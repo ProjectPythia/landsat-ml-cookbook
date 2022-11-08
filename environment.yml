@@ -1,7 +1,12 @@
-name: cookbook-dev
+name: hv-landsat-cookbook-dev
 channels:
   - conda-forge
 dependencies:
+  - holoviews
+  - hvplot
+  - panel
+  - geoviews
+  - datashader
   - jupyter-book
   - jupyterlab
   - pip
