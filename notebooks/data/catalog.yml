@@ -1,0 +1,181 @@
+sources:
+  landsat_5_small:
+    description: Small version of Landsat 5 Surface Reflectance Level-2 Science Product.
+    driver: rasterio
+    cache:
+      - argkey: urlpath
+        regex: 'earth-data/landsat'
+        type: file
+    args:
+      urlpath: 's3://earth-data/landsat/small/LT05_L1TP_042033_19881022_20161001_01_T1_sr_band{band:d}.tif'
+      chunks:
+        band: 1
+        x: 50
+        y: 50
+      concat_dim: band
+      storage_options: {'anon': True}
+    metadata:
+      plots:
+        band_image:
+          kind: 'image'
+          x: 'x'
+          y: 'y'
+          groupby: 'band'
+          rasterize: True
+          width: 400
+          dynamic: False
+          
+  landsat_8_small:
+    description: Small version of Landsat 8 Surface Reflectance Level-2 Science Product.
+    driver: rasterio
+    cache:
+      - argkey: urlpath
+        regex: 'earth-data/landsat'
+        type: file
+    args:
+      urlpath: 's3://earth-data/landsat/small/LC08_L1TP_042033_20171022_20171107_01_T1_sr_band{band:d}.tif'
+      chunks:
+        band: 1
+        x: 50
+        y: 50
+      concat_dim: band
+      storage_options: {'anon': True}
+
+  landsat_5:
+    description: Images contain Landsat 5 Surface Reflectance Level-2 Science Product.
+    driver: rasterio
+    cache:
+      - argkey: urlpath
+        regex: 'earth-data/landsat'
+        type: file
+    args:
+      urlpath: 's3://earth-data/landsat/LT05_L1TP_042033_19881022_20161001_01_T1_sr_band{band:d}.tif'
+      chunks:
+        band: 1
+        x: 256
+        y: 256
+      concat_dim: band
+      storage_options: {'anon': True}
+    metadata:
+      plots:
+        band_image:
+          kind: 'image'
+          x: 'x'
+          y: 'y'
+          groupby: 'band'
+          rasterize: True
+          width: 400
+
+  landsat_8:
+    description: Images contain Landsat 8 Surface Reflectance Level-2 Science Product.
+    driver: rasterio
+    cache:
+      - argkey: urlpath
+        regex: 'earth-data/landsat'
+        type: file
+    args:
+      urlpath: 's3://earth-data/landsat/LC08_L1TP_042033_20171022_20171107_01_T1_sr_band{band:d}.tif'
+      chunks:
+        band: 1
+        x: 256
+        y: 256
+      concat_dim: band
+      storage_options: {'anon': True}
+
+  google_landsat_band:
+    description: Landsat bands from Google Cloud Storage
+    driver: rasterio
+    parameters:
+      path:
+        description: landsat path
+        type: int
+      row:
+        description: landsat row
+        type: int
+      product_id:
+        description: landsat file id
+        type: str
+      band:
+        description: band
+        type: int
+    args:
+      urlpath: https://storage.googleapis.com/gcp-public-data-landsat/LC08/01/{{ '%03d' % path }}/{{ '%03d' % row }}/{{ product_id }}/{{ product_id }}_B{{ band }}.TIF
+      chunks:
+        band: 1
+        x: 256
+        y: 256
+
+  amazon_landsat_band:
+    description: Landsat bands from Amazon Web Services S3
+    driver: rasterio
+    parameters:
+      path:
+        description: landsat path
+        type: int
+      row:
+        description: landsat row
+        type: int
+      product_id:
+        description: landsat file id
+        type: str
+      band:
+        description: band
+        type: int
+    cache:
+      - argkey: urlpath
+        regex: 'landsat-pds'
+        type: file
+    args:
+      urlpath: s3://landsat-pds/c1/L8/{{ '%03d' % path }}/{{ '%03d' % row }}/{{ product_id }}/{{ product_id }}_B{{ band }}.TIF
+      chunks:
+        band: 1
+        x: 256
+        y: 256
+      storage_options: {'anon': True}
+
+  fluxnet_daily:
+    driver: csv
+    parameters:
+      s3_path:
+        description: Filename to load
+        type: str
+        default: earth-data/carbon_flux/nee_data_fusion/FLX_AR-SLu_FLUXNET2015_FULLSET_DD_2009-2011_1-3.csv
+    cache:
+      - argkey: urlpath
+        regex: 'earth-data'
+        type: file
+    args:
+      urlpath: "s3://{{ s3_path }}"
+      path_as_pattern: 'FLX_{site}_FLUXNET2015_FULLSET_DD_{}.csv'
+      csv_kwargs:
+        assume_missing: true
+        na_values: [-9999]
+        parse_dates: ['TIMESTAMP']
+      storage_options: {'anon': True}
+
+  fluxnet_metadata:
+    driver: csv
+    cache:
+      - argkey: urlpath
+        regex: 'earth-data'
+        type: file
+    args:
+      urlpath: "s3://earth-data/carbon_flux/nee_data_fusion/allflux_metadata.txt"
+      csv_kwargs:
+        header: null
+        names: ['site', 'lat', 'lon', 'igbp', 'network']
+        usecols: ['site', 'lat', 'lon', 'igbp']
+      storage_options: {'anon': True}
+
+  seattle_lidar:
+    driver: csv
+    cache: 
+      - argkey: urlpath
+        regex: 'https://s3.amazonaws.com/earth-data'
+        type: compressed
+        decomp: infer
+    args:
+      urlpath: "https://s3.amazonaws.com/earth-data/seattle-lidar.zip"
+      storage_options: {'anon': True}
+    metadata:
+      crs: State Plane Coordinate System Washington North FIPS 4601      

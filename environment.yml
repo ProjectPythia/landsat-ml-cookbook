@@ -2,11 +2,25 @@ name: hv-landsat-cookbook-dev
 channels:
   - conda-forge
 dependencies:
+  - python
+  - ipykernel
   - holoviews
   - hvplot
   - panel
   - geoviews
   - datashader
+  - colorcet
+  - intake
+  - intake-xarray
+  - xarray
+  - bokeh
+  - dask
+  - dask-ml
+  - pandas
+  - numpy
+  - cartopy
+  - rasterio
+  - s3fs
   - jupyter-book
   - jupyterlab
   - pip
