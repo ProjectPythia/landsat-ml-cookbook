@@ -27,6 +27,8 @@ dependencies:
   - s3fs
   - jupyter-book
   - jupyterlab
+  - satsearch
+  - intake-stac
   - pip
   - pip:
       - sphinx-pythia-theme
