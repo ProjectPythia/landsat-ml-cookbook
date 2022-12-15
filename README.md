@@ -1,34 +1,38 @@
 <img src="thumbnail.png" alt="thumbnail" width="300"/>
 
-# (Replace_with_your_title) Cookbook
+# Satellite-ML Cookbook
 
 [![nightly-build](https://github.com/ProjectPythiaCookbooks/cookbook-template/actions/workflows/nightly-build.yaml/badge.svg)](https://github.com/ProjectPythiaCookbooks/cookbook-template/actions/workflows/nightly-build.yaml)
 [![Binder](http://binder.mypythia.org/badge_logo.svg)](http://binder.mypythia.org/v2/gh/ProjectPythiaCookbooks/cookbook-template/main?labpath=notebooks)
 
-This Project Pythia Cookbook covers ... (replace `...` with the main subject of your cookbook ... e.g., *working with radar data in Python*)
+This Project Pythia Cookbook covers working with satellite data in the context of machine learning workflows.
 
 ## Motivation
 
-(Add a few sentences stating why this cookbook will be useful. What skills will you, "the chef", gain once you have reached the end of the cookbook?)
+This cookbook provides the essential materials to learning how to work with satellite data using Python. 
+
+Once you complete this materials, you will have the  skills to access, resample, regrid, reshape, and rescale satellite data. You will also have a foundation for applying machine learning to this data. Finally, you will be able to interactively visualize your data at every step in the process.
 
 ## Authors
 
-[First Author](@first-author), [Second Author](@second-author), etc. *Acknowledge primary content authors here*
+[Demetris Roumis](@droumis)
 
 ### Contributors
-
-<a href="https://github.com/ProjectPythiaCookbooks/cookbook-template/graphs/contributors">
-  <img src="https://contrib.rocks/image?repo=ProjectPythiaCookbooks/cookbook-template" />
+<a href="https://github.com/ProjectPythiaCookbooks/hv-landsat-cookbook/graphs/contributors">
+  <img src="https://contrib.rocks/image?repo=ProjectPythiaCookbooks/hv-landsat-cookbook" />
 </a>
 
 ## Structure
-(State one or more sections that will comprise the notebook. E.g., *This cookbook is broken up into two main sections - "Foundations" and "Example Workflows."* Then, describe each section below.)
+This cookbook is broken up into two main sections - "Foundations" and "Example Workflows."
 
-### Section 1 ( Replace with the title of this section, e.g. "Foundations" )
-(Add content for this section, e.g., "The foundational content includes ... ")
+### Foundations
+The foundational content includes:
+- Data Ingestion - Demonstrating common methods for loading and accessing satellite data
+- Preprocessing - Demonstrating different preprocessing approaches that for satellite data
 
-### Section 2 ( Replace with the title of this section, e.g. "Example workflows" )
-(Add content for this section, e.g., "Example workflows include ... ")
+### Example Workflows
+Example workflows include:
+- Spectral Clustering - Demonstrating a machine learning approach to cluster pixels of satellite data and comparing cluster results across time.
 
 ## Running the Notebooks
 You can either run the notebook using [Binder](https://mybinder.org/) or on your local machine.
@@ -55,10 +59,10 @@ If you are interested in running this material locally on your computer, you wil
 
 (Replace "cookbook-example" with the title of your cookbooks)   
 
-1. Clone the `https://github.com/ProjectPythiaCookbooks/cookbook-example` repository:
+1. Clone the [hv-landsat-cookbook](https://github.com/ProjectPythiaCookbooks/hv-landsat-cookbook) repository:
 
    ```bash
-    git clone https://github.com/ProjectPythiaCookbooks/cookbook-example.git
+    git clone https://github.com/ProjectPythiaCookbooks/hv-landsat-cookbook.git
     ```  
 1. Move into the `cookbook-example` directory
     ```bash
