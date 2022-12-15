@@ -1,14 +1,10 @@
-# create this environment with `conda env create`, not `conda create`, 
-# otherwise nodefaults will be ignored -_-
-
-name: hv-landsat-cookbook
+name: hv-landsat-cookbook-test2
 channels:
   - nodefaults
   - conda-forge
 dependencies:
   - python=3.10
   - ipykernel
-  - holoviews
   - hvplot
   - panel
   - geoviews
@@ -31,5 +27,3 @@ dependencies:
   - pip
   - pip:
       - sphinx-pythia-theme
-      - satsearch
-      - pystac-client
