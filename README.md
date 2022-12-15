@@ -1,11 +1,11 @@
 <img src="thumbnail.png" alt="thumbnail" width="300"/>
 
-# Satellite-ML Cookbook
+# Landsat ML Cookbook
 
 [![nightly-build](https://github.com/ProjectPythiaCookbooks/cookbook-template/actions/workflows/nightly-build.yaml/badge.svg)](https://github.com/ProjectPythiaCookbooks/cookbook-template/actions/workflows/nightly-build.yaml)
 [![Binder](http://binder.mypythia.org/badge_logo.svg)](http://binder.mypythia.org/v2/gh/ProjectPythiaCookbooks/cookbook-template/main?labpath=notebooks)
 
-This Project Pythia Cookbook covers working with satellite data in the context of machine learning workflows.
+This Project Pythia Cookbook covers working with Landsat images in the context of machine learning workflows.
 
 ## Motivation
 
