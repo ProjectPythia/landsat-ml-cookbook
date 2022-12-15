@@ -2,7 +2,7 @@
 
 # Landsat ML Cookbook
 
-TODO add links to repo after transfer
+TODO update badge links transfer to pythia
 
 [![nightly-build](https://github.com/ProjectPythiaCookbooks/cookbook-template/actions/workflows/nightly-build.yaml/badge.svg)](https://github.com/ProjectPythiaCookbooks/cookbook-template/actions/workflows/nightly-build.yaml)
 [![Binder](http://binder.mypythia.org/badge_logo.svg)](http://binder.mypythia.org/v2/gh/ProjectPythiaCookbooks/cookbook-template/main?labpath=notebooks)
@@ -13,14 +13,14 @@ This Project Pythia Cookbook covers working with Landsat images in the context o
 
 This cookbook provides the essential materials to learning how to work with satellite data using Python. 
 
-Once you complete this materials, you will have the  skills to access, resample, regrid, reshape, and rescale satellite data. You will also have a foundation for applying machine learning to this data. Finally, you will be able to interactively visualize your data at every step in the process.
+Once you complete this cookbook, you will have the  skills to access, resample, regrid, reshape, and rescale satellite data, as well as the foundation for applying machine learning to it. You will also learn how to interactively visualize your data at every step in the process.
 
 ## Authors
 
 [Demetris Roumis](https://github.com/droumis)
 
 ### Contributors
-TODO after transfer
+TODO after transfer to Pythia
 
 ## Structure
 This cookbook is broken up into two main sections - "Foundations" and "Example Workflows."
@@ -59,19 +59,19 @@ If you are interested in running this material locally on your computer, you wil
 
 (Replace "cookbook-example" with the title of your cookbooks)   
 
-1. Clone the hv-landsat-cookbook(TODO after transfer) repository:
+1. Clone the Landsat ML Cookbook repository:
 
    ```bash
-    git clone TODO after transfer
+    git clone (TODO after transfer)
     ```  
-1. Move into the `cookbook-example` directory
+1. Move into the `hv-landsat-cookbook` directory
     ```bash
-    cd cookbook-example
+    cd hv-landsat-cookbook
     ```  
 1. Create and activate your conda environment from the `environment.yml` file
     ```bash
     conda env create -f environment.yml
-    conda activate cookbook-example
+    conda activate hv-landsat-cookbook
     ```  
 1.  Move into the `notebooks` directory and start up Jupyterlab
     ```bash

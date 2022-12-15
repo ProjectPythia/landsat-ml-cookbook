@@ -1,4 +1,4 @@
-name: hv-landsat-cookbook-test2
+name: hv-landsat-cookbook
 channels:
   - nodefaults
   - conda-forge
