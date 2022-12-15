@@ -5,7 +5,7 @@
   <head>
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>(Replace_with_your_title) Cookbook &#8212; Project Pythia Cookbook Template</title>
+    <title>Landsat ML Cookbook &#8212; Landsat ML Cookbook</title>
     
   <link href="_static/css/theme.css" rel="stylesheet">
   <link href="_static/css/index.ff1ffe594081f20da1ef19478df9384b.css" rel="stylesheet">
@@ -51,9 +51,11 @@ const thebe_selector_input = "pre"
 const thebe_selector_output = ".output, .cell_output"
 </script>
     <script async="async" src="_static/sphinx-thebe.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/require.js/2.3.4/require.min.js"></script>
+    <script src="https://unpkg.com/@jupyter-widgets/html-manager@^0.20.1/dist/embed-amd.js"></script>
     <link rel="index" title="Index" href="genindex.html" />
     <link rel="search" title="Search" href="search.html" />
-    <link rel="next" title="Project Pythia Notebook Template" href="notebooks/notebook-template.html" />
+    <link rel="next" title="Data Ingestion" href="notebooks/01_Data_Ingestion.html" />
     <meta name="viewport" content="width=device-width, initial-scale=1" />
     <meta name="docsearch:language" content="None">
     
@@ -79,7 +81,7 @@ const thebe_selector_output = ".output, .cell_output"
     
 
 <a class="navbar-brand" href="https://projectpythia.org">
-  <img src="_static/pythia_logo-white-rtext.svg" class="logo" alt="logo">
+  <img src="_static/landsat_8_rend-sm1.png" class="logo" alt="logo">
 </a>
 
 
@@ -180,19 +182,36 @@ const thebe_selector_output = ".output, .cell_output"
         <ul class="nav bd-sidenav">
  <li class="toctree-l1 current">
   <a class="reference internal" href="#">
-   (Replace_with_your_title) Cookbook
+   Landsat ML Cookbook
   </a>
  </li>
 </ul>
 <p aria-level="2" class="caption" role="heading">
  <span class="caption-text">
-  Introduction
+  Foundations
  </span>
 </p>
 <ul class="nav bd-sidenav">
  <li class="toctree-l1">
-  <a class="reference internal" href="notebooks/notebook-template.html">
-   Project Pythia Notebook Template
+  <a class="reference internal" href="notebooks/01_Data_Ingestion.html">
+   Data Ingestion
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="notebooks/02_Preprocessing.html">
+   Preprocessing Data
+  </a>
+ </li>
+</ul>
+<p aria-level="2" class="caption" role="heading">
+ <span class="caption-text">
+  Example Workflows
+ </span>
+</p>
+<ul class="nav bd-sidenav">
+ <li class="toctree-l1">
+  <a class="reference internal" href="notebooks/03_Spectral_Clustering.html">
+   Spectral Clustering
   </a>
  </li>
 </ul>
@@ -304,13 +323,13 @@ All code in Pythia Cookbooks is licensed under Apache 2.0. All other non-code co
   </a>
   <ul class="nav section-nav flex-column">
    <li class="toc-h3 nav-item toc-entry">
-    <a class="reference internal nav-link" href="#section-1-replace-with-the-title-of-this-section-e-g-foundations">
-     Section 1 ( Replace with the title of this section, e.g. “Foundations” )
+    <a class="reference internal nav-link" href="#foundations">
+     Foundations
     </a>
    </li>
    <li class="toc-h3 nav-item toc-entry">
-    <a class="reference internal nav-link" href="#section-2-replace-with-the-title-of-this-section-e-g-example-workflows">
-     Section 2 ( Replace with the title of this section, e.g. “Example workflows” )
+    <a class="reference internal nav-link" href="#example-workflows">
+     Example Workflows
     </a>
    </li>
   </ul>
@@ -344,35 +363,42 @@ All code in Pythia Cookbooks is licensed under Apache 2.0. All other non-code co
               <div>
                 
   <a class="reference internal image-reference" href="_images/thumbnail.png"><img alt="thumbnail" src="_images/thumbnail.png" style="width: 300px;" /></a>
-<div class="tex2jax_ignore mathjax_ignore section" id="replace-with-your-title-cookbook">
-<h1>(Replace_with_your_title) Cookbook<a class="headerlink" href="#replace-with-your-title-cookbook" title="Permalink to this headline"><i class="fas fa-link"></i></a></h1>
+<div class="tex2jax_ignore mathjax_ignore section" id="landsat-ml-cookbook">
+<h1>Landsat ML Cookbook<a class="headerlink" href="#landsat-ml-cookbook" title="Permalink to this headline"><i class="fas fa-link"></i></a></h1>
+<p>TODO add links to repo after transfer</p>
 <p><a class="reference external" href="https://github.com/ProjectPythiaCookbooks/cookbook-template/actions/workflows/nightly-build.yaml"><img alt="nightly-build" src="https://github.com/ProjectPythiaCookbooks/cookbook-template/actions/workflows/nightly-build.yaml/badge.svg" /></a>
 <a class="reference external" href="http://binder.mypythia.org/v2/gh/ProjectPythiaCookbooks/cookbook-template/main?labpath=notebooks"><img alt="Binder" src="http://binder.mypythia.org/badge_logo.svg" /></a></p>
-<p>This Project Pythia Cookbook covers … (replace <code class="docutils literal notranslate"><span class="pre">...</span></code> with the main subject of your cookbook … e.g., <em>working with radar data in Python</em>)</p>
+<p>This Project Pythia Cookbook covers working with Landsat images in the context of machine learning workflows.</p>
 <div class="section" id="motivation">
 <h2>Motivation<a class="headerlink" href="#motivation" title="Permalink to this headline"><i class="fas fa-link"></i></a></h2>
-<p>(Add a few sentences stating why this cookbook will be useful. What skills will you, “the chef”, gain once you have reached the end of the cookbook?)</p>
+<p>This cookbook provides the essential materials to learning how to work with satellite data using Python.</p>
+<p>Once you complete this materials, you will have the  skills to access, resample, regrid, reshape, and rescale satellite data. You will also have a foundation for applying machine learning to this data. Finally, you will be able to interactively visualize your data at every step in the process.</p>
 </div>
 <div class="section" id="authors">
 <h2>Authors<a class="headerlink" href="#authors" title="Permalink to this headline"><i class="fas fa-link"></i></a></h2>
-<p><span class="xref myst">First Author</span>, <span class="xref myst">Second Author</span>, etc. <em>Acknowledge primary content authors here</em></p>
+<p><a class="reference external" href="https://github.com/droumis">Demetris Roumis</a></p>
 <div class="section" id="contributors">
 <h3>Contributors<a class="headerlink" href="#contributors" title="Permalink to this headline"><i class="fas fa-link"></i></a></h3>
-<a href="https://github.com/ProjectPythiaCookbooks/cookbook-template/graphs/contributors">
-  <img src="https://contrib.rocks/image?repo=ProjectPythiaCookbooks/cookbook-template" />
-</a>
+<p>TODO after transfer</p>
 </div>
 </div>
 <div class="section" id="structure">
 <h2>Structure<a class="headerlink" href="#structure" title="Permalink to this headline"><i class="fas fa-link"></i></a></h2>
-<p>(State one or more sections that will comprise the notebook. E.g., <em>This cookbook is broken up into two main sections - “Foundations” and “Example Workflows.”</em> Then, describe each section below.)</p>
-<div class="section" id="section-1-replace-with-the-title-of-this-section-e-g-foundations">
-<h3>Section 1 ( Replace with the title of this section, e.g. “Foundations” )<a class="headerlink" href="#section-1-replace-with-the-title-of-this-section-e-g-foundations" title="Permalink to this headline"><i class="fas fa-link"></i></a></h3>
-<p>(Add content for this section, e.g., “The foundational content includes … “)</p>
+<p>This cookbook is broken up into two main sections - “Foundations” and “Example Workflows.”</p>
+<div class="section" id="foundations">
+<h3>Foundations<a class="headerlink" href="#foundations" title="Permalink to this headline"><i class="fas fa-link"></i></a></h3>
+<p>The foundational content includes:</p>
+<ul class="simple">
+<li><p>Data Ingestion - Demonstrating common methods for loading and accessing satellite data</p></li>
+<li><p>Preprocessing - Demonstrating different preprocessing approaches that for satellite data</p></li>
+</ul>
 </div>
-<div class="section" id="section-2-replace-with-the-title-of-this-section-e-g-example-workflows">
-<h3>Section 2 ( Replace with the title of this section, e.g. “Example workflows” )<a class="headerlink" href="#section-2-replace-with-the-title-of-this-section-e-g-example-workflows" title="Permalink to this headline"><i class="fas fa-link"></i></a></h3>
-<p>(Add content for this section, e.g., “Example workflows include … “)</p>
+<div class="section" id="example-workflows">
+<h3>Example Workflows<a class="headerlink" href="#example-workflows" title="Permalink to this headline"><i class="fas fa-link"></i></a></h3>
+<p>Example workflows include:</p>
+<ul class="simple">
+<li><p>Spectral Clustering - Demonstrating a machine learning approach to cluster pixels of satellite data and comparing cluster results across time.</p></li>
+</ul>
 </div>
 </div>
 <div class="section" id="running-the-notebooks">
@@ -400,8 +426,8 @@ Jupyter</a>.</p>
 <p>If you are interested in running this material locally on your computer, you will need to follow this workflow:</p>
 <p>(Replace “cookbook-example” with the title of your cookbooks)</p>
 <ol>
-<li><p>Clone the <code class="docutils literal notranslate"><span class="pre">https://github.com/ProjectPythiaCookbooks/cookbook-example</span></code> repository:</p>
-<div class="highlight-bash notranslate"><div class="highlight"><pre><span></span> git clone https://github.com/ProjectPythiaCookbooks/cookbook-example.git
+<li><p>Clone the hv-landsat-cookbook(TODO after transfer) repository:</p>
+<div class="highlight-bash notranslate"><div class="highlight"><pre><span></span> git clone TODO after transfer
 </pre></div>
 </div>
 </li>
@@ -424,6 +450,8 @@ jupyter lab
 </li>
 </ol>
 </div>
+</div>
+<div class="toctree-wrapper compound">
 </div>
 <div class="toctree-wrapper compound">
 </div>
@@ -452,10 +480,10 @@ jupyter lab
               </div>
               <!-- Previous / next buttons -->
 <div class='prev-next-area'>
-    <a class='right-next' id="next-link" href="notebooks/notebook-template.html" title="next page">
+    <a class='right-next' id="next-link" href="notebooks/01_Data_Ingestion.html" title="next page">
     <div class="prev-next-info">
         <p class="prev-next-subtitle">next</p>
-        <p class="prev-next-title">Project Pythia Notebook Template</p>
+        <p class="prev-next-title">Data Ingestion</p>
     </div>
     <i class="fas fa-angle-right"></i>
     </a>
@@ -504,7 +532,7 @@ jupyter lab
         
           By the <a href="https://projectpythia.org/">Project Pythia</a> Community.
         
-          Last updated on 8 November 2022.
+          Last updated on 15 December 2022.
         </p>
       </div>
     </div>

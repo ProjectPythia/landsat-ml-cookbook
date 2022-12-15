@@ -5,7 +5,7 @@
   <head>
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Project Pythia Notebook Template &#8212; Project Pythia Cookbook Template</title>
+    <title>Project Pythia Notebook Template &#8212; Landsat ML Cookbook</title>
     
   <link href="../_static/css/theme.css" rel="stylesheet">
   <link href="../_static/css/index.ff1ffe594081f20da1ef19478df9384b.css" rel="stylesheet">
@@ -51,11 +51,12 @@ const thebe_selector_input = "pre"
 const thebe_selector_output = ".output, .cell_output"
 </script>
     <script async="async" src="../_static/sphinx-thebe.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/require.js/2.3.4/require.min.js"></script>
+    <script src="https://unpkg.com/@jupyter-widgets/html-manager@^0.20.1/dist/embed-amd.js"></script>
     <script>window.MathJax = {"options": {"processHtmlClass": "tex2jax_process|mathjax_process|math|output_area"}}</script>
     <script defer="defer" src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
     <link rel="index" title="Index" href="../genindex.html" />
     <link rel="search" title="Search" href="../search.html" />
-    <link rel="prev" title="(Replace_with_your_title) Cookbook" href="../README.html" />
     <meta name="viewport" content="width=device-width, initial-scale=1" />
     <meta name="docsearch:language" content="None">
     
@@ -81,7 +82,7 @@ const thebe_selector_output = ".output, .cell_output"
     
 
 <a class="navbar-brand" href="https://projectpythia.org">
-  <img src="../_static/pythia_logo-white-rtext.svg" class="logo" alt="logo">
+  <img src="../_static/landsat_8_rend-sm1.png" class="logo" alt="logo">
 </a>
 
 
@@ -182,19 +183,36 @@ const thebe_selector_output = ".output, .cell_output"
         <ul class="nav bd-sidenav">
  <li class="toctree-l1">
   <a class="reference internal" href="../README.html">
-   (Replace_with_your_title) Cookbook
+   Landsat ML Cookbook
   </a>
  </li>
 </ul>
 <p aria-level="2" class="caption" role="heading">
  <span class="caption-text">
-  Introduction
+  Foundations
  </span>
 </p>
-<ul class="current nav bd-sidenav">
- <li class="toctree-l1 current active">
-  <a class="current reference internal" href="#">
-   Project Pythia Notebook Template
+<ul class="nav bd-sidenav">
+ <li class="toctree-l1">
+  <a class="reference internal" href="01_Data_Ingestion.html">
+   Data Ingestion
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="02_Preprocessing.html">
+   Preprocessing Data
+  </a>
+ </li>
+</ul>
+<p aria-level="2" class="caption" role="heading">
+ <span class="caption-text">
+  Example Workflows
+ </span>
+</p>
+<ul class="nav bd-sidenav">
+ <li class="toctree-l1">
+  <a class="reference internal" href="03_Spectral_Clustering.html">
+   Spectral Clustering
   </a>
  </li>
 </ul>
@@ -514,8 +532,8 @@ All code in Pythia Cookbooks is licensed under Apache 2.0. All other non-code co
 <div class="section" id="header-levels">
 <h6>header levels<a class="headerlink" href="#header-levels" title="Permalink to this headline"><i class="fas fa-link"></i></a></h6>
 <p>as well <span class="math notranslate nohighlight">\(m = a * t / h\)</span> text! Similarly, you have access to other <span class="math notranslate nohighlight">\(\LaTeX\)</span> equation <a class="reference external" href="https://jupyter-notebook.readthedocs.io/en/stable/examples/Notebook/Typesetting%20Equations.html"><strong>functionality</strong></a> via MathJax (demo below from link),</p>
-<div class="amsmath math notranslate nohighlight" id="equation-4f3d7356-a6f5-495f-8108-0ed0c11495c0">
-<span class="eqno">(1)<a class="headerlink" href="#equation-4f3d7356-a6f5-495f-8108-0ed0c11495c0" title="Permalink to this equation"><i class="fas fa-link"></i></a></span>\[\begin{align}
+<div class="amsmath math notranslate nohighlight" id="equation-cd6831f0-7f48-4226-b83a-c142f7c4cea6">
+<span class="eqno">()<a class="headerlink" href="#equation-cd6831f0-7f48-4226-b83a-c142f7c4cea6" title="Permalink to this equation"><i class="fas fa-link"></i></a></span>\[\begin{align}
 \dot{x} &amp; = \sigma(y-x) \\
 \dot{y} &amp; = \rho x - y - xz \\
 \dot{z} &amp; = -\beta z + xy
@@ -593,14 +611,7 @@ All code in Pythia Cookbooks is licensed under Apache 2.0. All other non-code co
 
               </div>
               <!-- Previous / next buttons -->
-<div class='prev-next-area'> 
-    <a class='left-prev' id="prev-link" href="../README.html" title="previous page">
-        <i class="fas fa-angle-left"></i>
-        <div class="prev-next-info">
-            <p class="prev-next-subtitle">previous</p>
-            <p class="prev-next-title">(Replace_with_your_title) Cookbook</p>
-        </div>
-    </a>
+<div class='prev-next-area'>
 </div>
             </div>
           </div>
@@ -646,7 +657,7 @@ All code in Pythia Cookbooks is licensed under Apache 2.0. All other non-code co
         
           By the <a href="https://projectpythia.org/">Project Pythia</a> Community.
         
-          Last updated on 8 November 2022.
+          Last updated on 15 December 2022.
         </p>
       </div>
     </div>

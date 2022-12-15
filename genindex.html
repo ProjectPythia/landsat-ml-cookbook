@@ -5,7 +5,7 @@
   <head>
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Index &#8212; Project Pythia Cookbook Template</title>
+    <title>Index &#8212; Landsat ML Cookbook</title>
     
   <link href="_static/css/theme.css" rel="stylesheet">
   <link href="_static/css/index.ff1ffe594081f20da1ef19478df9384b.css" rel="stylesheet">
@@ -51,6 +51,8 @@ const thebe_selector_input = "pre"
 const thebe_selector_output = ".output, .cell_output"
 </script>
     <script async="async" src="_static/sphinx-thebe.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/require.js/2.3.4/require.min.js"></script>
+    <script src="https://unpkg.com/@jupyter-widgets/html-manager@^0.20.1/dist/embed-amd.js"></script>
     <link rel="index" title="Index" href="#" />
     <link rel="search" title="Search" href="search.html" />
     <meta name="viewport" content="width=device-width, initial-scale=1" />
@@ -78,7 +80,7 @@ const thebe_selector_output = ".output, .cell_output"
     
 
 <a class="navbar-brand" href="https://projectpythia.org">
-  <img src="_static/pythia_logo-white-rtext.svg" class="logo" alt="logo">
+  <img src="_static/landsat_8_rend-sm1.png" class="logo" alt="logo">
 </a>
 
 
@@ -179,19 +181,36 @@ const thebe_selector_output = ".output, .cell_output"
         <ul class="nav bd-sidenav">
  <li class="toctree-l1">
   <a class="reference internal" href="README.html">
-   (Replace_with_your_title) Cookbook
+   Landsat ML Cookbook
   </a>
  </li>
 </ul>
 <p aria-level="2" class="caption" role="heading">
  <span class="caption-text">
-  Introduction
+  Foundations
  </span>
 </p>
 <ul class="nav bd-sidenav">
  <li class="toctree-l1">
-  <a class="reference internal" href="notebooks/notebook-template.html">
-   Project Pythia Notebook Template
+  <a class="reference internal" href="notebooks/01_Data_Ingestion.html">
+   Data Ingestion
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="notebooks/02_Preprocessing.html">
+   Preprocessing Data
+  </a>
+ </li>
+</ul>
+<p aria-level="2" class="caption" role="heading">
+ <span class="caption-text">
+  Example Workflows
+ </span>
+</p>
+<ul class="nav bd-sidenav">
+ <li class="toctree-l1">
+  <a class="reference internal" href="notebooks/03_Spectral_Clustering.html">
+   Spectral Clustering
   </a>
  </li>
 </ul>
@@ -320,7 +339,7 @@ All code in Pythia Cookbooks is licensed under Apache 2.0. All other non-code co
         
           By the <a href="https://projectpythia.org/">Project Pythia</a> Community.
         
-          Last updated on 8 November 2022.
+          Last updated on 15 December 2022.
         </p>
       </div>
     </div>
