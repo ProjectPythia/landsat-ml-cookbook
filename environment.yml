@@ -1,9 +1,29 @@
-name: cookbook-dev
+name: hv-landsat-cookbook-test2
 channels:
+  - nodefaults
   - conda-forge
 dependencies:
+  - python=3.10
+  - ipykernel
+  - hvplot
+  - panel
+  - geoviews
+  - datashader
+  - colorcet
+  - intake
+  - intake-xarray
+  - xarray
+  - bokeh
+  - dask
+  - dask-ml
+  - pandas
+  - numpy
+  - cartopy
+  - rasterio
+  - s3fs
   - jupyter-book
   - jupyterlab
+  - intake-stac
   - pip
   - pip:
       - sphinx-pythia-theme
