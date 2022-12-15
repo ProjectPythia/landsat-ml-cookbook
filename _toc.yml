@@ -1,16 +1,11 @@
 format: jb-book
 root: README
 parts:
-  - caption: Introduction
-    chapters:
-      - file: notebooks/notebook-template
-  - caption: Data Ingestion
+  - caption: Foundations
     chapters:
       - file: notebooks/01_Data_Ingestion
-  - caption: Preprocessing
-    chapters:
       - file: notebooks/02_Preprocessing
-  - caption: Spectral Clustering
+  - caption: Example Workflows
     chapters:
       - file: notebooks/03_Spectral_Clustering
 
