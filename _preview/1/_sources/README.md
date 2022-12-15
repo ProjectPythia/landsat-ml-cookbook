@@ -2,6 +2,8 @@
 
 # Landsat ML Cookbook
 
+TODO add links to repo after transfer
+
 [![nightly-build](https://github.com/ProjectPythiaCookbooks/cookbook-template/actions/workflows/nightly-build.yaml/badge.svg)](https://github.com/ProjectPythiaCookbooks/cookbook-template/actions/workflows/nightly-build.yaml)
 [![Binder](http://binder.mypythia.org/badge_logo.svg)](http://binder.mypythia.org/v2/gh/ProjectPythiaCookbooks/cookbook-template/main?labpath=notebooks)
 
@@ -15,12 +17,10 @@ Once you complete this materials, you will have the  skills to access, resample,
 
 ## Authors
 
-[Demetris Roumis](@droumis)
+[Demetris Roumis](https://github.com/droumis)
 
 ### Contributors
-<a href="https://github.com/ProjectPythiaCookbooks/hv-landsat-cookbook/graphs/contributors">
-  <img src="https://contrib.rocks/image?repo=ProjectPythiaCookbooks/hv-landsat-cookbook" />
-</a>
+TODO after transfer
 
 ## Structure
 This cookbook is broken up into two main sections - "Foundations" and "Example Workflows."
@@ -59,10 +59,10 @@ If you are interested in running this material locally on your computer, you wil
 
 (Replace "cookbook-example" with the title of your cookbooks)   
 
-1. Clone the [hv-landsat-cookbook](https://github.com/ProjectPythiaCookbooks/hv-landsat-cookbook) repository:
+1. Clone the hv-landsat-cookbook(TODO after transfer) repository:
 
    ```bash
-    git clone https://github.com/ProjectPythiaCookbooks/hv-landsat-cookbook.git
+    git clone TODO after transfer
     ```  
 1. Move into the `cookbook-example` directory
     ```bash
