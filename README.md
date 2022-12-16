@@ -7,11 +7,9 @@ TODO update badge links transfer to pythia
 [![nightly-build](https://github.com/ProjectPythiaCookbooks/cookbook-template/actions/workflows/nightly-build.yaml/badge.svg)](https://github.com/ProjectPythiaCookbooks/cookbook-template/actions/workflows/nightly-build.yaml)
 [![Binder](http://binder.mypythia.org/badge_logo.svg)](http://binder.mypythia.org/v2/gh/ProjectPythiaCookbooks/cookbook-template/main?labpath=notebooks)
 
-This Project Pythia Cookbook covers working with Landsat images in the context of machine learning workflows.
+This Project Pythia Cookbook covers the essential materials for working with satellite images in the context of machine learning workflows.
 
 ## Motivation
-
-This cookbook provides the essential materials to learning how to work with satellite data using Python. 
 
 Once you complete this cookbook, you will have the  skills to access, resample, regrid, reshape, and rescale satellite data, as well as the foundation for applying machine learning to it. You will also learn how to interactively visualize your data at every step in the process.
 
@@ -32,7 +30,7 @@ The foundational content includes:
 
 ### Example Workflows
 Example workflows include:
-- Spectral Clustering - Demonstrating a machine learning approach to cluster pixels of satellite data and comparing cluster results across time.
+- Spectral Clustering - Demonstrating a machine learning approach to cluster pixels of satellite data and comparing cluster results across time
 
 ## Running the Notebooks
 You can either run the notebook using [Binder](https://mybinder.org/) or on your local machine.
