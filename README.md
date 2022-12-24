@@ -21,6 +21,11 @@ Once you complete this cookbook, you will have the  skills to access, resample, 
   <img src="https://contrib.rocks/image?repo=ProjectPythia/landsat-ml-cookbook" />
 </a>
 
+This cookbook was inspired by the [EarthML](https://github.com/pyviz-topics/EarthML) tutorial. See a list of the EarthML contributors [here:](https://github.com/pyviz-topics/EarthML/graphs/contributors)
+<a href="https://github.com/pyviz-topics/EarthML/graphs/contributors">
+  <img src="https://contrib.rocks/image?repo=pyviz-topics/EarthML" />
+</a>
+
 ## Structure
 This cookbook is broken up into two main sections - "Foundations" and "Example Workflows."
 
