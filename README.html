@@ -365,9 +365,8 @@ All code in Pythia Cookbooks is licensed under Apache 2.0. All other non-code co
   <a class="reference internal image-reference" href="_images/thumbnail.png"><img alt="thumbnail" src="_images/thumbnail.png" style="width: 300px;" /></a>
 <div class="tex2jax_ignore mathjax_ignore section" id="landsat-ml-cookbook">
 <h1>Landsat ML Cookbook<a class="headerlink" href="#landsat-ml-cookbook" title="Permalink to this headline"><i class="fas fa-link"></i></a></h1>
-<p>TODO update badge links transfer to pythia</p>
-<p><a class="reference external" href="https://github.com/ProjectPythiaCookbooks/cookbook-template/actions/workflows/nightly-build.yaml"><img alt="nightly-build" src="https://github.com/ProjectPythiaCookbooks/cookbook-template/actions/workflows/nightly-build.yaml/badge.svg" /></a>
-<a class="reference external" href="http://binder.mypythia.org/v2/gh/ProjectPythiaCookbooks/cookbook-template/main?labpath=notebooks"><img alt="Binder" src="http://binder.mypythia.org/badge_logo.svg" /></a></p>
+<p><a class="reference external" href="https://github.com/ProjectPythia/landsat-ml-cookbook/actions/workflows/nightly-build.yaml"><img alt="nightly-build" src="https://github.com/ProjectPythia/landsat-ml-cookbook/actions/workflows/nightly-build.yaml/badge.svg" /></a>
+<a class="reference external" href="http://binder.mypythia.org/v2/gh/ProjectPythia/landsat-ml-cookbook/main?labpath=notebooks"><img alt="Binder" src="http://binder.mypythia.org/badge_logo.svg" /></a></p>
 <p>This Project Pythia Cookbook covers the essential materials for working with satellite images in the context of machine learning workflows.</p>
 <div class="section" id="motivation">
 <h2>Motivation<a class="headerlink" href="#motivation" title="Permalink to this headline"><i class="fas fa-link"></i></a></h2>
@@ -378,7 +377,13 @@ All code in Pythia Cookbooks is licensed under Apache 2.0. All other non-code co
 <p><a class="reference external" href="https://github.com/droumis">Demetris Roumis</a></p>
 <div class="section" id="contributors">
 <h3>Contributors<a class="headerlink" href="#contributors" title="Permalink to this headline"><i class="fas fa-link"></i></a></h3>
-<p>TODO after transfer to Pythia</p>
+<a href="https://github.com/ProjectPythia/landsat-ml-cookbook/graphs/contributors">
+  <img src="https://contrib.rocks/image?repo=ProjectPythia/landsat-ml-cookbook" />
+</a>
+<p>This cookbook was inspired by the <a class="reference external" href="https://github.com/pyviz-topics/EarthML">EarthML</a> tutorial. See a list of the EarthML contributors <a class="reference external" href="https://github.com/pyviz-topics/EarthML/graphs/contributors">here:</a>
+<a href="https://github.com/pyviz-topics/EarthML/graphs/contributors">
+<img alt="https://contrib.rocks/image?repo=pyviz-topics/EarthML" src="https://contrib.rocks/image?repo=pyviz-topics/EarthML" />
+</a></p>
 </div>
 </div>
 <div class="section" id="structure">
@@ -423,21 +428,20 @@ Jupyter</a>.</p>
 <div class="section" id="running-on-your-own-machine">
 <h3>Running on Your Own Machine<a class="headerlink" href="#running-on-your-own-machine" title="Permalink to this headline"><i class="fas fa-link"></i></a></h3>
 <p>If you are interested in running this material locally on your computer, you will need to follow this workflow:</p>
-<p>(Replace “cookbook-example” with the title of your cookbooks)</p>
 <ol>
 <li><p>Clone the Landsat ML Cookbook repository:</p>
-<div class="highlight-bash notranslate"><div class="highlight"><pre><span></span> git clone <span class="o">(</span>TODO after transfer<span class="o">)</span>
+<div class="highlight-bash notranslate"><div class="highlight"><pre><span></span> git clone https://github.com/ProjectPythia/landsat-ml-cookbook.git
 </pre></div>
 </div>
 </li>
-<li><p>Move into the <code class="docutils literal notranslate"><span class="pre">hv-landsat-cookbook</span></code> directory</p>
-<div class="highlight-bash notranslate"><div class="highlight"><pre><span></span><span class="nb">cd</span> hv-landsat-cookbook
+<li><p>Move into the <code class="docutils literal notranslate"><span class="pre">landsat-ml-cookbook</span></code> directory</p>
+<div class="highlight-bash notranslate"><div class="highlight"><pre><span></span><span class="nb">cd</span> landsat-ml-cookbook
 </pre></div>
 </div>
 </li>
 <li><p>Create and activate your conda environment from the <code class="docutils literal notranslate"><span class="pre">environment.yml</span></code> file</p>
 <div class="highlight-bash notranslate"><div class="highlight"><pre><span></span>conda env create -f environment.yml
-conda activate hv-landsat-cookbook
+conda activate landsat-ml-cookbook
 </pre></div>
 </div>
 </li>
@@ -531,7 +535,7 @@ jupyter lab
         
           By the <a href="https://projectpythia.org/">Project Pythia</a> Community.
         
-          Last updated on 16 December 2022.
+          Last updated on 24 December 2022.
         </p>
       </div>
     </div>
