@@ -1,9 +1,10 @@
-name: hv-landsat-cookbook
+name: landsat-ml-cookbook
 channels:
   - nodefaults
   - conda-forge
 dependencies:
   - python=3.10
+  - shapely<2.0.0
   - ipykernel
   - hvplot
   - panel

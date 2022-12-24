@@ -7,7 +7,7 @@ logo: notebooks/images/landsat_8_rend-sm1.png
 email: projectpythia@ucar.edu
 copyright: '2022'
 
-description: Machine learning with Landsat images
+description: Machine learning on Landsat data
 thumbnail: thumbnail.png
 tags:
   domains: 

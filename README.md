@@ -2,10 +2,8 @@
 
 # Landsat ML Cookbook
 
-TODO update badge links transfer to pythia
-
-[![nightly-build](https://github.com/ProjectPythiaCookbooks/cookbook-template/actions/workflows/nightly-build.yaml/badge.svg)](https://github.com/ProjectPythiaCookbooks/cookbook-template/actions/workflows/nightly-build.yaml)
-[![Binder](http://binder.mypythia.org/badge_logo.svg)](http://binder.mypythia.org/v2/gh/ProjectPythiaCookbooks/cookbook-template/main?labpath=notebooks)
+[![nightly-build](https://github.com/ProjectPythia/landsat-ml-cookbook/actions/workflows/nightly-build.yaml/badge.svg)](https://github.com/ProjectPythia/landsat-ml-cookbook/actions/workflows/nightly-build.yaml)
+[![Binder](http://binder.mypythia.org/badge_logo.svg)](http://binder.mypythia.org/v2/gh/ProjectPythia/landsat-ml-cookbook/main?labpath=notebooks)
 
 This Project Pythia Cookbook covers the essential materials for working with satellite images in the context of machine learning workflows.
 
@@ -18,7 +16,15 @@ Once you complete this cookbook, you will have the  skills to access, resample, 
 [Demetris Roumis](https://github.com/droumis)
 
 ### Contributors
-TODO after transfer to Pythia
+
+<a href="https://github.com/ProjectPythia/landsat-ml-cookbook/graphs/contributors">
+  <img src="https://contrib.rocks/image?repo=ProjectPythia/landsat-ml-cookbook" />
+</a>
+
+This cookbook was inspired by the [EarthML](https://github.com/pyviz-topics/EarthML) tutorial. See a list of the EarthML contributors [here:](https://github.com/pyviz-topics/EarthML/graphs/contributors)
+<a href="https://github.com/pyviz-topics/EarthML/graphs/contributors">
+  <img src="https://contrib.rocks/image?repo=pyviz-topics/EarthML" />
+</a>
 
 ## Structure
 This cookbook is broken up into two main sections - "Foundations" and "Example Workflows."
@@ -55,21 +61,19 @@ Jupyter](https://foundations.projectpythia.org/foundations/getting-started-jupyt
 ### Running on Your Own Machine
 If you are interested in running this material locally on your computer, you will need to follow this workflow:
 
-(Replace "cookbook-example" with the title of your cookbooks)   
-
 1. Clone the Landsat ML Cookbook repository:
 
    ```bash
-    git clone (TODO after transfer)
+    git clone https://github.com/ProjectPythia/landsat-ml-cookbook.git
     ```  
-1. Move into the `hv-landsat-cookbook` directory
+1. Move into the `landsat-ml-cookbook` directory
     ```bash
-    cd hv-landsat-cookbook
+    cd landsat-ml-cookbook
     ```  
 1. Create and activate your conda environment from the `environment.yml` file
     ```bash
     conda env create -f environment.yml
-    conda activate hv-landsat-cookbook
+    conda activate landsat-ml-cookbook
     ```  
 1.  Move into the `notebooks` directory and start up Jupyterlab
     ```bash
