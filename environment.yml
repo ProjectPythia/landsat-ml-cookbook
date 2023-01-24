@@ -25,6 +25,7 @@ dependencies:
   - jupyter-book
   - jupyterlab
   - intake-stac
+  - jupyter_server<2
   - pip
   - pip:
       - sphinx-pythia-theme
