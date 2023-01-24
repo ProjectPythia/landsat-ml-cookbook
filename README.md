@@ -21,6 +21,7 @@ Once you complete this cookbook, you will have the  skills to access, resample, 
   <img src="https://contrib.rocks/image?repo=ProjectPythia/landsat-ml-cookbook" />
 </a>
 
+
 This cookbook was inspired by the [EarthML](https://github.com/pyviz-topics/EarthML) tutorial. See a list of the EarthML contributors [here:](https://github.com/pyviz-topics/EarthML/graphs/contributors)
 <a href="https://github.com/pyviz-topics/EarthML/graphs/contributors">
   <img src="https://contrib.rocks/image?repo=pyviz-topics/EarthML" />
@@ -32,7 +33,7 @@ This cookbook is broken up into two main sections - "Foundations" and "Example W
 ### Foundations
 The foundational content includes:
 - Data Ingestion - Demonstrating common methods for loading and accessing satellite data
-- Preprocessing - Demonstrating different preprocessing approaches that for satellite data
+- Preprocessing - Demonstrating different preprocessing approaches for that satellite data
 
 ### Example Workflows
 Example workflows include:
