@@ -1,15 +1,15 @@
-<img src="thumbnail.png" alt="thumbnail" width="300"/>
+<center><img src="./notebooks/images/nasa_landsat8.jpg" alt="Landsat 8"/></center>
 
 # Landsat ML Cookbook
 
 [![nightly-build](https://github.com/ProjectPythia/landsat-ml-cookbook/actions/workflows/nightly-build.yaml/badge.svg)](https://github.com/ProjectPythia/landsat-ml-cookbook/actions/workflows/nightly-build.yaml)
 [![Binder](http://binder.mypythia.org/badge_logo.svg)](http://binder.mypythia.org/v2/gh/ProjectPythia/landsat-ml-cookbook/main?labpath=notebooks)
 
-This Project Pythia Cookbook covers the essential materials for working with satellite images in the context of machine learning workflows.
+This Project Pythia Cookbook covers the essential materials for working with Landsat data in the context of machine learning workflows.
 
 ## Motivation
 
-Once you complete this cookbook, you will have the  skills to access, resample, regrid, reshape, and rescale satellite data, as well as the foundation for applying machine learning to it. You will also learn how to interactively visualize your data at every step in the process.
+Once you complete this cookbook, you will have the  skills to access and analyze Landsat data. You will also learn how to interactively visualize your data at every step in the process.
 
 ## Authors
 
@@ -22,7 +22,7 @@ Once you complete this cookbook, you will have the  skills to access, resample, 
 </a>
 
 
-This cookbook was inspired by the [EarthML](https://github.com/pyviz-topics/EarthML) tutorial. See a list of the EarthML contributors [here:](https://github.com/pyviz-topics/EarthML/graphs/contributors)
+This cookbook was initially inspired by the [EarthML](https://github.com/pyviz-topics/EarthML) . See a list of the EarthML contributors [here:](https://github.com/pyviz-topics/EarthML/graphs/contributors)
 <a href="https://github.com/pyviz-topics/EarthML/graphs/contributors">
   <img src="https://contrib.rocks/image?repo=pyviz-topics/EarthML" />
 </a>
@@ -32,8 +32,7 @@ This cookbook is broken up into two main sections - "Foundations" and "Example W
 
 ### Foundations
 The foundational content includes:
-- Data Ingestion - Demonstrating common methods for loading and accessing satellite data
-- Preprocessing - Demonstrating different preprocessing approaches for that satellite data
+- Data Ingestion - Demonstrating a method for loading and accessing Landsat data
 
 ### Example Workflows
 Example workflows include:
