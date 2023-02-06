@@ -7,7 +7,7 @@ dependencies:
   - shapely<2.0.0
   - planetary-computer
   - pystac
-  - pystac_client
+  - pystac-client
   - odc-stac
   - ipykernel
   - hvplot
