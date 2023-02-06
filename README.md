@@ -32,6 +32,7 @@ This cookbook is broken up into two main sections - "Foundations" and "Example W
 
 ### Foundations
 The foundational content includes:
+- Start Here - Introduction to Landsat data
 - Data Ingestion - Demonstrating a method for loading and accessing Landsat data
 
 ### Example Workflows
