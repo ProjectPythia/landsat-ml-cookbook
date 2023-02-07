@@ -51,11 +51,10 @@ const thebe_selector_input = "pre"
 const thebe_selector_output = ".output, .cell_output"
 </script>
     <script async="async" src="_static/sphinx-thebe.js"></script>
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/require.js/2.3.4/require.min.js"></script>
-    <script src="https://unpkg.com/@jupyter-widgets/html-manager@^0.20.1/dist/embed-amd.js"></script>
+    <link rel="shortcut icon" href="_static/favicon.ico"/>
     <link rel="index" title="Index" href="genindex.html" />
     <link rel="search" title="Search" href="search.html" />
-    <link rel="next" title="Data Ingestion" href="notebooks/01_Data_Ingestion.html" />
+    <link rel="next" title="Start Here - Intro to Landsat Data" href="notebooks/0.0_Intro_Landsat.html" />
     <meta name="viewport" content="width=device-width, initial-scale=1" />
     <meta name="docsearch:language" content="None">
     
@@ -193,13 +192,13 @@ const thebe_selector_output = ".output, .cell_output"
 </p>
 <ul class="nav bd-sidenav">
  <li class="toctree-l1">
-  <a class="reference internal" href="notebooks/01_Data_Ingestion.html">
-   Data Ingestion
+  <a class="reference internal" href="notebooks/0.0_Intro_Landsat.html">
+   Start Here - Intro to Landsat Data
   </a>
  </li>
  <li class="toctree-l1">
-  <a class="reference internal" href="notebooks/02_Preprocessing.html">
-   Preprocessing Data
+  <a class="reference internal" href="notebooks/1.0_Data_Ingestion-Planetary_Computer.html">
+   Data Ingestion - Microsoft Planetary Computer
   </a>
  </li>
 </ul>
@@ -210,7 +209,7 @@ const thebe_selector_output = ".output, .cell_output"
 </p>
 <ul class="nav bd-sidenav">
  <li class="toctree-l1">
-  <a class="reference internal" href="notebooks/03_Spectral_Clustering.html">
+  <a class="reference internal" href="notebooks/3.0_Spectral_Clustering_PC.html">
    Spectral Clustering
   </a>
  </li>
@@ -362,15 +361,15 @@ All code in Pythia Cookbooks is licensed under Apache 2.0. All other non-code co
               
               <div>
                 
-  <a class="reference internal image-reference" href="_images/thumbnail.png"><img alt="thumbnail" src="_images/thumbnail.png" style="width: 300px;" /></a>
+  <center><img src="./notebooks/images/nasa_landsat8.jpg" alt="Landsat 8"/></center>
 <div class="tex2jax_ignore mathjax_ignore section" id="landsat-ml-cookbook">
 <h1>Landsat ML Cookbook<a class="headerlink" href="#landsat-ml-cookbook" title="Permalink to this headline"><i class="fas fa-link"></i></a></h1>
 <p><a class="reference external" href="https://github.com/ProjectPythia/landsat-ml-cookbook/actions/workflows/nightly-build.yaml"><img alt="nightly-build" src="https://github.com/ProjectPythia/landsat-ml-cookbook/actions/workflows/nightly-build.yaml/badge.svg" /></a>
 <a class="reference external" href="http://binder.mypythia.org/v2/gh/ProjectPythia/landsat-ml-cookbook/main?labpath=notebooks"><img alt="Binder" src="http://binder.mypythia.org/badge_logo.svg" /></a></p>
-<p>This Project Pythia Cookbook covers the essential materials for working with satellite images in the context of machine learning workflows.</p>
+<p>This Project Pythia Cookbook covers the essential materials for working with Landsat data in the context of machine learning workflows.</p>
 <div class="section" id="motivation">
 <h2>Motivation<a class="headerlink" href="#motivation" title="Permalink to this headline"><i class="fas fa-link"></i></a></h2>
-<p>Once you complete this cookbook, you will have the  skills to access, resample, regrid, reshape, and rescale satellite data, as well as the foundation for applying machine learning to it. You will also learn how to interactively visualize your data at every step in the process.</p>
+<p>Once you complete this cookbook, you will have the  skills to access and analyze Landsat data. You will also learn how to interactively visualize your data at every step in the process.</p>
 </div>
 <div class="section" id="authors">
 <h2>Authors<a class="headerlink" href="#authors" title="Permalink to this headline"><i class="fas fa-link"></i></a></h2>
@@ -380,7 +379,7 @@ All code in Pythia Cookbooks is licensed under Apache 2.0. All other non-code co
 <a href="https://github.com/ProjectPythia/landsat-ml-cookbook/graphs/contributors">
   <img src="https://contrib.rocks/image?repo=ProjectPythia/landsat-ml-cookbook" />
 </a>
-<p>This cookbook was inspired by the <a class="reference external" href="https://github.com/pyviz-topics/EarthML">EarthML</a> tutorial. See a list of the EarthML contributors <a class="reference external" href="https://github.com/pyviz-topics/EarthML/graphs/contributors">here:</a>
+<p>This cookbook was initially inspired by the <a class="reference external" href="https://github.com/pyviz-topics/EarthML">EarthML</a> . See a list of the EarthML contributors <a class="reference external" href="https://github.com/pyviz-topics/EarthML/graphs/contributors">here:</a>
 <a href="https://github.com/pyviz-topics/EarthML/graphs/contributors">
 <img alt="https://contrib.rocks/image?repo=pyviz-topics/EarthML" src="https://contrib.rocks/image?repo=pyviz-topics/EarthML" />
 </a></p>
@@ -393,8 +392,8 @@ All code in Pythia Cookbooks is licensed under Apache 2.0. All other non-code co
 <h3>Foundations<a class="headerlink" href="#foundations" title="Permalink to this headline"><i class="fas fa-link"></i></a></h3>
 <p>The foundational content includes:</p>
 <ul class="simple">
-<li><p>Data Ingestion - Demonstrating common methods for loading and accessing satellite data</p></li>
-<li><p>Preprocessing - Demonstrating different preprocessing approaches for that satellite data</p></li>
+<li><p>Start Here - Introduction to Landsat data</p></li>
+<li><p>Data Ingestion - Demonstrating a method for loading and accessing Landsat data</p></li>
 </ul>
 </div>
 <div class="section" id="example-workflows">
@@ -483,10 +482,10 @@ jupyter<span class="w"> </span>lab
               </div>
               <!-- Previous / next buttons -->
 <div class='prev-next-area'>
-    <a class='right-next' id="next-link" href="notebooks/01_Data_Ingestion.html" title="next page">
+    <a class='right-next' id="next-link" href="notebooks/0.0_Intro_Landsat.html" title="next page">
     <div class="prev-next-info">
         <p class="prev-next-subtitle">next</p>
-        <p class="prev-next-title">Data Ingestion</p>
+        <p class="prev-next-title">Start Here - Intro to Landsat Data</p>
     </div>
     <i class="fas fa-angle-right"></i>
     </a>
@@ -535,7 +534,7 @@ jupyter<span class="w"> </span>lab
         
           By Demetris Roumis.
         
-          Last updated on 24 January 2023.
+          Last updated on 7 February 2023.
         </p>
       </div>
     </div>
