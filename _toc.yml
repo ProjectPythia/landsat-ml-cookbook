@@ -3,9 +3,9 @@ root: README
 parts:
   - caption: Foundations
     chapters:
-      - file: notebooks/01_Data_Ingestion
-      - file: notebooks/02_Preprocessing
+      - file: notebooks/0.0_Intro_Landsat
+      - file: notebooks/1.0_Data_Ingestion-Planetary_Computer
   - caption: Example Workflows
     chapters:
-      - file: notebooks/03_Spectral_Clustering
+      - file: notebooks/3.0_Spectral_Clustering_PC
 
