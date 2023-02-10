@@ -5,6 +5,8 @@ channels:
 dependencies:
   - python=3.10
   - shapely<2.0.0
+  - pandas
+  - xarray-datatree
   - planetary-computer
   - pystac
   - pystac-client
@@ -25,6 +27,7 @@ dependencies:
   - numpy
   - cartopy
   - rasterio
+  - s3fs
   - jupyter-book
   - jupyterlab
   - jupyter_server<2
