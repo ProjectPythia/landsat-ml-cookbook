@@ -9,7 +9,7 @@ This Project Pythia Cookbook covers the essential materials for working with Lan
 
 ## Motivation
 
-Once you complete this cookbook, you will have the  skills to access and analyze Landsat data. You will also learn how to interactively visualize your data at every step in the process.
+Once you complete this cookbook, you will have the skills to access, resample, regrid, reshape, and rescale satellite data, as well as the foundation for applying machine learning to it. You will also learn how to interactively visualize your data at every step in the process.
 
 ## Authors
 
@@ -33,7 +33,9 @@ This cookbook is broken up into two main sections - "Foundations" and "Example W
 ### Foundations
 The foundational content includes:
 - Start Here - Introduction to Landsat data
-- Data Ingestion - Demonstrating a method for loading and accessing Landsat data
+- Data Ingestion - Planetary Computer - Demonstrating a method for loading and accessing Landsat data from Microsoft's platform
+- Data Ingestion - Intake - Demonstrating approaches for data access using Intake
+- Preprocessing - Regrid - Demonstrating common preprocessing approaches such as regridding
 
 ### Example Workflows
 Example workflows include:
