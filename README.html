@@ -51,6 +51,8 @@ const thebe_selector_input = "pre"
 const thebe_selector_output = ".output, .cell_output"
 </script>
     <script async="async" src="_static/sphinx-thebe.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/require.js/2.3.4/require.min.js"></script>
+    <script src="https://unpkg.com/@jupyter-widgets/html-manager@^0.20.1/dist/embed-amd.js"></script>
     <link rel="shortcut icon" href="_static/favicon.ico"/>
     <link rel="index" title="Index" href="genindex.html" />
     <link rel="search" title="Search" href="search.html" />
@@ -199,6 +201,16 @@ const thebe_selector_output = ".output, .cell_output"
  <li class="toctree-l1">
   <a class="reference internal" href="notebooks/1.0_Data_Ingestion-Planetary_Computer.html">
    Data Ingestion - Microsoft Planetary Computer
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="notebooks/1.1_Data_Ingestion-Intake.html">
+   Data Ingestion - Intake
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="notebooks/2.0_Preprocessing.html">
+   Preprocessing - Regrid
   </a>
  </li>
 </ul>
@@ -369,7 +381,7 @@ All code in Pythia Cookbooks is licensed under Apache 2.0. All other non-code co
 <p>This Project Pythia Cookbook covers the essential materials for working with Landsat data in the context of machine learning workflows.</p>
 <div class="section" id="motivation">
 <h2>Motivation<a class="headerlink" href="#motivation" title="Permalink to this headline"><i class="fas fa-link"></i></a></h2>
-<p>Once you complete this cookbook, you will have the  skills to access and analyze Landsat data. You will also learn how to interactively visualize your data at every step in the process.</p>
+<p>Once you complete this cookbook, you will have the skills to access, resample, regrid, reshape, and rescale satellite data, as well as the foundation for applying machine learning to it. You will also learn how to interactively visualize your data at every step in the process.</p>
 </div>
 <div class="section" id="authors">
 <h2>Authors<a class="headerlink" href="#authors" title="Permalink to this headline"><i class="fas fa-link"></i></a></h2>
@@ -393,7 +405,9 @@ All code in Pythia Cookbooks is licensed under Apache 2.0. All other non-code co
 <p>The foundational content includes:</p>
 <ul class="simple">
 <li><p>Start Here - Introduction to Landsat data</p></li>
-<li><p>Data Ingestion - Demonstrating a method for loading and accessing Landsat data</p></li>
+<li><p>Data Ingestion - Planetary Computer - Demonstrating a method for loading and accessing Landsat data from Microsoft’s platform</p></li>
+<li><p>Data Ingestion - Intake - Demonstrating approaches for data access using Intake</p></li>
+<li><p>Preprocessing - Regrid - Demonstrating common preprocessing approaches such as regridding</p></li>
 </ul>
 </div>
 <div class="section" id="example-workflows">
