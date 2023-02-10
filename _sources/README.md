@@ -1,4 +1,4 @@
-<center><img src="./notebooks/images/nasa_landsat8.jpg" alt="Landsat 8"/></center>
+![Landsat 8](./notebooks/images/nasa_landsat8.jpg "Landsat 8")
 
 # Landsat ML Cookbook
 

@@ -355,7 +355,8 @@ All code in Pythia Cookbooks is licensed under Apache 2.0. All other non-code co
               
               <div>
                 
-  <center><img src="./images/nasa_landsat8.jpg" alt="Landsat 8"/></center><div class="tex2jax_ignore mathjax_ignore section" id="start-here-intro-to-landsat-data">
+  <p><img alt="Landsat8" src="../_images/nasa_landsat8.jpg" /></p>
+<div class="tex2jax_ignore mathjax_ignore section" id="start-here-intro-to-landsat-data">
 <h1>Start Here - Intro to Landsat Data<a class="headerlink" href="#start-here-intro-to-landsat-data" title="Permalink to this headline"><i class="fas fa-link"></i></a></h1>
 <hr class="docutils" />
 <div class="section" id="overview">
@@ -368,16 +369,10 @@ All code in Pythia Cookbooks is licensed under Apache 2.0. All other non-code co
 <div class="section" id="landsat-data">
 <h2>Landsat Data<a class="headerlink" href="#landsat-data" title="Permalink to this headline"><i class="fas fa-link"></i></a></h2>
 <p>The data in this cookbook originally come from the <a class="reference external" href="https://en.wikipedia.org/wiki/Landsat_program">Landsat</a> program, which is the longest record of moderate resolution multispectral data of the Earth’s surface. This program has launched several different satellites spanning many years which are designated as Landsat 1-9.</p>
-<center><img src = "images/landsat_timeline.png"></center>
-<p style="text-align: center">
-Source: USGS - <a href="https://www.usgs.gov/landsat-missions/landsat-satellite-missions">USGS Landsat Timeline</a>
-</p>
+<p><img alt="USGS Landsat Timeline" src="../_images/landsat_timeline.png" /></p>
 <p>When accessing the data, it’s important to keep in mind a couple key points. First, the instruments on different Landsat missions (1-9) varied in certain aspects. Second, Landsat data is available from multiple providers (USGS, NASA, Google, Microsoft, AWS, etc) but may vary in completeness and the level of processing applied. For the dataset that you end up using, it is crucial to review to relevant information from the particular data provider and the specific Landsat mission to understand the details, especially if you are comparing data across providers or missions.</p>
 <p>In general, a common aspect of Landsat data is the use of different wavelength-bands to capture multiple images of the same area - together providing much more information about different features on the ground than a single image alone. This provides us with a stack of images for each spatial region that we might be interested.</p>
-<center><img style="max-height:725px;" src = "images/nasa_bands.png"></center>
-<p style="text-align: center">
-Source: NASA - <a href="https://landsat.gsfc.nasa.gov/satellites/landsat-next/">Spectral Bands</a>
-</p>
+<p><img alt="Spectral Bands" src="../_images/nasa_bands.png" /></p>
 <p>Additionally, whenever we are looking at changes in satellite images over time, we will have an additional time dimension. For example, we will consider two stacks of images from different years to look at the change in the water level around a lake.</p>
 </div>
 <hr class="docutils" />
@@ -412,7 +407,7 @@ Source: NASA - <a href="https://landsat.gsfc.nasa.gov/satellites/landsat-next/">
             mode: "python"
         },
         kernelOptions: {
-            kernelName: "python3",
+            name: "python3",
             path: "./notebooks"
         },
         predefinedOutput: true
@@ -482,7 +477,7 @@ Source: NASA - <a href="https://landsat.gsfc.nasa.gov/satellites/landsat-next/">
         
           By Demetris Roumis.
         
-          Last updated on 7 February 2023.
+          Last updated on 10 February 2023.
         </p>
       </div>
     </div>
