@@ -27,6 +27,7 @@ dependencies:
   - numpy
   - cartopy
   - rasterio
+  - s3fs
   - jupyter-book
   - jupyterlab
   - jupyter_server<2
