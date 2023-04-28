@@ -31,6 +31,7 @@ dependencies:
   - jupyter-book
   - jupyterlab
   - jupyter_server<2
+  - pyopenssl>21
   - pip
   - pip:
       - sphinx-pythia-theme
