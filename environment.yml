@@ -19,7 +19,7 @@ dependencies:
   - colorcet
   - intake
   - intake-xarray
-  - xarray
+  - xarray<2023.04
   - bokeh
   - dask
   - dask-ml
@@ -31,7 +31,7 @@ dependencies:
   - jupyter-book
   - jupyterlab
   - jupyter_server<2
-  - pyopenssl>21
+  - pyopenssl>22
   - pip
   - pip:
       - sphinx-pythia-theme
