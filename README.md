@@ -2,6 +2,8 @@
 
 # Landsat ML Cookbook
 
+**IGNORE ME**
+
 [![nightly-build](https://github.com/ProjectPythia/landsat-ml-cookbook/actions/workflows/nightly-build.yaml/badge.svg)](https://github.com/ProjectPythia/landsat-ml-cookbook/actions/workflows/nightly-build.yaml)
 [![Binder](http://binder.mypythia.org/badge_logo.svg)](http://binder.mypythia.org/v2/gh/ProjectPythia/landsat-ml-cookbook/main?labpath=notebooks)
 
