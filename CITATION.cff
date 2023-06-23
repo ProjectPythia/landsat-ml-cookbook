@@ -5,6 +5,7 @@ authors:
   - family-names: Roumis
     given-names: Demetris
     website: https://github.com/droumis
+    orcid: https://orcid.org/0000-0003-4670-1657
   - name: "Landsat ML Cookbook contributors" # use the 'name' field to acknowledge organizations
     website: "https://github.com/ProjectPythia/landsat-ml-cookbook/graphs/contributors"
 title: "Landsat ML Cookbook"
