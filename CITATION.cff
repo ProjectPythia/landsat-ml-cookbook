@@ -1,0 +1,12 @@
+cff-version: 1.2.0
+message: "If you use this cookbook, please cite it as below."
+authors:
+  # add additional entries for each author -- see https://github.com/citation-file-format/citation-file-format/blob/main/schema-guide.md
+  - family-names: Roumis
+    given-names: Demetris
+    website: https://github.com/droumis
+    orcid: https://orcid.org/0000-0003-4670-1657
+  - name: "Landsat ML Cookbook contributors" # use the 'name' field to acknowledge organizations
+    website: "https://github.com/ProjectPythia/landsat-ml-cookbook/graphs/contributors"
+title: "Landsat ML Cookbook"
+abstract: "Machine learning on Landsat data."
