@@ -3,7 +3,9 @@
 # Landsat ML Cookbook
 
 [![nightly-build](https://github.com/ProjectPythia/landsat-ml-cookbook/actions/workflows/nightly-build.yaml/badge.svg)](https://github.com/ProjectPythia/landsat-ml-cookbook/actions/workflows/nightly-build.yaml)
-[![Binder](https://binder.projectpythia.org/badge_logo.svg)](https://binder.projectpythia.org/v2/gh/ProjectPythia/landsat-ml-cookbook/main?labpath=notebooks)
+[![Binder](http://binder.mypythia.org/badge_logo.svg)](http://binder.mypythia.org/v2/gh/ProjectPythia/landsat-ml-cookbook/main?labpath=notebooks)
+[![DOI](https://zenodo.org/badge/563445694.svg)](https://zenodo.org/badge/latestdoi/563445694)
+
 
 This Project Pythia Cookbook covers the essential materials for working with Landsat data in the context of machine learning workflows.
 

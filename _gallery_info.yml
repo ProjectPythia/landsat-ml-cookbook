@@ -1,0 +1,11 @@
+thumbnail: thumbnail.png
+tags:
+  domains: 
+    - satellite
+    - ml
+    - climate
+  packages: 
+    - hvPlot
+    - intake
+    - xarray
+    - dask

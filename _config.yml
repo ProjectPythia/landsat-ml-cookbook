@@ -4,21 +4,7 @@
 title: Landsat ML Cookbook
 author: Demetris Roumis
 logo: notebooks/images/logos/pythia_logo-white-rtext.svg
-email: projectpythia@ucar.edu
 copyright: '2022'
-
-description: Machine learning on Landsat data
-thumbnail: thumbnail.png
-tags:
-  domains: 
-    - satellite
-    - ml
-    - climate
-  packages: 
-    - hvPlot
-    - intake
-    - xarray
-    - dask
 
 execute:
   # To execute notebooks via a Binder instead, replace 'cache' with 'binder'
