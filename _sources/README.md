@@ -3,7 +3,7 @@
 # Landsat ML Cookbook
 
 [![nightly-build](https://github.com/ProjectPythia/landsat-ml-cookbook/actions/workflows/nightly-build.yaml/badge.svg)](https://github.com/ProjectPythia/landsat-ml-cookbook/actions/workflows/nightly-build.yaml)
-[![Binder](http://binder.mypythia.org/badge_logo.svg)](http://binder.mypythia.org/v2/gh/ProjectPythia/landsat-ml-cookbook/main?labpath=notebooks)
+[![Binder](http://binder.projectpythia.org/badge_logo.svg)](http://binder.projectpythia.org/v2/gh/ProjectPythia/landsat-ml-cookbook/main?labpath=notebooks)
 [![DOI](https://zenodo.org/badge/563445694.svg)](https://zenodo.org/badge/latestdoi/563445694)
 
 This Project Pythia Cookbook covers the essential materials for working with Landsat data in the context of machine learning workflows.
@@ -43,12 +43,12 @@ Example workflows include:
 - Spectral Clustering - Demonstrating a machine learning approach to cluster pixels of satellite data and comparing cluster results across time
 
 ## Running the Notebooks
-You can either run the notebook using [Binder](https://mybinder.org/) or on your local machine.
+You can either run the notebook using [Binder](https://binder.projectpythia.org/) or on your local machine.
 
 ### Running on Binder
 
 The simplest way to interact with a Jupyter Notebook is through
-[Binder](https://mybinder.org/), which enables the execution of a
+[Binder](https://binder.projectpythia.org/), which enables the execution of a
 [Jupyter Book](https://jupyterbook.org) in the cloud. The details of how this works are not
 important for now. All you need to know is how to launch a Pythia
 Cookbooks chapter via Binder. Simply navigate your mouse to
