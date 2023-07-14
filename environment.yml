@@ -14,13 +14,13 @@ dependencies:
   - ipykernel
   - hvplot
   - panel
-  - geoviews
+  - geoviews<1.10
   - datashader
   - colorcet
   - intake
-  - intake-xarray
-  - xarray<2023.04
-  - bokeh
+  - intake-xarray<0.7
+  - xarray=2023.04
+  - bokeh<3.0
   - dask
   - dask-ml
   - pandas
