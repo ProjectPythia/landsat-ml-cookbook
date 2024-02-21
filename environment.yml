@@ -26,12 +26,15 @@ dependencies:
   - pandas
   - numpy
   - cartopy
+  - rioxarray
   - rasterio
   - s3fs
   - jupyter-book
   - jupyterlab
   - jupyter_server<2
   - pyopenssl>22
+  - rioxarray
+  - adlfs
   - pip
   - pip:
       - sphinx-pythia-theme
