@@ -33,8 +33,11 @@ dependencies:
   - jupyterlab
   - jupyter_server<2
   - pyopenssl>22
-  - rioxarray
   - adlfs
   - pip
   - pip:
       - sphinx-pythia-theme
+      - stac_geoparquet
+      - dask_geopandas
+      - jupyter_bokeh
+      - pygeos
