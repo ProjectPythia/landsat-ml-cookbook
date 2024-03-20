@@ -426,86 +426,602 @@ const thebe_selector_output = ".output, .cell_output"
 </div>
 </div>
 <div class="cell_output docutils container">
-<div class="output traceback highlight-ipythontb notranslate"><div class="highlight"><pre><span></span><span class="gt">---------------------------------------------------------------------------</span>
-<span class="ne">ImportError</span><span class="g g-Whitespace">                               </span>Traceback (most recent call last)
-<span class="n">Cell</span> <span class="n">In</span><span class="p">[</span><span class="mi">1</span><span class="p">],</span> <span class="n">line</span> <span class="mi">2</span>
-<span class="g g-Whitespace">      </span><span class="mi">1</span> <span class="kn">import</span> <span class="nn">intake</span>
-<span class="ne">----&gt; </span><span class="mi">2</span> <span class="kn">import</span> <span class="nn">hvplot.xarray</span>
-<span class="g g-Whitespace">      </span><span class="mi">3</span> <span class="kn">import</span> <span class="nn">planetary_computer</span>
-<span class="g g-Whitespace">      </span><span class="mi">5</span> <span class="kn">import</span> <span class="nn">warnings</span>
+<script type="application/javascript">(function(root) {
+  function now() {
+    return new Date();
+  }
 
-<span class="n">File</span> <span class="o">~/</span><span class="n">miniconda3</span><span class="o">/</span><span class="n">envs</span><span class="o">/</span><span class="n">cookbook</span><span class="o">-</span><span class="n">dev</span><span class="o">/</span><span class="n">lib</span><span class="o">/</span><span class="n">python3</span><span class="mf">.10</span><span class="o">/</span><span class="n">site</span><span class="o">-</span><span class="n">packages</span><span class="o">/</span><span class="n">hvplot</span><span class="o">/</span><span class="fm">__init__</span><span class="o">.</span><span class="n">py</span><span class="p">:</span><span class="mi">64</span>
-<span class="g g-Whitespace">     </span><span class="mi">61</span> <span class="kn">import</span> <span class="nn">textwrap</span>
-<span class="g g-Whitespace">     </span><span class="mi">63</span> <span class="kn">import</span> <span class="nn">param</span>
-<span class="ne">---&gt; </span><span class="mi">64</span> <span class="kn">import</span> <span class="nn">panel</span> <span class="k">as</span> <span class="nn">_pn</span>
-<span class="g g-Whitespace">     </span><span class="mi">65</span> <span class="kn">import</span> <span class="nn">holoviews</span> <span class="k">as</span> <span class="nn">_hv</span>
-<span class="g g-Whitespace">     </span><span class="mi">67</span> <span class="kn">from</span> <span class="nn">holoviews</span> <span class="kn">import</span> <span class="n">Store</span><span class="p">,</span> <span class="n">render</span>  <span class="c1"># noqa</span>
+  var force = true;
+  var py_version = '3.3.4'.replace('rc', '-rc.').replace('.dev', '-dev.');
+  var reloading = false;
+  var Bokeh = root.Bokeh;
 
-<span class="n">File</span> <span class="o">~/</span><span class="n">miniconda3</span><span class="o">/</span><span class="n">envs</span><span class="o">/</span><span class="n">cookbook</span><span class="o">-</span><span class="n">dev</span><span class="o">/</span><span class="n">lib</span><span class="o">/</span><span class="n">python3</span><span class="mf">.10</span><span class="o">/</span><span class="n">site</span><span class="o">-</span><span class="n">packages</span><span class="o">/</span><span class="n">panel</span><span class="o">/</span><span class="fm">__init__</span><span class="o">.</span><span class="n">py</span><span class="p">:</span><span class="mi">48</span>
-<span class="g g-Whitespace">      </span><span class="mi">1</span><span class="w"> </span><span class="sd">&quot;&quot;&quot;</span>
-<span class="g g-Whitespace">      </span><span class="mi">2</span><span class="sd"> Panel is a high level app and dashboarding framework</span>
-<span class="g g-Whitespace">      </span><span class="mi">3</span><span class="sd"> ====================================================</span>
-<span class="sd">   (...)</span>
-<span class="g g-Whitespace">     </span><span class="mi">46</span><span class="sd"> https://panel.holoviz.org/getting_started/index.html</span>
-<span class="g g-Whitespace">     </span><span class="mi">47</span><span class="sd"> &quot;&quot;&quot;</span>
-<span class="ne">---&gt; </span><span class="mi">48</span> <span class="kn">from</span> <span class="nn">.</span> <span class="kn">import</span> <span class="n">layout</span>  <span class="c1"># noqa</span>
-<span class="g g-Whitespace">     </span><span class="mi">49</span> <span class="kn">from</span> <span class="nn">.</span> <span class="kn">import</span> <span class="n">links</span>  <span class="c1"># noqa</span>
-<span class="g g-Whitespace">     </span><span class="mi">50</span> <span class="kn">from</span> <span class="nn">.</span> <span class="kn">import</span> <span class="n">pane</span>  <span class="c1"># noqa</span>
+  if (typeof (root._bokeh_timeout) === "undefined" || force) {
+    root._bokeh_timeout = Date.now() + 5000;
+    root._bokeh_failed_load = false;
+  }
 
-<span class="n">File</span> <span class="o">~/</span><span class="n">miniconda3</span><span class="o">/</span><span class="n">envs</span><span class="o">/</span><span class="n">cookbook</span><span class="o">-</span><span class="n">dev</span><span class="o">/</span><span class="n">lib</span><span class="o">/</span><span class="n">python3</span><span class="mf">.10</span><span class="o">/</span><span class="n">site</span><span class="o">-</span><span class="n">packages</span><span class="o">/</span><span class="n">panel</span><span class="o">/</span><span class="n">layout</span><span class="o">/</span><span class="fm">__init__</span><span class="o">.</span><span class="n">py</span><span class="p">:</span><span class="mi">31</span>
-<span class="g g-Whitespace">      </span><span class="mi">1</span><span class="w"> </span><span class="sd">&quot;&quot;&quot;</span>
-<span class="g g-Whitespace">      </span><span class="mi">2</span><span class="sd"> Layout</span>
-<span class="g g-Whitespace">      </span><span class="mi">3</span><span class="sd"> ======</span>
-<span class="sd">   (...)</span>
-<span class="g g-Whitespace">     </span><span class="mi">29</span><span class="sd"> https://panel.holoviz.org/getting_started/index.html</span>
-<span class="g g-Whitespace">     </span><span class="mi">30</span><span class="sd"> &quot;&quot;&quot;</span>
-<span class="ne">---&gt; </span><span class="mi">31</span> <span class="kn">from</span> <span class="nn">.accordion</span> <span class="kn">import</span> <span class="n">Accordion</span>  <span class="c1"># noqa</span>
-<span class="g g-Whitespace">     </span><span class="mi">32</span> <span class="kn">from</span> <span class="nn">.base</span> <span class="kn">import</span> <span class="p">(</span>  <span class="c1"># noqa</span>
-<span class="g g-Whitespace">     </span><span class="mi">33</span>     <span class="n">Column</span><span class="p">,</span> <span class="n">ListLike</span><span class="p">,</span> <span class="n">ListPanel</span><span class="p">,</span> <span class="n">Panel</span><span class="p">,</span> <span class="n">Row</span><span class="p">,</span> <span class="n">WidgetBox</span><span class="p">,</span>
-<span class="g g-Whitespace">     </span><span class="mi">34</span> <span class="p">)</span>
-<span class="g g-Whitespace">     </span><span class="mi">35</span> <span class="kn">from</span> <span class="nn">.card</span> <span class="kn">import</span> <span class="n">Card</span>  <span class="c1"># noqa</span>
+  function run_callbacks() {
+    try {
+      root._bokeh_onload_callbacks.forEach(function(callback) {
+        if (callback != null)
+          callback();
+      });
+    } finally {
+      delete root._bokeh_onload_callbacks;
+    }
+    console.debug("Bokeh: all callbacks have finished");
+  }
 
-<span class="n">File</span> <span class="o">~/</span><span class="n">miniconda3</span><span class="o">/</span><span class="n">envs</span><span class="o">/</span><span class="n">cookbook</span><span class="o">-</span><span class="n">dev</span><span class="o">/</span><span class="n">lib</span><span class="o">/</span><span class="n">python3</span><span class="mf">.10</span><span class="o">/</span><span class="n">site</span><span class="o">-</span><span class="n">packages</span><span class="o">/</span><span class="n">panel</span><span class="o">/</span><span class="n">layout</span><span class="o">/</span><span class="n">accordion</span><span class="o">.</span><span class="n">py</span><span class="p">:</span><span class="mi">9</span>
-<span class="g g-Whitespace">      </span><span class="mi">5</span> <span class="kn">import</span> <span class="nn">param</span>
-<span class="g g-Whitespace">      </span><span class="mi">7</span> <span class="kn">from</span> <span class="nn">bokeh.models</span> <span class="kn">import</span> <span class="n">Column</span> <span class="k">as</span> <span class="n">BkColumn</span><span class="p">,</span> <span class="n">CustomJS</span>
-<span class="ne">----&gt; </span><span class="mi">9</span> <span class="kn">from</span> <span class="nn">.base</span> <span class="kn">import</span> <span class="n">NamedListPanel</span>
-<span class="g g-Whitespace">     </span><span class="mi">10</span> <span class="kn">from</span> <span class="nn">.card</span> <span class="kn">import</span> <span class="n">Card</span>
-<span class="g g-Whitespace">     </span><span class="mi">12</span> <span class="k">if</span> <span class="n">TYPE_CHECKING</span><span class="p">:</span>
+  function load_libs(css_urls, js_urls, js_modules, js_exports, callback) {
+    if (css_urls == null) css_urls = [];
+    if (js_urls == null) js_urls = [];
+    if (js_modules == null) js_modules = [];
+    if (js_exports == null) js_exports = {};
 
-<span class="n">File</span> <span class="o">~/</span><span class="n">miniconda3</span><span class="o">/</span><span class="n">envs</span><span class="o">/</span><span class="n">cookbook</span><span class="o">-</span><span class="n">dev</span><span class="o">/</span><span class="n">lib</span><span class="o">/</span><span class="n">python3</span><span class="mf">.10</span><span class="o">/</span><span class="n">site</span><span class="o">-</span><span class="n">packages</span><span class="o">/</span><span class="n">panel</span><span class="o">/</span><span class="n">layout</span><span class="o">/</span><span class="n">base</span><span class="o">.</span><span class="n">py</span><span class="p">:</span><span class="mi">17</span>
-<span class="g g-Whitespace">     </span><span class="mi">13</span> <span class="kn">import</span> <span class="nn">param</span>
-<span class="g g-Whitespace">     </span><span class="mi">15</span> <span class="kn">from</span> <span class="nn">bokeh.models</span> <span class="kn">import</span> <span class="n">Column</span> <span class="k">as</span> <span class="n">BkColumn</span><span class="p">,</span> <span class="n">Row</span> <span class="k">as</span> <span class="n">BkRow</span>
-<span class="ne">---&gt; </span><span class="mi">17</span> <span class="kn">from</span> <span class="nn">..io.model</span> <span class="kn">import</span> <span class="n">hold</span>
-<span class="g g-Whitespace">     </span><span class="mi">18</span> <span class="kn">from</span> <span class="nn">..io.state</span> <span class="kn">import</span> <span class="n">state</span>
-<span class="g g-Whitespace">     </span><span class="mi">19</span> <span class="kn">from</span> <span class="nn">..reactive</span> <span class="kn">import</span> <span class="n">Reactive</span>
+    root._bokeh_onload_callbacks.push(callback);
 
-<span class="n">File</span> <span class="o">~/</span><span class="n">miniconda3</span><span class="o">/</span><span class="n">envs</span><span class="o">/</span><span class="n">cookbook</span><span class="o">-</span><span class="n">dev</span><span class="o">/</span><span class="n">lib</span><span class="o">/</span><span class="n">python3</span><span class="mf">.10</span><span class="o">/</span><span class="n">site</span><span class="o">-</span><span class="n">packages</span><span class="o">/</span><span class="n">panel</span><span class="o">/</span><span class="n">io</span><span class="o">/</span><span class="fm">__init__</span><span class="o">.</span><span class="n">py</span><span class="p">:</span><span class="mi">9</span>
-<span class="g g-Whitespace">      </span><span class="mi">7</span> <span class="kn">from</span> <span class="nn">.cache</span> <span class="kn">import</span> <span class="n">cache</span>  <span class="c1"># noqa</span>
-<span class="g g-Whitespace">      </span><span class="mi">8</span> <span class="kn">from</span> <span class="nn">.callbacks</span> <span class="kn">import</span> <span class="n">PeriodicCallback</span>  <span class="c1"># noqa</span>
-<span class="ne">----&gt; </span><span class="mi">9</span> <span class="kn">from</span> <span class="nn">.document</span> <span class="kn">import</span> <span class="n">init_doc</span><span class="p">,</span> <span class="n">unlocked</span><span class="p">,</span> <span class="n">with_lock</span>  <span class="c1"># noqa</span>
-<span class="g g-Whitespace">     </span><span class="mi">10</span> <span class="kn">from</span> <span class="nn">.embed</span> <span class="kn">import</span> <span class="n">embed_state</span>  <span class="c1"># noqa</span>
-<span class="g g-Whitespace">     </span><span class="mi">11</span> <span class="kn">from</span> <span class="nn">.logging</span> <span class="kn">import</span> <span class="n">panel_logger</span>  <span class="c1"># noqa</span>
+    if (root._bokeh_is_loading > 0) {
+      console.debug("Bokeh: BokehJS is being loaded, scheduling callback at", now());
+      return null;
+    }
+    if (js_urls.length === 0 && js_modules.length === 0 && Object.keys(js_exports).length === 0) {
+      run_callbacks();
+      return null;
+    }
+    if (!reloading) {
+      console.debug("Bokeh: BokehJS not loaded, scheduling load and callback at", now());
+    }
 
-<span class="n">File</span> <span class="o">~/</span><span class="n">miniconda3</span><span class="o">/</span><span class="n">envs</span><span class="o">/</span><span class="n">cookbook</span><span class="o">-</span><span class="n">dev</span><span class="o">/</span><span class="n">lib</span><span class="o">/</span><span class="n">python3</span><span class="mf">.10</span><span class="o">/</span><span class="n">site</span><span class="o">-</span><span class="n">packages</span><span class="o">/</span><span class="n">panel</span><span class="o">/</span><span class="n">io</span><span class="o">/</span><span class="n">document</span><span class="o">.</span><span class="n">py</span><span class="p">:</span><span class="mi">20</span>
-<span class="g g-Whitespace">     </span><span class="mi">17</span> <span class="kn">from</span> <span class="nn">bokeh.document.document</span> <span class="kn">import</span> <span class="n">Document</span>
-<span class="g g-Whitespace">     </span><span class="mi">18</span> <span class="kn">from</span> <span class="nn">bokeh.document.events</span> <span class="kn">import</span> <span class="n">DocumentChangedEvent</span><span class="p">,</span> <span class="n">ModelChangedEvent</span>
-<span class="ne">---&gt; </span><span class="mi">20</span> <span class="kn">from</span> <span class="nn">.model</span> <span class="kn">import</span> <span class="n">monkeypatch_events</span>
-<span class="g g-Whitespace">     </span><span class="mi">21</span> <span class="kn">from</span> <span class="nn">.state</span> <span class="kn">import</span> <span class="n">curdoc_locked</span><span class="p">,</span> <span class="n">state</span>
-<span class="g g-Whitespace">     </span><span class="mi">23</span> <span class="n">logger</span> <span class="o">=</span> <span class="n">logging</span><span class="o">.</span><span class="n">getLogger</span><span class="p">(</span><span class="vm">__name__</span><span class="p">)</span>
+    function on_load() {
+      root._bokeh_is_loading--;
+      if (root._bokeh_is_loading === 0) {
+        console.debug("Bokeh: all BokehJS libraries/stylesheets loaded");
+        run_callbacks()
+      }
+    }
+    window._bokeh_on_load = on_load
 
-<span class="n">File</span> <span class="o">~/</span><span class="n">miniconda3</span><span class="o">/</span><span class="n">envs</span><span class="o">/</span><span class="n">cookbook</span><span class="o">-</span><span class="n">dev</span><span class="o">/</span><span class="n">lib</span><span class="o">/</span><span class="n">python3</span><span class="mf">.10</span><span class="o">/</span><span class="n">site</span><span class="o">-</span><span class="n">packages</span><span class="o">/</span><span class="n">panel</span><span class="o">/</span><span class="n">io</span><span class="o">/</span><span class="n">model</span><span class="o">.</span><span class="n">py</span><span class="p">:</span><span class="mi">20</span>
-<span class="g g-Whitespace">     </span><span class="mi">16</span> <span class="kn">from</span> <span class="nn">bokeh.document.events</span> <span class="kn">import</span> <span class="p">(</span>
-<span class="g g-Whitespace">     </span><span class="mi">17</span>     <span class="n">ColumnDataChangedEvent</span><span class="p">,</span> <span class="n">DocumentPatchedEvent</span><span class="p">,</span> <span class="n">ModelChangedEvent</span><span class="p">,</span>
-<span class="g g-Whitespace">     </span><span class="mi">18</span> <span class="p">)</span>
-<span class="g g-Whitespace">     </span><span class="mi">19</span> <span class="kn">from</span> <span class="nn">bokeh.model</span> <span class="kn">import</span> <span class="n">DataModel</span>
-<span class="ne">---&gt; </span><span class="mi">20</span> <span class="kn">from</span> <span class="nn">bokeh.models</span> <span class="kn">import</span> <span class="n">Box</span><span class="p">,</span> <span class="n">ColumnDataSource</span><span class="p">,</span> <span class="n">Model</span>
-<span class="g g-Whitespace">     </span><span class="mi">21</span> <span class="kn">from</span> <span class="nn">bokeh.protocol</span> <span class="kn">import</span> <span class="n">Protocol</span>
-<span class="g g-Whitespace">     </span><span class="mi">22</span> <span class="kn">from</span> <span class="nn">typing_extensions</span> <span class="kn">import</span> <span class="n">Literal</span>
+    function on_error() {
+      console.error("failed to load " + url);
+    }
 
-<span class="ne">ImportError</span>: cannot import name &#39;Box&#39; from &#39;bokeh.models&#39; (/home/runner/miniconda3/envs/cookbook-dev/lib/python3.10/site-packages/bokeh/models/__init__.py)
-</pre></div>
+    var skip = [];
+    if (window.requirejs) {
+      window.requirejs.config({'packages': {}, 'paths': {'jspanel': 'https://cdn.jsdelivr.net/npm/jspanel4@4.12.0/dist/jspanel', 'jspanel-modal': 'https://cdn.jsdelivr.net/npm/jspanel4@4.12.0/dist/extensions/modal/jspanel.modal', 'jspanel-tooltip': 'https://cdn.jsdelivr.net/npm/jspanel4@4.12.0/dist/extensions/tooltip/jspanel.tooltip', 'jspanel-hint': 'https://cdn.jsdelivr.net/npm/jspanel4@4.12.0/dist/extensions/hint/jspanel.hint', 'jspanel-layout': 'https://cdn.jsdelivr.net/npm/jspanel4@4.12.0/dist/extensions/layout/jspanel.layout', 'jspanel-contextmenu': 'https://cdn.jsdelivr.net/npm/jspanel4@4.12.0/dist/extensions/contextmenu/jspanel.contextmenu', 'jspanel-dock': 'https://cdn.jsdelivr.net/npm/jspanel4@4.12.0/dist/extensions/dock/jspanel.dock', 'gridstack': 'https://cdn.jsdelivr.net/npm/gridstack@7.2.3/dist/gridstack-all', 'notyf': 'https://cdn.jsdelivr.net/npm/notyf@3/notyf.min'}, 'shim': {'jspanel': {'exports': 'jsPanel'}, 'gridstack': {'exports': 'GridStack'}}});
+      require(["jspanel"], function(jsPanel) {
+	window.jsPanel = jsPanel
+	on_load()
+      })
+      require(["jspanel-modal"], function() {
+	on_load()
+      })
+      require(["jspanel-tooltip"], function() {
+	on_load()
+      })
+      require(["jspanel-hint"], function() {
+	on_load()
+      })
+      require(["jspanel-layout"], function() {
+	on_load()
+      })
+      require(["jspanel-contextmenu"], function() {
+	on_load()
+      })
+      require(["jspanel-dock"], function() {
+	on_load()
+      })
+      require(["gridstack"], function(GridStack) {
+	window.GridStack = GridStack
+	on_load()
+      })
+      require(["notyf"], function() {
+	on_load()
+      })
+      root._bokeh_is_loading = css_urls.length + 9;
+    } else {
+      root._bokeh_is_loading = css_urls.length + js_urls.length + js_modules.length + Object.keys(js_exports).length;
+    }
+
+    var existing_stylesheets = []
+    var links = document.getElementsByTagName('link')
+    for (var i = 0; i < links.length; i++) {
+      var link = links[i]
+      if (link.href != null) {
+	existing_stylesheets.push(link.href)
+      }
+    }
+    for (var i = 0; i < css_urls.length; i++) {
+      var url = css_urls[i];
+      if (existing_stylesheets.indexOf(url) !== -1) {
+	on_load()
+	continue;
+      }
+      const element = document.createElement("link");
+      element.onload = on_load;
+      element.onerror = on_error;
+      element.rel = "stylesheet";
+      element.type = "text/css";
+      element.href = url;
+      console.debug("Bokeh: injecting link tag for BokehJS stylesheet: ", url);
+      document.body.appendChild(element);
+    }    if (((window['jsPanel'] !== undefined) && (!(window['jsPanel'] instanceof HTMLElement))) || window.requirejs) {
+      var urls = ['https://cdn.holoviz.org/panel/1.3.8/dist/bundled/floatpanel/jspanel4@4.12.0/dist/jspanel.js', 'https://cdn.holoviz.org/panel/1.3.8/dist/bundled/floatpanel/jspanel4@4.12.0/dist/extensions/modal/jspanel.modal.js', 'https://cdn.holoviz.org/panel/1.3.8/dist/bundled/floatpanel/jspanel4@4.12.0/dist/extensions/tooltip/jspanel.tooltip.js', 'https://cdn.holoviz.org/panel/1.3.8/dist/bundled/floatpanel/jspanel4@4.12.0/dist/extensions/hint/jspanel.hint.js', 'https://cdn.holoviz.org/panel/1.3.8/dist/bundled/floatpanel/jspanel4@4.12.0/dist/extensions/layout/jspanel.layout.js', 'https://cdn.holoviz.org/panel/1.3.8/dist/bundled/floatpanel/jspanel4@4.12.0/dist/extensions/contextmenu/jspanel.contextmenu.js', 'https://cdn.holoviz.org/panel/1.3.8/dist/bundled/floatpanel/jspanel4@4.12.0/dist/extensions/dock/jspanel.dock.js'];
+      for (var i = 0; i < urls.length; i++) {
+        skip.push(urls[i])
+      }
+    }    if (((window['GridStack'] !== undefined) && (!(window['GridStack'] instanceof HTMLElement))) || window.requirejs) {
+      var urls = ['https://cdn.holoviz.org/panel/1.3.8/dist/bundled/gridstack/gridstack@7.2.3/dist/gridstack-all.js'];
+      for (var i = 0; i < urls.length; i++) {
+        skip.push(urls[i])
+      }
+    }    if (((window['Notyf'] !== undefined) && (!(window['Notyf'] instanceof HTMLElement))) || window.requirejs) {
+      var urls = ['https://cdn.holoviz.org/panel/1.3.8/dist/bundled/notificationarea/notyf@3/notyf.min.js'];
+      for (var i = 0; i < urls.length; i++) {
+        skip.push(urls[i])
+      }
+    }    var existing_scripts = []
+    var scripts = document.getElementsByTagName('script')
+    for (var i = 0; i < scripts.length; i++) {
+      var script = scripts[i]
+      if (script.src != null) {
+	existing_scripts.push(script.src)
+      }
+    }
+    for (var i = 0; i < js_urls.length; i++) {
+      var url = js_urls[i];
+      if (skip.indexOf(url) !== -1 || existing_scripts.indexOf(url) !== -1) {
+	if (!window.requirejs) {
+	  on_load();
+	}
+	continue;
+      }
+      var element = document.createElement('script');
+      element.onload = on_load;
+      element.onerror = on_error;
+      element.async = false;
+      element.src = url;
+      console.debug("Bokeh: injecting script tag for BokehJS library: ", url);
+      document.head.appendChild(element);
+    }
+    for (var i = 0; i < js_modules.length; i++) {
+      var url = js_modules[i];
+      if (skip.indexOf(url) !== -1 || existing_scripts.indexOf(url) !== -1) {
+	if (!window.requirejs) {
+	  on_load();
+	}
+	continue;
+      }
+      var element = document.createElement('script');
+      element.onload = on_load;
+      element.onerror = on_error;
+      element.async = false;
+      element.src = url;
+      element.type = "module";
+      console.debug("Bokeh: injecting script tag for BokehJS library: ", url);
+      document.head.appendChild(element);
+    }
+    for (const name in js_exports) {
+      var url = js_exports[name];
+      if (skip.indexOf(url) >= 0 || root[name] != null) {
+	if (!window.requirejs) {
+	  on_load();
+	}
+	continue;
+      }
+      var element = document.createElement('script');
+      element.onerror = on_error;
+      element.async = false;
+      element.type = "module";
+      console.debug("Bokeh: injecting script tag for BokehJS library: ", url);
+      element.textContent = `
+      import ${name} from "${url}"
+      window.${name} = ${name}
+      window._bokeh_on_load()
+      `
+      document.head.appendChild(element);
+    }
+    if (!js_urls.length && !js_modules.length) {
+      on_load()
+    }
+  };
+
+  function inject_raw_css(css) {
+    const element = document.createElement("style");
+    element.appendChild(document.createTextNode(css));
+    document.body.appendChild(element);
+  }
+
+  var js_urls = ["https://cdn.bokeh.org/bokeh/release/bokeh-3.3.4.min.js", "https://cdn.bokeh.org/bokeh/release/bokeh-gl-3.3.4.min.js", "https://cdn.bokeh.org/bokeh/release/bokeh-widgets-3.3.4.min.js", "https://cdn.bokeh.org/bokeh/release/bokeh-tables-3.3.4.min.js", "https://cdn.holoviz.org/panel/1.3.8/dist/panel.min.js"];
+  var js_modules = [];
+  var js_exports = {};
+  var css_urls = [];
+  var inline_js = [    function(Bokeh) {
+      Bokeh.set_log_level("info");
+    },
+function(Bokeh) {} // ensure no trailing comma for IE
+  ];
+
+  function run_inline_js() {
+    if ((root.Bokeh !== undefined) || (force === true)) {
+      for (var i = 0; i < inline_js.length; i++) {
+	try {
+          inline_js[i].call(root, root.Bokeh);
+	} catch(e) {
+	  if (!reloading) {
+	    throw e;
+	  }
+	}
+      }
+      // Cache old bokeh versions
+      if (Bokeh != undefined && !reloading) {
+	var NewBokeh = root.Bokeh;
+	if (Bokeh.versions === undefined) {
+	  Bokeh.versions = new Map();
+	}
+	if (NewBokeh.version !== Bokeh.version) {
+	  Bokeh.versions.set(NewBokeh.version, NewBokeh)
+	}
+	root.Bokeh = Bokeh;
+      }} else if (Date.now() < root._bokeh_timeout) {
+      setTimeout(run_inline_js, 100);
+    } else if (!root._bokeh_failed_load) {
+      console.log("Bokeh: BokehJS failed to load within specified timeout.");
+      root._bokeh_failed_load = true;
+    }
+    root._bokeh_is_initializing = false
+  }
+
+  function load_or_wait() {
+    // Implement a backoff loop that tries to ensure we do not load multiple
+    // versions of Bokeh and its dependencies at the same time.
+    // In recent versions we use the root._bokeh_is_initializing flag
+    // to determine whether there is an ongoing attempt to initialize
+    // bokeh, however for backward compatibility we also try to ensure
+    // that we do not start loading a newer (Panel>=1.0 and Bokeh>3) version
+    // before older versions are fully initialized.
+    if (root._bokeh_is_initializing && Date.now() > root._bokeh_timeout) {
+      root._bokeh_is_initializing = false;
+      root._bokeh_onload_callbacks = undefined;
+      console.log("Bokeh: BokehJS was loaded multiple times but one version failed to initialize.");
+      load_or_wait();
+    } else if (root._bokeh_is_initializing || (typeof root._bokeh_is_initializing === "undefined" && root._bokeh_onload_callbacks !== undefined)) {
+      setTimeout(load_or_wait, 100);
+    } else {
+      root._bokeh_is_initializing = true
+      root._bokeh_onload_callbacks = []
+      var bokeh_loaded = Bokeh != null && (Bokeh.version === py_version || (Bokeh.versions !== undefined && Bokeh.versions.has(py_version)));
+      if (!reloading && !bokeh_loaded) {
+	root.Bokeh = undefined;
+      }
+      load_libs(css_urls, js_urls, js_modules, js_exports, function() {
+	console.debug("Bokeh: BokehJS plotting callback run at", now());
+	run_inline_js();
+      });
+    }
+  }
+  // Give older versions of the autoload script a head-start to ensure
+  // they initialize before we start loading newer version.
+  setTimeout(load_or_wait, 100)
+}(window));</script><script type="application/javascript">
+if ((window.PyViz === undefined) || (window.PyViz instanceof HTMLElement)) {
+  window.PyViz = {comms: {}, comm_status:{}, kernels:{}, receivers: {}, plot_index: []}
+}
+
+
+    function JupyterCommManager() {
+    }
+
+    JupyterCommManager.prototype.register_target = function(plot_id, comm_id, msg_handler) {
+      if (window.comm_manager || ((window.Jupyter !== undefined) && (Jupyter.notebook.kernel != null))) {
+        var comm_manager = window.comm_manager || Jupyter.notebook.kernel.comm_manager;
+        comm_manager.register_target(comm_id, function(comm) {
+          comm.on_msg(msg_handler);
+        });
+      } else if ((plot_id in window.PyViz.kernels) && (window.PyViz.kernels[plot_id])) {
+        window.PyViz.kernels[plot_id].registerCommTarget(comm_id, function(comm) {
+          comm.onMsg = msg_handler;
+        });
+      } else if (typeof google != 'undefined' && google.colab.kernel != null) {
+        google.colab.kernel.comms.registerTarget(comm_id, (comm) => {
+          var messages = comm.messages[Symbol.asyncIterator]();
+          function processIteratorResult(result) {
+            var message = result.value;
+            console.log(message)
+            var content = {data: message.data, comm_id};
+            var buffers = []
+            for (var buffer of message.buffers || []) {
+              buffers.push(new DataView(buffer))
+            }
+            var metadata = message.metadata || {};
+            var msg = {content, buffers, metadata}
+            msg_handler(msg);
+            return messages.next().then(processIteratorResult);
+          }
+          return messages.next().then(processIteratorResult);
+        })
+      }
+    }
+
+    JupyterCommManager.prototype.get_client_comm = function(plot_id, comm_id, msg_handler) {
+      if (comm_id in window.PyViz.comms) {
+        return window.PyViz.comms[comm_id];
+      } else if (window.comm_manager || ((window.Jupyter !== undefined) && (Jupyter.notebook.kernel != null))) {
+        var comm_manager = window.comm_manager || Jupyter.notebook.kernel.comm_manager;
+        var comm = comm_manager.new_comm(comm_id, {}, {}, {}, comm_id);
+        if (msg_handler) {
+          comm.on_msg(msg_handler);
+        }
+      } else if ((plot_id in window.PyViz.kernels) && (window.PyViz.kernels[plot_id])) {
+        var comm = window.PyViz.kernels[plot_id].connectToComm(comm_id);
+        comm.open();
+        if (msg_handler) {
+          comm.onMsg = msg_handler;
+        }
+      } else if (typeof google != 'undefined' && google.colab.kernel != null) {
+        var comm_promise = google.colab.kernel.comms.open(comm_id)
+        comm_promise.then((comm) => {
+          window.PyViz.comms[comm_id] = comm;
+          if (msg_handler) {
+            var messages = comm.messages[Symbol.asyncIterator]();
+            function processIteratorResult(result) {
+              var message = result.value;
+              var content = {data: message.data};
+              var metadata = message.metadata || {comm_id};
+              var msg = {content, metadata}
+              msg_handler(msg);
+              return messages.next().then(processIteratorResult);
+            }
+            return messages.next().then(processIteratorResult);
+          }
+        }) 
+        var sendClosure = (data, metadata, buffers, disposeOnDone) => {
+          return comm_promise.then((comm) => {
+            comm.send(data, metadata, buffers, disposeOnDone);
+          });
+        };
+        var comm = {
+          send: sendClosure
+        };
+      }
+      window.PyViz.comms[comm_id] = comm;
+      return comm;
+    }
+    window.PyViz.comm_manager = new JupyterCommManager();
+    
+
+
+var JS_MIME_TYPE = 'application/javascript';
+var HTML_MIME_TYPE = 'text/html';
+var EXEC_MIME_TYPE = 'application/vnd.holoviews_exec.v0+json';
+var CLASS_NAME = 'output';
+
+/**
+ * Render data to the DOM node
+ */
+function render(props, node) {
+  var div = document.createElement("div");
+  var script = document.createElement("script");
+  node.appendChild(div);
+  node.appendChild(script);
+}
+
+/**
+ * Handle when a new output is added
+ */
+function handle_add_output(event, handle) {
+  var output_area = handle.output_area;
+  var output = handle.output;
+  if ((output.data == undefined) || (!output.data.hasOwnProperty(EXEC_MIME_TYPE))) {
+    return
+  }
+  var id = output.metadata[EXEC_MIME_TYPE]["id"];
+  var toinsert = output_area.element.find("." + CLASS_NAME.split(' ')[0]);
+  if (id !== undefined) {
+    var nchildren = toinsert.length;
+    var html_node = toinsert[nchildren-1].children[0];
+    html_node.innerHTML = output.data[HTML_MIME_TYPE];
+    var scripts = [];
+    var nodelist = html_node.querySelectorAll("script");
+    for (var i in nodelist) {
+      if (nodelist.hasOwnProperty(i)) {
+        scripts.push(nodelist[i])
+      }
+    }
+
+    scripts.forEach( function (oldScript) {
+      var newScript = document.createElement("script");
+      var attrs = [];
+      var nodemap = oldScript.attributes;
+      for (var j in nodemap) {
+        if (nodemap.hasOwnProperty(j)) {
+          attrs.push(nodemap[j])
+        }
+      }
+      attrs.forEach(function(attr) { newScript.setAttribute(attr.name, attr.value) });
+      newScript.appendChild(document.createTextNode(oldScript.innerHTML));
+      oldScript.parentNode.replaceChild(newScript, oldScript);
+    });
+    if (JS_MIME_TYPE in output.data) {
+      toinsert[nchildren-1].children[1].textContent = output.data[JS_MIME_TYPE];
+    }
+    output_area._hv_plot_id = id;
+    if ((window.Bokeh !== undefined) && (id in Bokeh.index)) {
+      window.PyViz.plot_index[id] = Bokeh.index[id];
+    } else {
+      window.PyViz.plot_index[id] = null;
+    }
+  } else if (output.metadata[EXEC_MIME_TYPE]["server_id"] !== undefined) {
+    var bk_div = document.createElement("div");
+    bk_div.innerHTML = output.data[HTML_MIME_TYPE];
+    var script_attrs = bk_div.children[0].attributes;
+    for (var i = 0; i < script_attrs.length; i++) {
+      toinsert[toinsert.length - 1].childNodes[1].setAttribute(script_attrs[i].name, script_attrs[i].value);
+    }
+    // store reference to server id on output_area
+    output_area._bokeh_server_id = output.metadata[EXEC_MIME_TYPE]["server_id"];
+  }
+}
+
+/**
+ * Handle when an output is cleared or removed
+ */
+function handle_clear_output(event, handle) {
+  var id = handle.cell.output_area._hv_plot_id;
+  var server_id = handle.cell.output_area._bokeh_server_id;
+  if (((id === undefined) || !(id in PyViz.plot_index)) && (server_id !== undefined)) { return; }
+  var comm = window.PyViz.comm_manager.get_client_comm("hv-extension-comm", "hv-extension-comm", function () {});
+  if (server_id !== null) {
+    comm.send({event_type: 'server_delete', 'id': server_id});
+    return;
+  } else if (comm !== null) {
+    comm.send({event_type: 'delete', 'id': id});
+  }
+  delete PyViz.plot_index[id];
+  if ((window.Bokeh !== undefined) & (id in window.Bokeh.index)) {
+    var doc = window.Bokeh.index[id].model.document
+    doc.clear();
+    const i = window.Bokeh.documents.indexOf(doc);
+    if (i > -1) {
+      window.Bokeh.documents.splice(i, 1);
+    }
+  }
+}
+
+/**
+ * Handle kernel restart event
+ */
+function handle_kernel_cleanup(event, handle) {
+  delete PyViz.comms["hv-extension-comm"];
+  window.PyViz.plot_index = {}
+}
+
+/**
+ * Handle update_display_data messages
+ */
+function handle_update_output(event, handle) {
+  handle_clear_output(event, {cell: {output_area: handle.output_area}})
+  handle_add_output(event, handle)
+}
+
+function register_renderer(events, OutputArea) {
+  function append_mime(data, metadata, element) {
+    // create a DOM node to render to
+    var toinsert = this.create_output_subarea(
+    metadata,
+    CLASS_NAME,
+    EXEC_MIME_TYPE
+    );
+    this.keyboard_manager.register_events(toinsert);
+    // Render to node
+    var props = {data: data, metadata: metadata[EXEC_MIME_TYPE]};
+    render(props, toinsert[0]);
+    element.append(toinsert);
+    return toinsert
+  }
+
+  events.on('output_added.OutputArea', handle_add_output);
+  events.on('output_updated.OutputArea', handle_update_output);
+  events.on('clear_output.CodeCell', handle_clear_output);
+  events.on('delete.Cell', handle_clear_output);
+  events.on('kernel_ready.Kernel', handle_kernel_cleanup);
+
+  OutputArea.prototype.register_mime_type(EXEC_MIME_TYPE, append_mime, {
+    safe: true,
+    index: 0
+  });
+}
+
+if (window.Jupyter !== undefined) {
+  try {
+    var events = require('base/js/events');
+    var OutputArea = require('notebook/js/outputarea').OutputArea;
+    if (OutputArea.prototype.mime_types().indexOf(EXEC_MIME_TYPE) == -1) {
+      register_renderer(events, OutputArea);
+    }
+  } catch(err) {
+  }
+}
+</script><div class="output text_html"><style>*[data-root-id],
+*[data-root-id] > * {
+  box-sizing: border-box;
+  font-family: var(--jp-ui-font-family);
+  font-size: var(--jp-ui-font-size1);
+  color: var(--vscode-editor-foreground, var(--jp-ui-font-color1));
+}
+
+/* Override VSCode background color */
+.cell-output-ipywidget-background:has(
+    > .cell-output-ipywidget-background > .lm-Widget > *[data-root-id]
+  ),
+.cell-output-ipywidget-background:has(> .lm-Widget > *[data-root-id]) {
+  background-color: transparent !important;
+}
+</style></div><div class="output text_html"><div id='p1002'>
+  <div id="e2b99a22-3903-4353-9b90-9c03eeebaa90" data-root-id="p1002" style="display: contents;"></div>
 </div>
-</div>
+<script type="application/javascript">(function(root) {
+  var docs_json = {"e0af15ef-9872-4a1e-999d-3845fe97bbd3":{"version":"3.3.4","title":"Bokeh Application","roots":[{"type":"object","name":"panel.models.browser.BrowserInfo","id":"p1002"},{"type":"object","name":"panel.models.comm_manager.CommManager","id":"p1003","attributes":{"plot_id":"p1002","comm_id":"b169a89672154c50a8365b689c83b245","client_comm_id":"5f9817f1d65f43e4a4739de899cf7d8c"}}],"defs":[{"type":"model","name":"ReactiveHTML1"},{"type":"model","name":"FlexBox1","properties":[{"name":"align_content","kind":"Any","default":"flex-start"},{"name":"align_items","kind":"Any","default":"flex-start"},{"name":"flex_direction","kind":"Any","default":"row"},{"name":"flex_wrap","kind":"Any","default":"wrap"},{"name":"justify_content","kind":"Any","default":"flex-start"}]},{"type":"model","name":"FloatPanel1","properties":[{"name":"config","kind":"Any","default":{"type":"map"}},{"name":"contained","kind":"Any","default":true},{"name":"position","kind":"Any","default":"right-top"},{"name":"offsetx","kind":"Any","default":null},{"name":"offsety","kind":"Any","default":null},{"name":"theme","kind":"Any","default":"primary"},{"name":"status","kind":"Any","default":"normalized"}]},{"type":"model","name":"GridStack1","properties":[{"name":"mode","kind":"Any","default":"warn"},{"name":"ncols","kind":"Any","default":null},{"name":"nrows","kind":"Any","default":null},{"name":"allow_resize","kind":"Any","default":true},{"name":"allow_drag","kind":"Any","default":true},{"name":"state","kind":"Any","default":[]}]},{"type":"model","name":"drag1","properties":[{"name":"slider_width","kind":"Any","default":5},{"name":"slider_color","kind":"Any","default":"black"},{"name":"value","kind":"Any","default":50}]},{"type":"model","name":"click1","properties":[{"name":"terminal_output","kind":"Any","default":""},{"name":"debug_name","kind":"Any","default":""},{"name":"clears","kind":"Any","default":0}]},{"type":"model","name":"copy_to_clipboard1","properties":[{"name":"fill","kind":"Any","default":"none"},{"name":"value","kind":"Any","default":null}]},{"type":"model","name":"FastWrapper1","properties":[{"name":"object","kind":"Any","default":null},{"name":"style","kind":"Any","default":null}]},{"type":"model","name":"NotificationAreaBase1","properties":[{"name":"js_events","kind":"Any","default":{"type":"map"}},{"name":"position","kind":"Any","default":"bottom-right"},{"name":"_clear","kind":"Any","default":0}]},{"type":"model","name":"NotificationArea1","properties":[{"name":"js_events","kind":"Any","default":{"type":"map"}},{"name":"notifications","kind":"Any","default":[]},{"name":"position","kind":"Any","default":"bottom-right"},{"name":"_clear","kind":"Any","default":0},{"name":"types","kind":"Any","default":[{"type":"map","entries":[["type","warning"],["background","#ffc107"],["icon",{"type":"map","entries":[["className","fas fa-exclamation-triangle"],["tagName","i"],["color","white"]]}]]},{"type":"map","entries":[["type","info"],["background","#007bff"],["icon",{"type":"map","entries":[["className","fas fa-info-circle"],["tagName","i"],["color","white"]]}]]}]}]},{"type":"model","name":"Notification","properties":[{"name":"background","kind":"Any","default":null},{"name":"duration","kind":"Any","default":3000},{"name":"icon","kind":"Any","default":null},{"name":"message","kind":"Any","default":""},{"name":"notification_type","kind":"Any","default":null},{"name":"_destroyed","kind":"Any","default":false}]},{"type":"model","name":"TemplateActions1","properties":[{"name":"open_modal","kind":"Any","default":0},{"name":"close_modal","kind":"Any","default":0}]},{"type":"model","name":"BootstrapTemplateActions1","properties":[{"name":"open_modal","kind":"Any","default":0},{"name":"close_modal","kind":"Any","default":0}]},{"type":"model","name":"MaterialTemplateActions1","properties":[{"name":"open_modal","kind":"Any","default":0},{"name":"close_modal","kind":"Any","default":0}]}]}};
+  var render_items = [{"docid":"e0af15ef-9872-4a1e-999d-3845fe97bbd3","roots":{"p1002":"e2b99a22-3903-4353-9b90-9c03eeebaa90"},"root_ids":["p1002"]}];
+  var docs = Object.values(docs_json)
+  if (!docs) {
+    return
+  }
+  const py_version = docs[0].version.replace('rc', '-rc.').replace('.dev', '-dev.')
+  function embed_document(root) {
+    var Bokeh = get_bokeh(root)
+    Bokeh.embed.embed_items_notebook(docs_json, render_items);
+    for (const render_item of render_items) {
+      for (const root_id of render_item.root_ids) {
+	const id_el = document.getElementById(root_id)
+	if (id_el.children.length && (id_el.children[0].className === 'bk-root')) {
+	  const root_el = id_el.children[0]
+	  root_el.id = root_el.id + '-rendered'
+	}
+      }
+    }
+  }
+  function get_bokeh(root) {
+    if (root.Bokeh === undefined) {
+      return null
+    } else if (root.Bokeh.version !== py_version) {
+      if (root.Bokeh.versions === undefined || !root.Bokeh.versions.has(py_version)) {
+	return null
+      }
+      return root.Bokeh.versions.get(py_version);
+    } else if (root.Bokeh.version === py_version) {
+      return root.Bokeh
+    }
+    return null
+  }
+  function is_loaded(root) {
+    var Bokeh = get_bokeh(root)
+    return (Bokeh != null && Bokeh.Panel !== undefined)
+  }
+  if (is_loaded(root)) {
+    embed_document(root);
+  } else {
+    var attempts = 0;
+    var timer = setInterval(function(root) {
+      if (is_loaded(root)) {
+        clearInterval(timer);
+        embed_document(root);
+      } else if (document.readyState == "complete") {
+        attempts++;
+        if (attempts > 200) {
+          clearInterval(timer);
+	  var Bokeh = get_bokeh(root)
+	  if (Bokeh == null || Bokeh.Panel == null) {
+            console.warn("Panel: ERROR: Unable to run Panel code because Bokeh or Panel library is missing");
+	  } else {
+	    console.warn("Panel: WARNING: Attempting to render but not all required libraries could be resolved.")
+	    embed_document(root)
+	  }
+        }
+      }
+    }, 25, root)
+  }
+})(window);</script></div></div>
 </div>
 <p>To get started, we need to provide a STAC URL (or any other data source URL) to intake, and we can ask intake to recommend some suitable datatypes.</p>
 <div class="cell docutils container">
@@ -545,7 +1061,7 @@ const thebe_selector_output = ".output, .cell_output"
 </div>
 </div>
 <div class="cell_output docutils container">
-<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>{&#39;importable&#39;: [&lt;class &#39;intake.readers.catalogs.StacCatalogReader&#39;&gt;, &lt;class &#39;intake.readers.catalogs.StackBands&#39;&gt;, &lt;class &#39;intake.readers.catalogs.StacSearch&#39;&gt;, &lt;class &#39;intake.readers.readers.DaskJSON&#39;&gt;, &lt;class &#39;intake.readers.readers.FileExistsReader&#39;&gt;, &lt;class &#39;intake.readers.readers.FileByteReader&#39;&gt;, &lt;class &#39;intake.readers.readers.FileTextReader&#39;&gt;], &#39;not_importable&#39;: [&lt;class &#39;intake.readers.readers.AwkwardJSON&#39;&gt;, &lt;class &#39;intake.readers.readers.DuckJSON&#39;&gt;, &lt;class &#39;intake.readers.readers.PolarsJSON&#39;&gt;, &lt;class &#39;intake.readers.readers.RayJSON&#39;&gt;, &lt;class &#39;intake.readers.readers.RayBinary&#39;&gt;]}
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>{&#39;importable&#39;: [&lt;class &#39;intake.readers.catalogs.StacCatalogReader&#39;&gt;, &lt;class &#39;intake.readers.catalogs.StackBands&#39;&gt;, &lt;class &#39;intake.readers.catalogs.StacSearch&#39;&gt;, &lt;class &#39;intake.readers.readers.DaskJSON&#39;&gt;, &lt;class &#39;intake.readers.readers.FileExistsReader&#39;&gt;, &lt;class &#39;intake.readers.readers.FileByteReader&#39;&gt;, &lt;class &#39;intake.readers.readers.FileTextReader&#39;&gt;], &#39;not_importable&#39;: [&lt;class &#39;intake.readers.readers.PolarsJSON&#39;&gt;, &lt;class &#39;intake.readers.readers.RayJSON&#39;&gt;, &lt;class &#39;intake.readers.readers.AwkwardJSON&#39;&gt;, &lt;class &#39;intake.readers.readers.DuckJSON&#39;&gt;, &lt;class &#39;intake.readers.readers.RayBinary&#39;&gt;]}
 </pre></div>
 </div>
 </div>
@@ -561,15 +1077,7 @@ const thebe_selector_output = ".output, .cell_output"
 </div>
 </div>
 <div class="cell_output docutils container">
-<div class="output traceback highlight-ipythontb notranslate"><div class="highlight"><pre><span></span><span class="gt">---------------------------------------------------------------------------</span>
-<span class="ne">NameError</span><span class="g g-Whitespace">                                 </span>Traceback (most recent call last)
-<span class="n">Cell</span> <span class="n">In</span><span class="p">[</span><span class="mi">5</span><span class="p">],</span> <span class="n">line</span> <span class="mi">2</span>
-<span class="g g-Whitespace">      </span><span class="mi">1</span> <span class="n">reader</span> <span class="o">=</span> <span class="n">intake</span><span class="o">.</span><span class="n">catalogs</span><span class="o">.</span><span class="n">StacCatalogReader</span><span class="p">(</span>
-<span class="ne">----&gt; </span><span class="mi">2</span>     <span class="n">data_type</span><span class="p">,</span> <span class="n">signer</span><span class="o">=</span><span class="n">planetary_computer</span><span class="o">.</span><span class="n">sign_inplace</span>
-<span class="g g-Whitespace">      </span><span class="mi">3</span> <span class="p">)</span>
-<span class="g g-Whitespace">      </span><span class="mi">4</span> <span class="n">reader</span>
-
-<span class="ne">NameError</span>: name &#39;planetary_computer&#39; is not defined
+<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>StacCatalogReader reader producing intake.readers.entry:Catalog
 </pre></div>
 </div>
 </div>
@@ -578,16 +1086,6 @@ const thebe_selector_output = ".output, .cell_output"
 <div class="cell docutils container">
 <div class="cell_input docutils container">
 <div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">stac_cat</span> <span class="o">=</span> <span class="n">reader</span><span class="o">.</span><span class="n">read</span><span class="p">()</span>
-</pre></div>
-</div>
-</div>
-<div class="cell_output docutils container">
-<div class="output traceback highlight-ipythontb notranslate"><div class="highlight"><pre><span></span><span class="gt">---------------------------------------------------------------------------</span>
-<span class="ne">NameError</span><span class="g g-Whitespace">                                 </span>Traceback (most recent call last)
-<span class="n">Cell</span> <span class="n">In</span><span class="p">[</span><span class="mi">6</span><span class="p">],</span> <span class="n">line</span> <span class="mi">1</span>
-<span class="ne">----&gt; </span><span class="mi">1</span> <span class="n">stac_cat</span> <span class="o">=</span> <span class="n">reader</span><span class="o">.</span><span class="n">read</span><span class="p">()</span>
-
-<span class="ne">NameError</span>: name &#39;reader&#39; is not defined
 </pre></div>
 </div>
 </div>
@@ -603,15 +1101,129 @@ const thebe_selector_output = ".output, .cell_output"
 </div>
 </div>
 <div class="cell_output docutils container">
-<div class="output traceback highlight-ipythontb notranslate"><div class="highlight"><pre><span></span><span class="gt">---------------------------------------------------------------------------</span>
-<span class="ne">NameError</span><span class="g g-Whitespace">                                 </span>Traceback (most recent call last)
-<span class="n">Cell</span> <span class="n">In</span><span class="p">[</span><span class="mi">7</span><span class="p">],</span> <span class="n">line</span> <span class="mi">2</span>
-<span class="g g-Whitespace">      </span><span class="mi">1</span> <span class="n">metadata</span> <span class="o">=</span> <span class="p">{}</span>
-<span class="ne">----&gt; </span><span class="mi">2</span> <span class="k">for</span> <span class="n">data_description</span> <span class="ow">in</span> <span class="n">stac_cat</span><span class="o">.</span><span class="n">data</span><span class="o">.</span><span class="n">values</span><span class="p">():</span>
-<span class="g g-Whitespace">      </span><span class="mi">3</span>     <span class="n">data</span> <span class="o">=</span> <span class="n">data_description</span><span class="o">.</span><span class="n">kwargs</span><span class="p">[</span><span class="s2">&quot;data&quot;</span><span class="p">]</span>
-<span class="g g-Whitespace">      </span><span class="mi">4</span>     <span class="n">metadata</span><span class="p">[</span><span class="n">data</span><span class="p">[</span><span class="s2">&quot;id&quot;</span><span class="p">]]</span> <span class="o">=</span> <span class="n">data</span><span class="p">[</span><span class="s2">&quot;description&quot;</span><span class="p">]</span>
-
-<span class="ne">NameError</span>: name &#39;stac_cat&#39; is not defined
+<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>[&#39;daymet-annual-pr&#39;,
+ &#39;daymet-daily-hi&#39;,
+ &#39;3dep-seamless&#39;,
+ &#39;3dep-lidar-dsm&#39;,
+ &#39;fia&#39;,
+ &#39;sentinel-1-rtc&#39;,
+ &#39;gridmet&#39;,
+ &#39;daymet-annual-na&#39;,
+ &#39;daymet-monthly-na&#39;,
+ &#39;daymet-annual-hi&#39;,
+ &#39;daymet-monthly-hi&#39;,
+ &#39;daymet-monthly-pr&#39;,
+ &#39;gnatsgo-tables&#39;,
+ &#39;hgb&#39;,
+ &#39;cop-dem-glo-30&#39;,
+ &#39;cop-dem-glo-90&#39;,
+ &#39;goes-cmi&#39;,
+ &#39;terraclimate&#39;,
+ &#39;nasa-nex-gddp-cmip6&#39;,
+ &#39;gpm-imerg-hhr&#39;,
+ &#39;gnatsgo-rasters&#39;,
+ &#39;3dep-lidar-hag&#39;,
+ &#39;io-lulc-annual-v02&#39;,
+ &#39;3dep-lidar-intensity&#39;,
+ &#39;3dep-lidar-pointsourceid&#39;,
+ &#39;mtbs&#39;,
+ &#39;noaa-c-cap&#39;,
+ &#39;3dep-lidar-copc&#39;,
+ &#39;modis-64A1-061&#39;,
+ &#39;alos-fnf-mosaic&#39;,
+ &#39;3dep-lidar-returns&#39;,
+ &#39;mobi&#39;,
+ &#39;landsat-c2-l2&#39;,
+ &#39;era5-pds&#39;,
+ &#39;chloris-biomass&#39;,
+ &#39;kaza-hydroforecast&#39;,
+ &#39;planet-nicfi-analytic&#39;,
+ &#39;modis-17A2H-061&#39;,
+ &#39;modis-11A2-061&#39;,
+ &#39;daymet-daily-pr&#39;,
+ &#39;3dep-lidar-dtm-native&#39;,
+ &#39;3dep-lidar-classification&#39;,
+ &#39;3dep-lidar-dtm&#39;,
+ &#39;gap&#39;,
+ &#39;modis-17A2HGF-061&#39;,
+ &#39;planet-nicfi-visual&#39;,
+ &#39;gbif&#39;,
+ &#39;modis-17A3HGF-061&#39;,
+ &#39;modis-09A1-061&#39;,
+ &#39;alos-dem&#39;,
+ &#39;alos-palsar-mosaic&#39;,
+ &#39;deltares-water-availability&#39;,
+ &#39;modis-16A3GF-061&#39;,
+ &#39;modis-21A2-061&#39;,
+ &#39;us-census&#39;,
+ &#39;jrc-gsw&#39;,
+ &#39;deltares-floods&#39;,
+ &#39;modis-43A4-061&#39;,
+ &#39;modis-09Q1-061&#39;,
+ &#39;modis-14A1-061&#39;,
+ &#39;hrea&#39;,
+ &#39;modis-13Q1-061&#39;,
+ &#39;modis-14A2-061&#39;,
+ &#39;sentinel-2-l2a&#39;,
+ &#39;modis-15A2H-061&#39;,
+ &#39;modis-11A1-061&#39;,
+ &#39;modis-15A3H-061&#39;,
+ &#39;modis-13A1-061&#39;,
+ &#39;daymet-daily-na&#39;,
+ &#39;nrcan-landcover&#39;,
+ &#39;modis-10A2-061&#39;,
+ &#39;ecmwf-forecast&#39;,
+ &#39;noaa-mrms-qpe-24h-pass2&#39;,
+ &#39;sentinel-1-grd&#39;,
+ &#39;nasadem&#39;,
+ &#39;io-lulc&#39;,
+ &#39;landsat-c2-l1&#39;,
+ &#39;drcog-lulc&#39;,
+ &#39;chesapeake-lc-7&#39;,
+ &#39;chesapeake-lc-13&#39;,
+ &#39;chesapeake-lu&#39;,
+ &#39;noaa-mrms-qpe-1h-pass1&#39;,
+ &#39;noaa-mrms-qpe-1h-pass2&#39;,
+ &#39;noaa-nclimgrid-monthly&#39;,
+ &#39;goes-glm&#39;,
+ &#39;usda-cdl&#39;,
+ &#39;eclipse&#39;,
+ &#39;esa-cci-lc&#39;,
+ &#39;esa-cci-lc-netcdf&#39;,
+ &#39;fws-nwi&#39;,
+ &#39;usgs-lcmap-conus-v13&#39;,
+ &#39;usgs-lcmap-hawaii-v10&#39;,
+ &#39;noaa-climate-normals-tabular&#39;,
+ &#39;noaa-climate-normals-netcdf&#39;,
+ &#39;noaa-climate-normals-gridded&#39;,
+ &#39;aster-l1t&#39;,
+ &#39;cil-gdpcir-cc-by-sa&#39;,
+ &#39;naip&#39;,
+ &#39;io-lulc-9-class&#39;,
+ &#39;io-biodiversity&#39;,
+ &#39;noaa-cdr-sea-surface-temperature-whoi&#39;,
+ &#39;noaa-cdr-ocean-heat-content&#39;,
+ &#39;cil-gdpcir-cc0&#39;,
+ &#39;cil-gdpcir-cc-by&#39;,
+ &#39;noaa-cdr-sea-surface-temperature-whoi-netcdf&#39;,
+ &#39;noaa-cdr-sea-surface-temperature-optimum-interpolation&#39;,
+ &#39;modis-10A1-061&#39;,
+ &#39;sentinel-5p-l2-netcdf&#39;,
+ &#39;sentinel-3-olci-wfr-l2-netcdf&#39;,
+ &#39;noaa-cdr-ocean-heat-content-netcdf&#39;,
+ &#39;sentinel-3-synergy-aod-l2-netcdf&#39;,
+ &#39;sentinel-3-synergy-v10-l2-netcdf&#39;,
+ &#39;sentinel-3-olci-lfr-l2-netcdf&#39;,
+ &#39;sentinel-3-sral-lan-l2-netcdf&#39;,
+ &#39;sentinel-3-slstr-lst-l2-netcdf&#39;,
+ &#39;sentinel-3-slstr-wst-l2-netcdf&#39;,
+ &#39;sentinel-3-sral-wat-l2-netcdf&#39;,
+ &#39;ms-buildings&#39;,
+ &#39;sentinel-3-slstr-frp-l2-netcdf&#39;,
+ &#39;sentinel-3-synergy-syn-l2-netcdf&#39;,
+ &#39;sentinel-3-synergy-vgp-l2-netcdf&#39;,
+ &#39;sentinel-3-synergy-vg1-l2-netcdf&#39;,
+ &#39;esa-worldcover&#39;]
 </pre></div>
 </div>
 </div>
@@ -625,13 +1237,13 @@ const thebe_selector_output = ".output, .cell_output"
 </div>
 </div>
 <div class="cell_output docutils container">
-<div class="output traceback highlight-ipythontb notranslate"><div class="highlight"><pre><span></span><span class="gt">---------------------------------------------------------------------------</span>
-<span class="ne">KeyError</span><span class="g g-Whitespace">                                  </span>Traceback (most recent call last)
-<span class="n">Cell</span> <span class="n">In</span><span class="p">[</span><span class="mi">8</span><span class="p">],</span> <span class="n">line</span> <span class="mi">1</span>
-<span class="ne">----&gt; </span><span class="mi">1</span> <span class="nb">print</span><span class="p">(</span><span class="s2">&quot;1:&quot;</span><span class="p">,</span> <span class="n">metadata</span><span class="p">[</span><span class="s2">&quot;landsat-c2-l1&quot;</span><span class="p">])</span>
-<span class="g g-Whitespace">      </span><span class="mi">2</span> <span class="nb">print</span><span class="p">(</span><span class="s2">&quot;2:&quot;</span><span class="p">,</span> <span class="n">metadata</span><span class="p">[</span><span class="s2">&quot;landsat-c2-l2&quot;</span><span class="p">])</span>
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>1: Landsat Collection 2 Level-1 data, consisting of quantized and calibrated scaled Digital Numbers (DN) representing the multispectral image data. These [Level-1](https://www.usgs.gov/landsat-missions/landsat-collection-2-level-1-data) data can be [rescaled](https://www.usgs.gov/landsat-missions/using-usgs-landsat-level-1-data-product) to top of atmosphere (TOA) reflectance and/or radiance. Thermal band data can be rescaled to TOA brightness temperature.
 
-<span class="ne">KeyError</span>: &#39;landsat-c2-l1&#39;
+This dataset represents the global archive of Level-1 data from [Landsat Collection 2](https://www.usgs.gov/core-science-systems/nli/landsat/landsat-collection-2) acquired by the [Multispectral Scanner System](https://landsat.gsfc.nasa.gov/multispectral-scanner-system/) onboard Landsat 1 through Landsat 5 from July 7, 1972 to January 7, 2013. Images are stored in [cloud-optimized GeoTIFF](https://www.cogeo.org/) format.
+
+2: Landsat Collection 2 Level-2 [Science Products](https://www.usgs.gov/landsat-missions/landsat-collection-2-level-2-science-products), consisting of atmospherically corrected [surface reflectance](https://www.usgs.gov/landsat-missions/landsat-collection-2-surface-reflectance) and [surface temperature](https://www.usgs.gov/landsat-missions/landsat-collection-2-surface-temperature) image data. Collection 2 Level-2 Science Products are available from August 22, 1982 to present.
+
+This dataset represents the global archive of Level-2 data from [Landsat Collection 2](https://www.usgs.gov/core-science-systems/nli/landsat/landsat-collection-2) acquired by the [Thematic Mapper](https://landsat.gsfc.nasa.gov/thematic-mapper/) onboard Landsat 4 and 5, the [Enhanced Thematic Mapper](https://landsat.gsfc.nasa.gov/the-enhanced-thematic-mapper-plus-etm/) onboard Landsat 7, and the [Operatational Land Imager](https://landsat.gsfc.nasa.gov/satellites/landsat-8/spacecraft-instruments/operational-land-imager/) and [Thermal Infrared Sensor](https://landsat.gsfc.nasa.gov/satellites/landsat-8/spacecraft-instruments/thermal-infrared-sensor/) onboard Landsat 8 and 9. Images are stored in [cloud-optimized GeoTIFF](https://www.cogeo.org/) format.
 </pre></div>
 </div>
 </div>
@@ -640,16 +1252,6 @@ const thebe_selector_output = ".output, .cell_output"
 <div class="cell docutils container">
 <div class="cell_input docutils container">
 <div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">landsat_reader</span> <span class="o">=</span> <span class="n">stac_cat</span><span class="p">[</span><span class="s2">&quot;landsat-c2-l2&quot;</span><span class="p">]</span>
-</pre></div>
-</div>
-</div>
-<div class="cell_output docutils container">
-<div class="output traceback highlight-ipythontb notranslate"><div class="highlight"><pre><span></span><span class="gt">---------------------------------------------------------------------------</span>
-<span class="ne">NameError</span><span class="g g-Whitespace">                                 </span>Traceback (most recent call last)
-<span class="n">Cell</span> <span class="n">In</span><span class="p">[</span><span class="mi">9</span><span class="p">],</span> <span class="n">line</span> <span class="mi">1</span>
-<span class="ne">----&gt; </span><span class="mi">1</span> <span class="n">landsat_reader</span> <span class="o">=</span> <span class="n">stac_cat</span><span class="p">[</span><span class="s2">&quot;landsat-c2-l2&quot;</span><span class="p">]</span>
-
-<span class="ne">NameError</span>: name &#39;stac_cat&#39; is not defined
 </pre></div>
 </div>
 </div>
@@ -662,12 +1264,509 @@ const thebe_selector_output = ".output, .cell_output"
 </div>
 </div>
 <div class="cell_output docutils container">
-<div class="output traceback highlight-ipythontb notranslate"><div class="highlight"><pre><span></span><span class="gt">---------------------------------------------------------------------------</span>
-<span class="ne">NameError</span><span class="g g-Whitespace">                                 </span>Traceback (most recent call last)
-<span class="n">Cell</span> <span class="n">In</span><span class="p">[</span><span class="mi">10</span><span class="p">],</span> <span class="n">line</span> <span class="mi">1</span>
-<span class="ne">----&gt; </span><span class="mi">1</span> <span class="n">landsat_reader</span><span class="o">.</span><span class="n">read</span><span class="p">()</span><span class="o">.</span><span class="n">metadata</span>
-
-<span class="ne">NameError</span>: name &#39;landsat_reader&#39; is not defined
+<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>{&#39;type&#39;: &#39;Collection&#39;,
+ &#39;id&#39;: &#39;landsat-c2-l2&#39;,
+ &#39;stac_version&#39;: &#39;1.0.0&#39;,
+ &#39;description&#39;: &#39;Landsat Collection 2 Level-2 [Science Products](https://www.usgs.gov/landsat-missions/landsat-collection-2-level-2-science-products), consisting of atmospherically corrected [surface reflectance](https://www.usgs.gov/landsat-missions/landsat-collection-2-surface-reflectance) and [surface temperature](https://www.usgs.gov/landsat-missions/landsat-collection-2-surface-temperature) image data. Collection 2 Level-2 Science Products are available from August 22, 1982 to present.\n\nThis dataset represents the global archive of Level-2 data from [Landsat Collection 2](https://www.usgs.gov/core-science-systems/nli/landsat/landsat-collection-2) acquired by the [Thematic Mapper](https://landsat.gsfc.nasa.gov/thematic-mapper/) onboard Landsat 4 and 5, the [Enhanced Thematic Mapper](https://landsat.gsfc.nasa.gov/the-enhanced-thematic-mapper-plus-etm/) onboard Landsat 7, and the [Operatational Land Imager](https://landsat.gsfc.nasa.gov/satellites/landsat-8/spacecraft-instruments/operational-land-imager/) and [Thermal Infrared Sensor](https://landsat.gsfc.nasa.gov/satellites/landsat-8/spacecraft-instruments/thermal-infrared-sensor/) onboard Landsat 8 and 9. Images are stored in [cloud-optimized GeoTIFF](https://www.cogeo.org/) format.\n&#39;,
+ &#39;conformsTo&#39;: [&#39;http://www.opengis.net/spec/cql2/1.0/conf/basic-cql2&#39;,
+  &#39;http://www.opengis.net/spec/cql2/1.0/conf/cql2-json&#39;,
+  &#39;http://www.opengis.net/spec/cql2/1.0/conf/cql2-text&#39;,
+  &#39;http://www.opengis.net/spec/ogcapi-features-1/1.0/conf/core&#39;,
+  &#39;http://www.opengis.net/spec/ogcapi-features-1/1.0/conf/geojson&#39;,
+  &#39;http://www.opengis.net/spec/ogcapi-features-1/1.0/conf/oas30&#39;,
+  &#39;http://www.opengis.net/spec/ogcapi-features-3/1.0/conf/filter&#39;,
+  &#39;https://api.stacspec.org/v1.0.0-rc.1/collections&#39;,
+  &#39;https://api.stacspec.org/v1.0.0-rc.1/core&#39;,
+  &#39;https://api.stacspec.org/v1.0.0-rc.1/item-search&#39;,
+  &#39;https://api.stacspec.org/v1.0.0-rc.1/item-search#fields&#39;,
+  &#39;https://api.stacspec.org/v1.0.0-rc.1/item-search#filter&#39;,
+  &#39;https://api.stacspec.org/v1.0.0-rc.1/item-search#query&#39;,
+  &#39;https://api.stacspec.org/v1.0.0-rc.1/item-search#sort&#39;,
+  &#39;https://api.stacspec.org/v1.0.0-rc.1/ogcapi-features&#39;],
+ &#39;title&#39;: &#39;Landsat Collection 2 Level-2&#39;,
+ &#39;stac_extensions&#39;: [&#39;https://stac-extensions.github.io/item-assets/v1.0.0/schema.json&#39;,
+  &#39;https://stac-extensions.github.io/view/v1.0.0/schema.json&#39;,
+  &#39;https://stac-extensions.github.io/scientific/v1.0.0/schema.json&#39;,
+  &#39;https://stac-extensions.github.io/raster/v1.1.0/schema.json&#39;,
+  &#39;https://stac-extensions.github.io/eo/v1.0.0/schema.json&#39;,
+  &#39;https://stac-extensions.github.io/table/v1.2.0/schema.json&#39;],
+ &#39;item_assets&#39;: {&#39;qa&#39;: {&#39;type&#39;: &#39;image/tiff; application=geotiff; profile=cloud-optimized&#39;,
+   &#39;roles&#39;: [&#39;data&#39;],
+   &#39;title&#39;: &#39;Surface Temperature Quality Assessment Band&#39;,
+   &#39;description&#39;: &#39;Collection 2 Level-2 Quality Assessment Band (ST_QA) Surface Temperature Product&#39;,
+   &#39;raster:bands&#39;: [{&#39;unit&#39;: &#39;kelvin&#39;,
+     &#39;scale&#39;: 0.01,
+     &#39;nodata&#39;: -9999,
+     &#39;data_type&#39;: &#39;int16&#39;,
+     &#39;spatial_resolution&#39;: 30}]},
+  &#39;ang&#39;: {&#39;type&#39;: &#39;text/plain&#39;,
+   &#39;roles&#39;: [&#39;metadata&#39;],
+   &#39;title&#39;: &#39;Angle Coefficients File&#39;,
+   &#39;description&#39;: &#39;Collection 2 Level-1 Angle Coefficients File&#39;},
+  &#39;red&#39;: {&#39;type&#39;: &#39;image/tiff; application=geotiff; profile=cloud-optimized&#39;,
+   &#39;roles&#39;: [&#39;data&#39;, &#39;reflectance&#39;],
+   &#39;title&#39;: &#39;Red Band&#39;,
+   &#39;eo:bands&#39;: [{&#39;common_name&#39;: &#39;red&#39;, &#39;description&#39;: &#39;Visible red&#39;}],
+   &#39;raster:bands&#39;: [{&#39;scale&#39;: 2.75e-05,
+     &#39;nodata&#39;: 0,
+     &#39;offset&#39;: -0.2,
+     &#39;data_type&#39;: &#39;uint16&#39;,
+     &#39;spatial_resolution&#39;: 30}]},
+  &#39;blue&#39;: {&#39;type&#39;: &#39;image/tiff; application=geotiff; profile=cloud-optimized&#39;,
+   &#39;roles&#39;: [&#39;data&#39;, &#39;reflectance&#39;],
+   &#39;title&#39;: &#39;Blue Band&#39;,
+   &#39;eo:bands&#39;: [{&#39;common_name&#39;: &#39;blue&#39;, &#39;description&#39;: &#39;Visible blue&#39;}],
+   &#39;raster:bands&#39;: [{&#39;scale&#39;: 2.75e-05,
+     &#39;nodata&#39;: 0,
+     &#39;offset&#39;: -0.2,
+     &#39;data_type&#39;: &#39;uint16&#39;,
+     &#39;spatial_resolution&#39;: 30}]},
+  &#39;drad&#39;: {&#39;type&#39;: &#39;image/tiff; application=geotiff; profile=cloud-optimized&#39;,
+   &#39;roles&#39;: [&#39;data&#39;],
+   &#39;title&#39;: &#39;Downwelled Radiance Band&#39;,
+   &#39;description&#39;: &#39;Collection 2 Level-2 Downwelled Radiance Band (ST_DRAD) Surface Temperature Product&#39;,
+   &#39;raster:bands&#39;: [{&#39;unit&#39;: &#39;watt/steradian/square_meter/micrometer&#39;,
+     &#39;scale&#39;: 0.001,
+     &#39;nodata&#39;: -9999,
+     &#39;data_type&#39;: &#39;int16&#39;,
+     &#39;spatial_resolution&#39;: 30}]},
+  &#39;emis&#39;: {&#39;type&#39;: &#39;image/tiff; application=geotiff; profile=cloud-optimized&#39;,
+   &#39;roles&#39;: [&#39;data&#39;],
+   &#39;title&#39;: &#39;Emissivity Band&#39;,
+   &#39;description&#39;: &#39;Collection 2 Level-2 Emissivity Band (ST_EMIS) Surface Temperature Product&#39;,
+   &#39;raster:bands&#39;: [{&#39;unit&#39;: &#39;emissivity coefficient&#39;,
+     &#39;scale&#39;: 0.0001,
+     &#39;nodata&#39;: -9999,
+     &#39;data_type&#39;: &#39;int16&#39;,
+     &#39;spatial_resolution&#39;: 30}]},
+  &#39;emsd&#39;: {&#39;type&#39;: &#39;image/tiff; application=geotiff; profile=cloud-optimized&#39;,
+   &#39;roles&#39;: [&#39;data&#39;],
+   &#39;title&#39;: &#39;Emissivity Standard Deviation Band&#39;,
+   &#39;description&#39;: &#39;Collection 2 Level-2 Emissivity Standard Deviation Band (ST_EMSD) Surface Temperature Product&#39;,
+   &#39;raster:bands&#39;: [{&#39;unit&#39;: &#39;emissivity coefficient&#39;,
+     &#39;scale&#39;: 0.0001,
+     &#39;nodata&#39;: -9999,
+     &#39;data_type&#39;: &#39;int16&#39;,
+     &#39;spatial_resolution&#39;: 30}]},
+  &#39;lwir&#39;: {&#39;type&#39;: &#39;image/tiff; application=geotiff; profile=cloud-optimized&#39;,
+   &#39;roles&#39;: [&#39;data&#39;, &#39;temperature&#39;],
+   &#39;title&#39;: &#39;Surface Temperature Band&#39;,
+   &#39;eo:bands&#39;: [{&#39;common_name&#39;: &#39;lwir&#39;, &#39;description&#39;: &#39;Long-wave infrared&#39;}],
+   &#39;description&#39;: &#39;Collection 2 Level-2 Thermal Infrared Band (ST_B6) Surface Temperature&#39;,
+   &#39;raster:bands&#39;: [{&#39;unit&#39;: &#39;kelvin&#39;,
+     &#39;scale&#39;: 0.00341802,
+     &#39;nodata&#39;: 0,
+     &#39;offset&#39;: 149.0,
+     &#39;data_type&#39;: &#39;uint16&#39;,
+     &#39;spatial_resolution&#39;: 30}]},
+  &#39;trad&#39;: {&#39;type&#39;: &#39;image/tiff; application=geotiff; profile=cloud-optimized&#39;,
+   &#39;roles&#39;: [&#39;data&#39;],
+   &#39;title&#39;: &#39;Thermal Radiance Band&#39;,
+   &#39;description&#39;: &#39;Collection 2 Level-2 Thermal Radiance Band (ST_TRAD) Surface Temperature Product&#39;,
+   &#39;raster:bands&#39;: [{&#39;unit&#39;: &#39;watt/steradian/square_meter/micrometer&#39;,
+     &#39;scale&#39;: 0.001,
+     &#39;nodata&#39;: -9999,
+     &#39;data_type&#39;: &#39;int16&#39;,
+     &#39;spatial_resolution&#39;: 30}]},
+  &#39;urad&#39;: {&#39;type&#39;: &#39;image/tiff; application=geotiff; profile=cloud-optimized&#39;,
+   &#39;roles&#39;: [&#39;data&#39;],
+   &#39;title&#39;: &#39;Upwelled Radiance Band&#39;,
+   &#39;description&#39;: &#39;Collection 2 Level-2 Upwelled Radiance Band (ST_URAD) Surface Temperature Product&#39;,
+   &#39;raster:bands&#39;: [{&#39;unit&#39;: &#39;watt/steradian/square_meter/micrometer&#39;,
+     &#39;scale&#39;: 0.001,
+     &#39;nodata&#39;: -9999,
+     &#39;data_type&#39;: &#39;int16&#39;,
+     &#39;spatial_resolution&#39;: 30}]},
+  &#39;atran&#39;: {&#39;type&#39;: &#39;image/tiff; application=geotiff; profile=cloud-optimized&#39;,
+   &#39;roles&#39;: [&#39;data&#39;],
+   &#39;title&#39;: &#39;Atmospheric Transmittance Band&#39;,
+   &#39;description&#39;: &#39;Collection 2 Level-2 Atmospheric Transmittance Band (ST_ATRAN) Surface Temperature Product&#39;,
+   &#39;raster:bands&#39;: [{&#39;scale&#39;: 0.0001,
+     &#39;nodata&#39;: -9999,
+     &#39;data_type&#39;: &#39;int16&#39;,
+     &#39;spatial_resolution&#39;: 30}]},
+  &#39;cdist&#39;: {&#39;type&#39;: &#39;image/tiff; application=geotiff; profile=cloud-optimized&#39;,
+   &#39;roles&#39;: [&#39;data&#39;],
+   &#39;title&#39;: &#39;Cloud Distance Band&#39;,
+   &#39;description&#39;: &#39;Collection 2 Level-2 Cloud Distance Band (ST_CDIST) Surface Temperature Product&#39;,
+   &#39;raster:bands&#39;: [{&#39;unit&#39;: &#39;kilometer&#39;,
+     &#39;scale&#39;: 0.01,
+     &#39;nodata&#39;: -9999,
+     &#39;data_type&#39;: &#39;int16&#39;,
+     &#39;spatial_resolution&#39;: 30}]},
+  &#39;green&#39;: {&#39;type&#39;: &#39;image/tiff; application=geotiff; profile=cloud-optimized&#39;,
+   &#39;roles&#39;: [&#39;data&#39;, &#39;reflectance&#39;],
+   &#39;title&#39;: &#39;Green Band&#39;,
+   &#39;eo:bands&#39;: [{&#39;common_name&#39;: &#39;green&#39;,
+     &#39;description&#39;: &#39;Visible green&#39;,
+     &#39;center_wavelength&#39;: 0.56}],
+   &#39;raster:bands&#39;: [{&#39;scale&#39;: 2.75e-05,
+     &#39;nodata&#39;: 0,
+     &#39;offset&#39;: -0.2,
+     &#39;data_type&#39;: &#39;uint16&#39;,
+     &#39;spatial_resolution&#39;: 30}]},
+  &#39;nir08&#39;: {&#39;type&#39;: &#39;image/tiff; application=geotiff; profile=cloud-optimized&#39;,
+   &#39;roles&#39;: [&#39;data&#39;, &#39;reflectance&#39;],
+   &#39;title&#39;: &#39;Near Infrared Band 0.8&#39;,
+   &#39;eo:bands&#39;: [{&#39;common_name&#39;: &#39;nir08&#39;, &#39;description&#39;: &#39;Near infrared&#39;}],
+   &#39;raster:bands&#39;: [{&#39;scale&#39;: 2.75e-05,
+     &#39;nodata&#39;: 0,
+     &#39;offset&#39;: -0.2,
+     &#39;data_type&#39;: &#39;uint16&#39;,
+     &#39;spatial_resolution&#39;: 30}]},
+  &#39;lwir11&#39;: {&#39;gsd&#39;: 100,
+   &#39;type&#39;: &#39;image/tiff; application=geotiff; profile=cloud-optimized&#39;,
+   &#39;roles&#39;: [&#39;data&#39;, &#39;temperature&#39;],
+   &#39;title&#39;: &#39;Surface Temperature Band&#39;,
+   &#39;eo:bands&#39;: [{&#39;name&#39;: &#39;TIRS_B10&#39;,
+     &#39;common_name&#39;: &#39;lwir11&#39;,
+     &#39;description&#39;: &#39;Long-wave infrared&#39;,
+     &#39;center_wavelength&#39;: 10.9,
+     &#39;full_width_half_max&#39;: 0.59}],
+   &#39;description&#39;: &#39;Collection 2 Level-2 Thermal Infrared Band (ST_B10) Surface Temperature&#39;,
+   &#39;raster:bands&#39;: [{&#39;unit&#39;: &#39;kelvin&#39;,
+     &#39;scale&#39;: 0.00341802,
+     &#39;nodata&#39;: 0,
+     &#39;offset&#39;: 149.0,
+     &#39;data_type&#39;: &#39;uint16&#39;,
+     &#39;spatial_resolution&#39;: 30}]},
+  &#39;swir16&#39;: {&#39;type&#39;: &#39;image/tiff; application=geotiff; profile=cloud-optimized&#39;,
+   &#39;roles&#39;: [&#39;data&#39;, &#39;reflectance&#39;],
+   &#39;title&#39;: &#39;Short-wave Infrared Band 1.6&#39;,
+   &#39;eo:bands&#39;: [{&#39;common_name&#39;: &#39;swir16&#39;,
+     &#39;description&#39;: &#39;Short-wave infrared&#39;}],
+   &#39;raster:bands&#39;: [{&#39;scale&#39;: 2.75e-05,
+     &#39;nodata&#39;: 0,
+     &#39;offset&#39;: -0.2,
+     &#39;data_type&#39;: &#39;uint16&#39;,
+     &#39;spatial_resolution&#39;: 30}]},
+  &#39;swir22&#39;: {&#39;type&#39;: &#39;image/tiff; application=geotiff; profile=cloud-optimized&#39;,
+   &#39;roles&#39;: [&#39;data&#39;, &#39;reflectance&#39;],
+   &#39;title&#39;: &#39;Short-wave Infrared Band 2.2&#39;,
+   &#39;eo:bands&#39;: [{&#39;common_name&#39;: &#39;swir22&#39;,
+     &#39;description&#39;: &#39;Short-wave infrared&#39;}],
+   &#39;description&#39;: &#39;Collection 2 Level-2 Short-wave Infrared Band 2.2 (SR_B7) Surface Reflectance&#39;,
+   &#39;raster:bands&#39;: [{&#39;scale&#39;: 2.75e-05,
+     &#39;nodata&#39;: 0,
+     &#39;offset&#39;: -0.2,
+     &#39;data_type&#39;: &#39;uint16&#39;,
+     &#39;spatial_resolution&#39;: 30}]},
+  &#39;coastal&#39;: {&#39;type&#39;: &#39;image/tiff; application=geotiff; profile=cloud-optimized&#39;,
+   &#39;roles&#39;: [&#39;data&#39;, &#39;reflectance&#39;],
+   &#39;title&#39;: &#39;Coastal/Aerosol Band&#39;,
+   &#39;eo:bands&#39;: [{&#39;name&#39;: &#39;OLI_B1&#39;,
+     &#39;common_name&#39;: &#39;coastal&#39;,
+     &#39;description&#39;: &#39;Coastal/Aerosol&#39;,
+     &#39;center_wavelength&#39;: 0.44,
+     &#39;full_width_half_max&#39;: 0.02}],
+   &#39;description&#39;: &#39;Collection 2 Level-2 Coastal/Aerosol Band (SR_B1) Surface Reflectance&#39;,
+   &#39;raster:bands&#39;: [{&#39;scale&#39;: 2.75e-05,
+     &#39;nodata&#39;: 0,
+     &#39;offset&#39;: -0.2,
+     &#39;data_type&#39;: &#39;uint16&#39;,
+     &#39;spatial_resolution&#39;: 30}]},
+  &#39;mtl.txt&#39;: {&#39;type&#39;: &#39;text/plain&#39;,
+   &#39;roles&#39;: [&#39;metadata&#39;],
+   &#39;title&#39;: &#39;Product Metadata File (txt)&#39;,
+   &#39;description&#39;: &#39;Collection 2 Level-2 Product Metadata File (txt)&#39;},
+  &#39;mtl.xml&#39;: {&#39;type&#39;: &#39;application/xml&#39;,
+   &#39;roles&#39;: [&#39;metadata&#39;],
+   &#39;title&#39;: &#39;Product Metadata File (xml)&#39;,
+   &#39;description&#39;: &#39;Collection 2 Level-2 Product Metadata File (xml)&#39;},
+  &#39;cloud_qa&#39;: {&#39;type&#39;: &#39;image/tiff; application=geotiff; profile=cloud-optimized&#39;,
+   &#39;roles&#39;: [&#39;cloud&#39;, &#39;cloud-shadow&#39;, &#39;snow-ice&#39;, &#39;water-mask&#39;],
+   &#39;title&#39;: &#39;Cloud Quality Assessment Band&#39;,
+   &#39;description&#39;: &#39;Collection 2 Level-2 Cloud Quality Assessment Band (SR_CLOUD_QA) Surface Reflectance Product&#39;,
+   &#39;raster:bands&#39;: [{&#39;unit&#39;: &#39;bit index&#39;,
+     &#39;data_type&#39;: &#39;uint8&#39;,
+     &#39;spatial_resolution&#39;: 30}],
+   &#39;classification:bitfields&#39;: [{&#39;name&#39;: &#39;ddv&#39;,
+     &#39;length&#39;: 1,
+     &#39;offset&#39;: 0,
+     &#39;classes&#39;: [{&#39;name&#39;: &#39;not_ddv&#39;,
+       &#39;value&#39;: 0,
+       &#39;description&#39;: &#39;Pixel has no DDV&#39;},
+      {&#39;name&#39;: &#39;ddv&#39;, &#39;value&#39;: 1, &#39;description&#39;: &#39;Pixel has DDV&#39;}],
+     &#39;description&#39;: &#39;Dense Dark Vegetation (DDV)&#39;},
+    {&#39;name&#39;: &#39;cloud&#39;,
+     &#39;length&#39;: 1,
+     &#39;offset&#39;: 1,
+     &#39;classes&#39;: [{&#39;name&#39;: &#39;not_cloud&#39;,
+       &#39;value&#39;: 0,
+       &#39;description&#39;: &#39;Pixel has no cloud&#39;},
+      {&#39;name&#39;: &#39;cloud&#39;, &#39;value&#39;: 1, &#39;description&#39;: &#39;Pixel has cloud&#39;}],
+     &#39;description&#39;: &#39;Cloud mask&#39;},
+    {&#39;name&#39;: &#39;cloud_shadow&#39;,
+     &#39;length&#39;: 1,
+     &#39;offset&#39;: 2,
+     &#39;classes&#39;: [{&#39;name&#39;: &#39;not_shadow&#39;,
+       &#39;value&#39;: 0,
+       &#39;description&#39;: &#39;Pixel has no cloud shadow&#39;},
+      {&#39;name&#39;: &#39;shadow&#39;, &#39;value&#39;: 1, &#39;description&#39;: &#39;Pixel has cloud shadow&#39;}],
+     &#39;description&#39;: &#39;Cloud shadow mask&#39;},
+    {&#39;name&#39;: &#39;cloud_adjacent&#39;,
+     &#39;length&#39;: 1,
+     &#39;offset&#39;: 3,
+     &#39;classes&#39;: [{&#39;name&#39;: &#39;not_adjacent&#39;,
+       &#39;value&#39;: 0,
+       &#39;description&#39;: &#39;Pixel is not adjacent to cloud&#39;},
+      {&#39;name&#39;: &#39;adjacent&#39;,
+       &#39;value&#39;: 1,
+       &#39;description&#39;: &#39;Pixel is adjacent to cloud&#39;}],
+     &#39;description&#39;: &#39;Cloud adjacency&#39;},
+    {&#39;name&#39;: &#39;snow&#39;,
+     &#39;length&#39;: 1,
+     &#39;offset&#39;: 4,
+     &#39;classes&#39;: [{&#39;name&#39;: &#39;not_snow&#39;,
+       &#39;value&#39;: 0,
+       &#39;description&#39;: &#39;Pixel is not snow&#39;},
+      {&#39;name&#39;: &#39;shadow&#39;, &#39;value&#39;: 1, &#39;description&#39;: &#39;Pixel is snow&#39;}],
+     &#39;description&#39;: &#39;Snow mask&#39;},
+    {&#39;name&#39;: &#39;water&#39;,
+     &#39;length&#39;: 1,
+     &#39;offset&#39;: 5,
+     &#39;classes&#39;: [{&#39;name&#39;: &#39;not_water&#39;,
+       &#39;value&#39;: 0,
+       &#39;description&#39;: &#39;Pixel is not water&#39;},
+      {&#39;name&#39;: &#39;water&#39;, &#39;value&#39;: 1, &#39;description&#39;: &#39;Pixel is water&#39;}],
+     &#39;description&#39;: &#39;Water mask&#39;}]},
+  &#39;mtl.json&#39;: {&#39;type&#39;: &#39;application/json&#39;,
+   &#39;roles&#39;: [&#39;metadata&#39;],
+   &#39;title&#39;: &#39;Product Metadata File (json)&#39;,
+   &#39;description&#39;: &#39;Collection 2 Level-2 Product Metadata File (json)&#39;},
+  &#39;qa_pixel&#39;: {&#39;type&#39;: &#39;image/tiff; application=geotiff; profile=cloud-optimized&#39;,
+   &#39;roles&#39;: [&#39;cloud&#39;, &#39;cloud-shadow&#39;, &#39;snow-ice&#39;, &#39;water-mask&#39;],
+   &#39;title&#39;: &#39;Pixel Quality Assessment Band&#39;,
+   &#39;description&#39;: &#39;Collection 2 Level-1 Pixel Quality Assessment Band (QA_PIXEL)&#39;,
+   &#39;raster:bands&#39;: [{&#39;unit&#39;: &#39;bit index&#39;,
+     &#39;nodata&#39;: 1,
+     &#39;data_type&#39;: &#39;uint16&#39;,
+     &#39;spatial_resolution&#39;: 30}]},
+  &#39;qa_radsat&#39;: {&#39;type&#39;: &#39;image/tiff; application=geotiff; profile=cloud-optimized&#39;,
+   &#39;roles&#39;: [&#39;saturation&#39;],
+   &#39;raster:bands&#39;: [{&#39;unit&#39;: &#39;bit index&#39;,
+     &#39;data_type&#39;: &#39;uint16&#39;,
+     &#39;spatial_resolution&#39;: 30}]},
+  &#39;qa_aerosol&#39;: {&#39;type&#39;: &#39;image/tiff; application=geotiff; profile=cloud-optimized&#39;,
+   &#39;roles&#39;: [&#39;data-mask&#39;, &#39;water-mask&#39;],
+   &#39;title&#39;: &#39;Aerosol Quality Assessment Band&#39;,
+   &#39;description&#39;: &#39;Collection 2 Level-2 Aerosol Quality Assessment Band (SR_QA_AEROSOL) Surface Reflectance Product&#39;,
+   &#39;raster:bands&#39;: [{&#39;unit&#39;: &#39;bit index&#39;,
+     &#39;nodata&#39;: 1,
+     &#39;data_type&#39;: &#39;uint8&#39;,
+     &#39;spatial_resolution&#39;: 30}],
+   &#39;classification:bitfields&#39;: [{&#39;name&#39;: &#39;fill&#39;,
+     &#39;length&#39;: 1,
+     &#39;offset&#39;: 0,
+     &#39;classes&#39;: [{&#39;name&#39;: &#39;not_fill&#39;,
+       &#39;value&#39;: 0,
+       &#39;description&#39;: &#39;Pixel is not fill&#39;},
+      {&#39;name&#39;: &#39;fill&#39;, &#39;value&#39;: 1, &#39;description&#39;: &#39;Pixel is fill&#39;}],
+     &#39;description&#39;: &#39;Image or fill data&#39;},
+    {&#39;name&#39;: &#39;retrieval&#39;,
+     &#39;length&#39;: 1,
+     &#39;offset&#39;: 1,
+     &#39;classes&#39;: [{&#39;name&#39;: &#39;not_valid&#39;,
+       &#39;value&#39;: 0,
+       &#39;description&#39;: &#39;Pixel retrieval is not valid&#39;},
+      {&#39;name&#39;: &#39;valid&#39;,
+       &#39;value&#39;: 1,
+       &#39;description&#39;: &#39;Pixel retrieval is valid&#39;}],
+     &#39;description&#39;: &#39;Valid aerosol retrieval&#39;},
+    {&#39;name&#39;: &#39;water&#39;,
+     &#39;length&#39;: 1,
+     &#39;offset&#39;: 2,
+     &#39;classes&#39;: [{&#39;name&#39;: &#39;not_water&#39;,
+       &#39;value&#39;: 0,
+       &#39;description&#39;: &#39;Pixel is not water&#39;},
+      {&#39;name&#39;: &#39;water&#39;, &#39;value&#39;: 1, &#39;description&#39;: &#39;Pixel is water&#39;}],
+     &#39;description&#39;: &#39;Water mask&#39;},
+    {&#39;name&#39;: &#39;interpolated&#39;,
+     &#39;length&#39;: 1,
+     &#39;offset&#39;: 5,
+     &#39;classes&#39;: [{&#39;name&#39;: &#39;not_interpolated&#39;,
+       &#39;value&#39;: 0,
+       &#39;description&#39;: &#39;Pixel is not interpolated aerosol&#39;},
+      {&#39;name&#39;: &#39;interpolated&#39;,
+       &#39;value&#39;: 1,
+       &#39;description&#39;: &#39;Pixel is interpolated aerosol&#39;}],
+     &#39;description&#39;: &#39;Aerosol interpolation&#39;},
+    {&#39;name&#39;: &#39;level&#39;,
+     &#39;length&#39;: 2,
+     &#39;offset&#39;: 6,
+     &#39;classes&#39;: [{&#39;name&#39;: &#39;climatology&#39;,
+       &#39;value&#39;: 0,
+       &#39;description&#39;: &#39;No aerosol correction applied&#39;},
+      {&#39;name&#39;: &#39;low&#39;, &#39;value&#39;: 1, &#39;description&#39;: &#39;Low aerosol level&#39;},
+      {&#39;name&#39;: &#39;medium&#39;, &#39;value&#39;: 2, &#39;description&#39;: &#39;Medium aerosol level&#39;},
+      {&#39;name&#39;: &#39;high&#39;, &#39;value&#39;: 3, &#39;description&#39;: &#39;High aerosol level&#39;}],
+     &#39;description&#39;: &#39;Aerosol level&#39;}]},
+  &#39;atmos_opacity&#39;: {&#39;type&#39;: &#39;image/tiff; application=geotiff; profile=cloud-optimized&#39;,
+   &#39;roles&#39;: [&#39;data&#39;],
+   &#39;title&#39;: &#39;Atmospheric Opacity Band&#39;,
+   &#39;description&#39;: &#39;Collection 2 Level-2 Atmospheric Opacity Band (SR_ATMOS_OPACITY) Surface Reflectance Product&#39;,
+   &#39;raster:bands&#39;: [{&#39;scale&#39;: 0.001,
+     &#39;nodata&#39;: -9999,
+     &#39;data_type&#39;: &#39;int16&#39;,
+     &#39;spatial_resolution&#39;: 30}]}},
+ &#39;msft:group_id&#39;: &#39;landsat&#39;,
+ &#39;msft:container&#39;: &#39;landsat-c2&#39;,
+ &#39;msft:storage_account&#39;: &#39;landsateuwest&#39;,
+ &#39;msft:short_description&#39;: &#39;Landsat Collection 2 Level-2 data from the Thematic Mapper (TM) onboard Landsat 4 and 5, the Enhanced Thematic Mapper Plus (ETM+) onboard Landsat 7, and the Operational Land Imager (OLI) and Thermal Infrared Sensor (TIRS) onboard Landsat 8 and 9.&#39;,
+ &#39;msft:region&#39;: &#39;westeurope&#39;,
+ &#39;extent&#39;: {&#39;spatial&#39;: {&#39;bbox&#39;: [[-180.0, -90.0, 180.0, 90.0]]},
+  &#39;temporal&#39;: {&#39;interval&#39;: [[&#39;1982-08-22T00:00:00Z&#39;, None]]}},
+ &#39;license&#39;: &#39;proprietary&#39;,
+ &#39;keywords&#39;: [&#39;Landsat&#39;,
+  &#39;USGS&#39;,
+  &#39;NASA&#39;,
+  &#39;Satellite&#39;,
+  &#39;Global&#39;,
+  &#39;Imagery&#39;,
+  &#39;Reflectance&#39;,
+  &#39;Temperature&#39;],
+ &#39;providers&#39;: [{&#39;name&#39;: &#39;NASA&#39;,
+   &#39;roles&#39;: [&#39;producer&#39;, &#39;licensor&#39;],
+   &#39;url&#39;: &#39;https://landsat.gsfc.nasa.gov/&#39;},
+  {&#39;name&#39;: &#39;USGS&#39;,
+   &#39;roles&#39;: [&#39;producer&#39;, &#39;processor&#39;, &#39;licensor&#39;],
+   &#39;url&#39;: &#39;https://www.usgs.gov/landsat-missions/landsat-collection-2-level-2-science-products&#39;},
+  {&#39;name&#39;: &#39;Microsoft&#39;,
+   &#39;roles&#39;: [&#39;host&#39;],
+   &#39;url&#39;: &#39;https://planetarycomputer.microsoft.com&#39;}],
+ &#39;summaries&#39;: {&#39;gsd&#39;: [30, 60, 100, 120],
+  &#39;sci:doi&#39;: [&#39;10.5066/P9IAXOVV&#39;, &#39;10.5066/P9C7I13B&#39;, &#39;10.5066/P9OGBGM6&#39;],
+  &#39;eo:bands&#39;: [{&#39;name&#39;: &#39;TM_B1&#39;,
+    &#39;common_name&#39;: &#39;blue&#39;,
+    &#39;description&#39;: &#39;Visible blue (Thematic Mapper)&#39;,
+    &#39;center_wavelength&#39;: 0.49,
+    &#39;full_width_half_max&#39;: 0.07},
+   {&#39;name&#39;: &#39;TM_B2&#39;,
+    &#39;common_name&#39;: &#39;green&#39;,
+    &#39;description&#39;: &#39;Visible green (Thematic Mapper)&#39;,
+    &#39;center_wavelength&#39;: 0.56,
+    &#39;full_width_half_max&#39;: 0.08},
+   {&#39;name&#39;: &#39;TM_B3&#39;,
+    &#39;common_name&#39;: &#39;red&#39;,
+    &#39;description&#39;: &#39;Visible red (Thematic Mapper)&#39;,
+    &#39;center_wavelength&#39;: 0.66,
+    &#39;full_width_half_max&#39;: 0.06},
+   {&#39;name&#39;: &#39;TM_B4&#39;,
+    &#39;common_name&#39;: &#39;nir08&#39;,
+    &#39;description&#39;: &#39;Near infrared (Thematic Mapper)&#39;,
+    &#39;center_wavelength&#39;: 0.83,
+    &#39;full_width_half_max&#39;: 0.14},
+   {&#39;name&#39;: &#39;TM_B5&#39;,
+    &#39;common_name&#39;: &#39;swir16&#39;,
+    &#39;description&#39;: &#39;Short-wave infrared (Thematic Mapper)&#39;,
+    &#39;center_wavelength&#39;: 1.65,
+    &#39;full_width_half_max&#39;: 0.2},
+   {&#39;name&#39;: &#39;TM_B6&#39;,
+    &#39;common_name&#39;: &#39;lwir&#39;,
+    &#39;description&#39;: &#39;Long-wave infrared (Thematic Mapper)&#39;,
+    &#39;center_wavelength&#39;: 11.45,
+    &#39;full_width_half_max&#39;: 2.1},
+   {&#39;name&#39;: &#39;TM_B7&#39;,
+    &#39;common_name&#39;: &#39;swir22&#39;,
+    &#39;description&#39;: &#39;Short-wave infrared (Thematic Mapper)&#39;,
+    &#39;center_wavelength&#39;: 2.22,
+    &#39;full_width_half_max&#39;: 0.27},
+   {&#39;name&#39;: &#39;ETM_B1&#39;,
+    &#39;common_name&#39;: &#39;blue&#39;,
+    &#39;description&#39;: &#39;Visible blue (Enhanced Thematic Mapper Plus)&#39;,
+    &#39;center_wavelength&#39;: 0.48,
+    &#39;full_width_half_max&#39;: 0.07},
+   {&#39;name&#39;: &#39;ETM_B2&#39;,
+    &#39;common_name&#39;: &#39;green&#39;,
+    &#39;description&#39;: &#39;Visible green (Enhanced Thematic Mapper Plus)&#39;,
+    &#39;center_wavelength&#39;: 0.56,
+    &#39;full_width_half_max&#39;: 0.08},
+   {&#39;name&#39;: &#39;ETM_B3&#39;,
+    &#39;common_name&#39;: &#39;red&#39;,
+    &#39;description&#39;: &#39;Visible red (Enhanced Thematic Mapper Plus)&#39;,
+    &#39;center_wavelength&#39;: 0.66,
+    &#39;full_width_half_max&#39;: 0.06},
+   {&#39;name&#39;: &#39;ETM_B4&#39;,
+    &#39;common_name&#39;: &#39;nir08&#39;,
+    &#39;description&#39;: &#39;Near infrared (Enhanced Thematic Mapper Plus)&#39;,
+    &#39;center_wavelength&#39;: 0.84,
+    &#39;full_width_half_max&#39;: 0.13},
+   {&#39;name&#39;: &#39;ETM_B5&#39;,
+    &#39;common_name&#39;: &#39;swir16&#39;,
+    &#39;description&#39;: &#39;Short-wave infrared (Enhanced Thematic Mapper Plus)&#39;,
+    &#39;center_wavelength&#39;: 1.65,
+    &#39;full_width_half_max&#39;: 0.2},
+   {&#39;name&#39;: &#39;ETM_B6&#39;,
+    &#39;common_name&#39;: &#39;lwir&#39;,
+    &#39;description&#39;: &#39;Long-wave infrared (Enhanced Thematic Mapper Plus)&#39;,
+    &#39;center_wavelength&#39;: 11.34,
+    &#39;full_width_half_max&#39;: 2.05},
+   {&#39;name&#39;: &#39;ETM_B7&#39;,
+    &#39;common_name&#39;: &#39;swir22&#39;,
+    &#39;description&#39;: &#39;Short-wave infrared (Enhanced Thematic Mapper Plus)&#39;,
+    &#39;center_wavelength&#39;: 2.2,
+    &#39;full_width_half_max&#39;: 0.28},
+   {&#39;name&#39;: &#39;OLI_B1&#39;,
+    &#39;common_name&#39;: &#39;coastal&#39;,
+    &#39;description&#39;: &#39;Coastal/Aerosol (Operational Land Imager)&#39;,
+    &#39;center_wavelength&#39;: 0.44,
+    &#39;full_width_half_max&#39;: 0.02},
+   {&#39;name&#39;: &#39;OLI_B2&#39;,
+    &#39;common_name&#39;: &#39;blue&#39;,
+    &#39;description&#39;: &#39;Visible blue (Operational Land Imager)&#39;,
+    &#39;center_wavelength&#39;: 0.48,
+    &#39;full_width_half_max&#39;: 0.06},
+   {&#39;name&#39;: &#39;OLI_B3&#39;,
+    &#39;common_name&#39;: &#39;green&#39;,
+    &#39;description&#39;: &#39;Visible green (Operational Land Imager)&#39;,
+    &#39;center_wavelength&#39;: 0.56,
+    &#39;full_width_half_max&#39;: 0.06},
+   {&#39;name&#39;: &#39;OLI_B4&#39;,
+    &#39;common_name&#39;: &#39;red&#39;,
+    &#39;description&#39;: &#39;Visible red (Operational Land Imager)&#39;,
+    &#39;center_wavelength&#39;: 0.65,
+    &#39;full_width_half_max&#39;: 0.04},
+   {&#39;name&#39;: &#39;OLI_B5&#39;,
+    &#39;common_name&#39;: &#39;nir08&#39;,
+    &#39;description&#39;: &#39;Near infrared (Operational Land Imager)&#39;,
+    &#39;center_wavelength&#39;: 0.87,
+    &#39;full_width_half_max&#39;: 0.03},
+   {&#39;name&#39;: &#39;OLI_B6&#39;,
+    &#39;common_name&#39;: &#39;swir16&#39;,
+    &#39;description&#39;: &#39;Short-wave infrared (Operational Land Imager)&#39;,
+    &#39;center_wavelength&#39;: 1.61,
+    &#39;full_width_half_max&#39;: 0.09},
+   {&#39;name&#39;: &#39;OLI_B7&#39;,
+    &#39;common_name&#39;: &#39;swir22&#39;,
+    &#39;description&#39;: &#39;Short-wave infrared (Operational Land Imager)&#39;,
+    &#39;center_wavelength&#39;: 2.2,
+    &#39;full_width_half_max&#39;: 0.19},
+   {&#39;name&#39;: &#39;TIRS_B10&#39;,
+    &#39;common_name&#39;: &#39;lwir11&#39;,
+    &#39;description&#39;: &#39;Long-wave infrared (Thermal Infrared Sensor)&#39;,
+    &#39;center_wavelength&#39;: 10.9,
+    &#39;full_width_half_max&#39;: 0.59}],
+  &#39;platform&#39;: [&#39;landsat-4&#39;,
+   &#39;landsat-5&#39;,
+   &#39;landsat-7&#39;,
+   &#39;landsat-8&#39;,
+   &#39;landsat-9&#39;],
+  &#39;instruments&#39;: [&#39;tm&#39;, &#39;etm+&#39;, &#39;oli&#39;, &#39;tirs&#39;],
+  &#39;view:off_nadir&#39;: {&#39;minimum&#39;: 0, &#39;maximum&#39;: 15}},
+ &#39;assets&#39;: {&#39;thumbnail&#39;: {&#39;href&#39;: &#39;https://ai4edatasetspublicassets.blob.core.windows.net/assets/pc_thumbnails/landsat-c2-l2-thumb.png&#39;,
+   &#39;type&#39;: &#39;image/png&#39;,
+   &#39;title&#39;: &#39;Landsat Collection 2 Level-2 thumbnail&#39;,
+   &#39;roles&#39;: [&#39;thumbnail&#39;]},
+  &#39;geoparquet-items&#39;: {&#39;href&#39;: &#39;abfs://items/landsat-c2-l2.parquet&#39;,
+   &#39;type&#39;: &#39;application/x-parquet&#39;,
+   &#39;title&#39;: &#39;GeoParquet STAC items&#39;,
+   &#39;description&#39;: &quot;Snapshot of the collection&#39;s STAC items exported to GeoParquet format.&quot;,
+   &#39;msft:partition_info&#39;: {&#39;is_partitioned&#39;: True,
+    &#39;partition_frequency&#39;: &#39;MS&#39;},
+   &#39;table:storage_options&#39;: {&#39;account_name&#39;: &#39;pcstacitems&#39;,
+    &#39;credential&#39;: &#39;st=2024-03-19T18%3A10%3A11Z&amp;se=2024-03-20T18%3A55%3A11Z&amp;sp=rl&amp;sv=2021-06-08&amp;sr=c&amp;skoid=c85c15d6-d1ae-42d4-af60-e2ca0f81359b&amp;sktid=72f988bf-86f1-41af-91ab-2d7cd011db47&amp;skt=2024-03-20T13%3A51%3A55Z&amp;ske=2024-03-27T13%3A51%3A55Z&amp;sks=b&amp;skv=2021-06-08&amp;sig=AKEoM5CnPZMYSwoA4qjSHae8ROqGHv/1idP4E78V7WM%3D&#39;,
+    &#39;sas_token&#39;: &#39;st=2024-03-19T18%3A10%3A11Z&amp;se=2024-03-20T18%3A55%3A11Z&amp;sp=rl&amp;sv=2021-06-08&amp;sr=c&amp;skoid=c85c15d6-d1ae-42d4-af60-e2ca0f81359b&amp;sktid=72f988bf-86f1-41af-91ab-2d7cd011db47&amp;skt=2024-03-20T13%3A51%3A55Z&amp;ske=2024-03-27T13%3A51%3A55Z&amp;sks=b&amp;skv=2021-06-08&amp;sig=AKEoM5CnPZMYSwoA4qjSHae8ROqGHv/1idP4E78V7WM%3D&#39;},
+   &#39;roles&#39;: [&#39;stac-items&#39;]}}}
 </pre></div>
 </div>
 </div>
@@ -681,16 +1780,71 @@ const thebe_selector_output = ".output, .cell_output"
 </div>
 </div>
 <div class="cell_output docutils container">
-<div class="output traceback highlight-ipythontb notranslate"><div class="highlight"><pre><span></span><span class="gt">---------------------------------------------------------------------------</span>
-<span class="ne">NameError</span><span class="g g-Whitespace">                                 </span>Traceback (most recent call last)
-<span class="n">Cell</span> <span class="n">In</span><span class="p">[</span><span class="mi">11</span><span class="p">],</span> <span class="n">line</span> <span class="mi">2</span>
-<span class="g g-Whitespace">      </span><span class="mi">1</span> <span class="c1"># data as array</span>
-<span class="ne">----&gt; </span><span class="mi">2</span> <span class="n">landsat_reader</span><span class="p">[</span><span class="s2">&quot;thumbnail&quot;</span><span class="p">]</span><span class="o">.</span><span class="n">read</span><span class="p">()</span>
-
-<span class="ne">NameError</span>: name &#39;landsat_reader&#39; is not defined
-</pre></div>
+<div class="output text_html"><div id='p1007'>
+  <div id="fe62a90d-bb77-42a6-a51d-d5255e10152d" data-root-id="p1007" style="display: contents;"></div>
 </div>
-</div>
+<script type="application/javascript">(function(root) {
+  var docs_json = {"74cd0e2d-5e76-44b3-beb8-25a83d868457":{"version":"3.3.4","title":"Bokeh Application","roots":[{"type":"object","name":"panel.models.markup.HTML","id":"p1007","attributes":{"stylesheets":["\n:host(.pn-loading.pn-arc):before, .pn-loading.pn-arc:before {\n  background-image: url(\"data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHN0eWxlPSJtYXJnaW46IGF1dG87IGJhY2tncm91bmQ6IG5vbmU7IGRpc3BsYXk6IGJsb2NrOyBzaGFwZS1yZW5kZXJpbmc6IGF1dG87IiB2aWV3Qm94PSIwIDAgMTAwIDEwMCIgcHJlc2VydmVBc3BlY3RSYXRpbz0ieE1pZFlNaWQiPiAgPGNpcmNsZSBjeD0iNTAiIGN5PSI1MCIgZmlsbD0ibm9uZSIgc3Ryb2tlPSIjYzNjM2MzIiBzdHJva2Utd2lkdGg9IjEwIiByPSIzNSIgc3Ryb2tlLWRhc2hhcnJheT0iMTY0LjkzMzYxNDMxMzQ2NDE1IDU2Ljk3Nzg3MTQzNzgyMTM4Ij4gICAgPGFuaW1hdGVUcmFuc2Zvcm0gYXR0cmlidXRlTmFtZT0idHJhbnNmb3JtIiB0eXBlPSJyb3RhdGUiIHJlcGVhdENvdW50PSJpbmRlZmluaXRlIiBkdXI9IjFzIiB2YWx1ZXM9IjAgNTAgNTA7MzYwIDUwIDUwIiBrZXlUaW1lcz0iMDsxIj48L2FuaW1hdGVUcmFuc2Zvcm0+ICA8L2NpcmNsZT48L3N2Zz4=\");\n  background-size: auto calc(min(50%, 400px));\n}",{"type":"object","name":"ImportedStyleSheet","id":"p1006","attributes":{"url":"https://cdn.holoviz.org/panel/1.3.8/dist/css/loading.css"}},{"type":"object","name":"ImportedStyleSheet","id":"p1004","attributes":{"url":"https://cdn.holoviz.org/panel/1.3.8/dist/bundled/theme/default.css"}},{"type":"object","name":"ImportedStyleSheet","id":"p1005","attributes":{"url":"https://cdn.holoviz.org/panel/1.3.8/dist/bundled/theme/native.css"}}],"margin":[5,10],"align":"start","text":"&lt;img src=&quot;https://ai4edatasetspublicassets.blob.core.windows.net/assets/pc_thumbnails/landsat-c2-l2-thumb.png&quot;  style=&quot;max-width: 100%; max-height: 100%; object-fit: contain; width: auto; height: auto;&quot;&gt;&lt;/img&gt;"}},{"type":"object","name":"panel.models.comm_manager.CommManager","id":"p1008","attributes":{"plot_id":"p1007","comm_id":"24e72993c08a4ae2bb2b815e4ad0c7e4","client_comm_id":"ce6f4ff34bf3442eb2d663cd0cc4330d"}}],"defs":[{"type":"model","name":"ReactiveHTML1"},{"type":"model","name":"FlexBox1","properties":[{"name":"align_content","kind":"Any","default":"flex-start"},{"name":"align_items","kind":"Any","default":"flex-start"},{"name":"flex_direction","kind":"Any","default":"row"},{"name":"flex_wrap","kind":"Any","default":"wrap"},{"name":"justify_content","kind":"Any","default":"flex-start"}]},{"type":"model","name":"FloatPanel1","properties":[{"name":"config","kind":"Any","default":{"type":"map"}},{"name":"contained","kind":"Any","default":true},{"name":"position","kind":"Any","default":"right-top"},{"name":"offsetx","kind":"Any","default":null},{"name":"offsety","kind":"Any","default":null},{"name":"theme","kind":"Any","default":"primary"},{"name":"status","kind":"Any","default":"normalized"}]},{"type":"model","name":"GridStack1","properties":[{"name":"mode","kind":"Any","default":"warn"},{"name":"ncols","kind":"Any","default":null},{"name":"nrows","kind":"Any","default":null},{"name":"allow_resize","kind":"Any","default":true},{"name":"allow_drag","kind":"Any","default":true},{"name":"state","kind":"Any","default":[]}]},{"type":"model","name":"drag1","properties":[{"name":"slider_width","kind":"Any","default":5},{"name":"slider_color","kind":"Any","default":"black"},{"name":"value","kind":"Any","default":50}]},{"type":"model","name":"click1","properties":[{"name":"terminal_output","kind":"Any","default":""},{"name":"debug_name","kind":"Any","default":""},{"name":"clears","kind":"Any","default":0}]},{"type":"model","name":"copy_to_clipboard1","properties":[{"name":"fill","kind":"Any","default":"none"},{"name":"value","kind":"Any","default":null}]},{"type":"model","name":"FastWrapper1","properties":[{"name":"object","kind":"Any","default":null},{"name":"style","kind":"Any","default":null}]},{"type":"model","name":"NotificationAreaBase1","properties":[{"name":"js_events","kind":"Any","default":{"type":"map"}},{"name":"position","kind":"Any","default":"bottom-right"},{"name":"_clear","kind":"Any","default":0}]},{"type":"model","name":"NotificationArea1","properties":[{"name":"js_events","kind":"Any","default":{"type":"map"}},{"name":"notifications","kind":"Any","default":[]},{"name":"position","kind":"Any","default":"bottom-right"},{"name":"_clear","kind":"Any","default":0},{"name":"types","kind":"Any","default":[{"type":"map","entries":[["type","warning"],["background","#ffc107"],["icon",{"type":"map","entries":[["className","fas fa-exclamation-triangle"],["tagName","i"],["color","white"]]}]]},{"type":"map","entries":[["type","info"],["background","#007bff"],["icon",{"type":"map","entries":[["className","fas fa-info-circle"],["tagName","i"],["color","white"]]}]]}]}]},{"type":"model","name":"Notification","properties":[{"name":"background","kind":"Any","default":null},{"name":"duration","kind":"Any","default":3000},{"name":"icon","kind":"Any","default":null},{"name":"message","kind":"Any","default":""},{"name":"notification_type","kind":"Any","default":null},{"name":"_destroyed","kind":"Any","default":false}]},{"type":"model","name":"TemplateActions1","properties":[{"name":"open_modal","kind":"Any","default":0},{"name":"close_modal","kind":"Any","default":0}]},{"type":"model","name":"BootstrapTemplateActions1","properties":[{"name":"open_modal","kind":"Any","default":0},{"name":"close_modal","kind":"Any","default":0}]},{"type":"model","name":"MaterialTemplateActions1","properties":[{"name":"open_modal","kind":"Any","default":0},{"name":"close_modal","kind":"Any","default":0}]}]}};
+  var render_items = [{"docid":"74cd0e2d-5e76-44b3-beb8-25a83d868457","roots":{"p1007":"fe62a90d-bb77-42a6-a51d-d5255e10152d"},"root_ids":["p1007"]}];
+  var docs = Object.values(docs_json)
+  if (!docs) {
+    return
+  }
+  const py_version = docs[0].version.replace('rc', '-rc.').replace('.dev', '-dev.')
+  function embed_document(root) {
+    var Bokeh = get_bokeh(root)
+    Bokeh.embed.embed_items_notebook(docs_json, render_items);
+    for (const render_item of render_items) {
+      for (const root_id of render_item.root_ids) {
+	const id_el = document.getElementById(root_id)
+	if (id_el.children.length && (id_el.children[0].className === 'bk-root')) {
+	  const root_el = id_el.children[0]
+	  root_el.id = root_el.id + '-rendered'
+	}
+      }
+    }
+  }
+  function get_bokeh(root) {
+    if (root.Bokeh === undefined) {
+      return null
+    } else if (root.Bokeh.version !== py_version) {
+      if (root.Bokeh.versions === undefined || !root.Bokeh.versions.has(py_version)) {
+	return null
+      }
+      return root.Bokeh.versions.get(py_version);
+    } else if (root.Bokeh.version === py_version) {
+      return root.Bokeh
+    }
+    return null
+  }
+  function is_loaded(root) {
+    var Bokeh = get_bokeh(root)
+    return (Bokeh != null && Bokeh.Panel !== undefined)
+  }
+  if (is_loaded(root)) {
+    embed_document(root);
+  } else {
+    var attempts = 0;
+    var timer = setInterval(function(root) {
+      if (is_loaded(root)) {
+        clearInterval(timer);
+        embed_document(root);
+      } else if (document.readyState == "complete") {
+        attempts++;
+        if (attempts > 200) {
+          clearInterval(timer);
+	  var Bokeh = get_bokeh(root)
+	  if (Bokeh == null || Bokeh.Panel == null) {
+            console.warn("Panel: ERROR: Unable to run Panel code because Bokeh or Panel library is missing");
+	  } else {
+	    console.warn("Panel: WARNING: Attempting to render but not all required libraries could be resolved.")
+	    embed_document(root)
+	  }
+        }
+      }
+    }, 25, root)
+  }
+})(window);</script></div></div>
 </div>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
@@ -700,13 +1854,7 @@ const thebe_selector_output = ".output, .cell_output"
 </div>
 </div>
 <div class="cell_output docutils container">
-<div class="output traceback highlight-ipythontb notranslate"><div class="highlight"><pre><span></span><span class="gt">---------------------------------------------------------------------------</span>
-<span class="ne">NameError</span><span class="g g-Whitespace">                                 </span>Traceback (most recent call last)
-<span class="n">Cell</span> <span class="n">In</span><span class="p">[</span><span class="mi">12</span><span class="p">],</span> <span class="n">line</span> <span class="mi">2</span>
-<span class="g g-Whitespace">      </span><span class="mi">1</span> <span class="c1"># render with panel</span>
-<span class="ne">----&gt; </span><span class="mi">2</span> <span class="n">landsat_reader</span><span class="p">[</span><span class="s2">&quot;thumbnail&quot;</span><span class="p">]</span><span class="o">.</span><span class="n">to_reader</span><span class="p">(</span><span class="s2">&quot;panel&quot;</span><span class="p">)</span>
-
-<span class="ne">NameError</span>: name &#39;landsat_reader&#39; is not defined
+<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>PanelImageViewer reader producing panel.pane:Image
 </pre></div>
 </div>
 </div>
@@ -720,13 +1868,7 @@ const thebe_selector_output = ".output, .cell_output"
 </div>
 </div>
 <div class="cell_output docutils container">
-<div class="output traceback highlight-ipythontb notranslate"><div class="highlight"><pre><span></span><span class="gt">---------------------------------------------------------------------------</span>
-<span class="ne">NameError</span><span class="g g-Whitespace">                                 </span>Traceback (most recent call last)
-<span class="n">Cell</span> <span class="n">In</span><span class="p">[</span><span class="mi">13</span><span class="p">],</span> <span class="n">line</span> <span class="mi">1</span>
-<span class="ne">----&gt; </span><span class="mi">1</span> <span class="n">landsat_items</span> <span class="o">=</span> <span class="n">landsat_reader</span><span class="p">[</span><span class="s2">&quot;geoparquet-items&quot;</span><span class="p">]</span>
-<span class="g g-Whitespace">      </span><span class="mi">2</span> <span class="n">landsat_items</span>
-
-<span class="ne">NameError</span>: name &#39;landsat_reader&#39; is not defined
+<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>DaskGeoParquet reader producing dask_geopandas.core:GeoDataFrame
 </pre></div>
 </div>
 </div>
@@ -739,18 +1881,6 @@ const thebe_selector_output = ".output, .cell_output"
 </pre></div>
 </div>
 </div>
-<div class="cell_output docutils container">
-<div class="output traceback highlight-ipythontb notranslate"><div class="highlight"><pre><span></span><span class="gt">---------------------------------------------------------------------------</span>
-<span class="ne">NameError</span><span class="g g-Whitespace">                                 </span>Traceback (most recent call last)
-<span class="n">Cell</span> <span class="n">In</span><span class="p">[</span><span class="mi">14</span><span class="p">],</span> <span class="n">line</span> <span class="mi">3</span>
-<span class="g g-Whitespace">      </span><span class="mi">1</span> <span class="c1"># note `output_instance`: this is because .tail() makes a pandas from a dask dataframe. GeoDataFrameToSTACCatalog</span>
-<span class="g g-Whitespace">      </span><span class="mi">2</span> <span class="c1"># works specifically with geopandas only</span>
-<span class="ne">----&gt; </span><span class="mi">3</span> <span class="n">cat</span> <span class="o">=</span> <span class="n">landsat_items</span><span class="o">.</span><span class="n">tail</span><span class="p">(</span><span class="n">output_instance</span><span class="o">=</span><span class="s2">&quot;geopandas:GeoDataFrame&quot;</span><span class="p">)</span><span class="o">.</span><span class="n">GeoDataFrameToSTACCatalog</span><span class="o">.</span><span class="n">read</span><span class="p">()</span>
-
-<span class="ne">NameError</span>: name &#39;landsat_items&#39; is not defined
-</pre></div>
-</div>
-</div>
 </div>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
@@ -760,13 +1890,8 @@ const thebe_selector_output = ".output, .cell_output"
 </div>
 </div>
 <div class="cell_output docutils container">
-<div class="output traceback highlight-ipythontb notranslate"><div class="highlight"><pre><span></span><span class="gt">---------------------------------------------------------------------------</span>
-<span class="ne">NameError</span><span class="g g-Whitespace">                                 </span>Traceback (most recent call last)
-<span class="n">Cell</span> <span class="n">In</span><span class="p">[</span><span class="mi">15</span><span class="p">],</span> <span class="n">line</span> <span class="mi">2</span>
-<span class="g g-Whitespace">      </span><span class="mi">1</span> <span class="c1"># this is an &quot;item collection&quot;; each item is a set of assets (many levels here)</span>
-<span class="ne">----&gt; </span><span class="mi">2</span> <span class="n">cat</span>
-
-<span class="ne">NameError</span>: name &#39;cat&#39; is not defined
+<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>Catalog
+ named datasets: [&#39;LC09_L2SP_105013_20240301_02_T1&#39;, &#39;LC09_L2SP_105014_20240301_02_T1&#39;, &#39;LC09_L2SP_105015_20240301_02_T1&#39;, &#39;LC09_L2SP_105016_20240301_02_T2&#39;, &#39;LC09_L2SP_105017_20240301_02_T2&#39;]
 </pre></div>
 </div>
 </div>
@@ -774,19 +1899,15 @@ const thebe_selector_output = ".output, .cell_output"
 <p>Repeat the process aforementioned.</p>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
-<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">subcat</span> <span class="o">=</span> <span class="n">cat</span><span class="p">[</span><span class="s2">&quot;LC09_L2SP_094061_20240201_02_T2&quot;</span><span class="p">]</span><span class="o">.</span><span class="n">read</span><span class="p">()</span>
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">item_key</span> <span class="o">=</span> <span class="nb">list</span><span class="p">(</span><span class="n">cat</span><span class="o">.</span><span class="n">entries</span><span class="o">.</span><span class="n">keys</span><span class="p">())[</span><span class="mi">0</span><span class="p">]</span>
+<span class="n">subcat</span> <span class="o">=</span> <span class="n">cat</span><span class="p">[</span><span class="n">item_key</span><span class="p">]</span><span class="o">.</span><span class="n">read</span><span class="p">()</span>
 <span class="n">subcat</span>
 </pre></div>
 </div>
 </div>
 <div class="cell_output docutils container">
-<div class="output traceback highlight-ipythontb notranslate"><div class="highlight"><pre><span></span><span class="gt">---------------------------------------------------------------------------</span>
-<span class="ne">NameError</span><span class="g g-Whitespace">                                 </span>Traceback (most recent call last)
-<span class="n">Cell</span> <span class="n">In</span><span class="p">[</span><span class="mi">16</span><span class="p">],</span> <span class="n">line</span> <span class="mi">1</span>
-<span class="ne">----&gt; </span><span class="mi">1</span> <span class="n">subcat</span> <span class="o">=</span> <span class="n">cat</span><span class="p">[</span><span class="s2">&quot;LC09_L2SP_094061_20240201_02_T2&quot;</span><span class="p">]</span><span class="o">.</span><span class="n">read</span><span class="p">()</span>
-<span class="g g-Whitespace">      </span><span class="mi">2</span> <span class="n">subcat</span>
-
-<span class="ne">NameError</span>: name &#39;cat&#39; is not defined
+<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>Catalog
+ named datasets: [&#39;ang&#39;, &#39;atran&#39;, &#39;blue&#39;, &#39;cdist&#39;, &#39;coastal&#39;, &#39;drad&#39;, &#39;emis&#39;, &#39;emsd&#39;, &#39;green&#39;, &#39;lwir11&#39;, &#39;mtl.json&#39;, &#39;mtl.txt&#39;, &#39;mtl.xml&#39;, &#39;nir08&#39;, &#39;qa&#39;, &#39;qa_aerosol&#39;, &#39;qa_pixel&#39;, &#39;qa_radsat&#39;, &#39;red&#39;, &#39;rendered_preview&#39;, &#39;swir16&#39;, &#39;swir22&#39;, &#39;tilejson&#39;, &#39;trad&#39;, &#39;urad&#39;]
 </pre></div>
 </div>
 </div>
@@ -799,13 +1920,18 @@ const thebe_selector_output = ".output, .cell_output"
 </div>
 </div>
 <div class="cell_output docutils container">
-<div class="output traceback highlight-ipythontb notranslate"><div class="highlight"><pre><span></span><span class="gt">---------------------------------------------------------------------------</span>
-<span class="ne">NameError</span><span class="g g-Whitespace">                                 </span>Traceback (most recent call last)
-<span class="n">Cell</span> <span class="n">In</span><span class="p">[</span><span class="mi">17</span><span class="p">],</span> <span class="n">line</span> <span class="mi">2</span>
-<span class="g g-Whitespace">      </span><span class="mi">1</span> <span class="c1"># single image in one band</span>
-<span class="ne">----&gt; </span><span class="mi">2</span> <span class="n">subcat</span><span class="o">.</span><span class="n">red</span><span class="o">.</span><span class="n">read</span><span class="p">()</span>
-
-<span class="ne">NameError</span>: name &#39;subcat&#39; is not defined
+<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>[&lt;xarray.DataArray (band: 1, y: 8181, x: 8121)&gt;
+ [66437901 values with dtype=uint16]
+ Coordinates:
+   * band         (band) int64 1
+   * x            (x) float64 4.455e+05 4.455e+05 ... 6.891e+05 6.891e+05
+   * y            (y) float64 6.939e+06 6.939e+06 ... 6.693e+06 6.693e+06
+     spatial_ref  int64 0
+ Attributes:
+     AREA_OR_POINT:  Point
+     _FillValue:     0
+     scale_factor:   1.0
+     add_offset:     0.0]
 </pre></div>
 </div>
 </div>
@@ -813,18 +1939,7 @@ const thebe_selector_output = ".output, .cell_output"
 <div class="cell docutils container">
 <div class="cell_input docutils container">
 <div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1"># unfortunately, the &quot;signer&quot; didn&#39;t make it through</span>
-<span class="n">catbands</span> <span class="o">=</span> <span class="n">cat</span><span class="p">[</span><span class="s2">&quot;LC09_L2SP_094061_20240201_02_T2&quot;</span><span class="p">]</span><span class="o">.</span><span class="n">to_reader</span><span class="p">(</span><span class="n">reader</span><span class="o">=</span><span class="s2">&quot;StackBands&quot;</span><span class="p">,</span> <span class="n">bands</span><span class="o">=</span><span class="p">[</span><span class="s2">&quot;red&quot;</span><span class="p">,</span> <span class="s2">&quot;green&quot;</span><span class="p">,</span> <span class="s2">&quot;blue&quot;</span><span class="p">],</span> <span class="n">signer</span><span class="o">=</span><span class="n">planetary_computer</span><span class="o">.</span><span class="n">sign_inplace</span><span class="p">)</span>
-</pre></div>
-</div>
-</div>
-<div class="cell_output docutils container">
-<div class="output traceback highlight-ipythontb notranslate"><div class="highlight"><pre><span></span><span class="gt">---------------------------------------------------------------------------</span>
-<span class="ne">NameError</span><span class="g g-Whitespace">                                 </span>Traceback (most recent call last)
-<span class="n">Cell</span> <span class="n">In</span><span class="p">[</span><span class="mi">18</span><span class="p">],</span> <span class="n">line</span> <span class="mi">2</span>
-<span class="g g-Whitespace">      </span><span class="mi">1</span> <span class="c1"># unfortunately, the &quot;signer&quot; didn&#39;t make it through</span>
-<span class="ne">----&gt; </span><span class="mi">2</span> <span class="n">catbands</span> <span class="o">=</span> <span class="n">cat</span><span class="p">[</span><span class="s2">&quot;LC09_L2SP_094061_20240201_02_T2&quot;</span><span class="p">]</span><span class="o">.</span><span class="n">to_reader</span><span class="p">(</span><span class="n">reader</span><span class="o">=</span><span class="s2">&quot;StackBands&quot;</span><span class="p">,</span> <span class="n">bands</span><span class="o">=</span><span class="p">[</span><span class="s2">&quot;red&quot;</span><span class="p">,</span> <span class="s2">&quot;green&quot;</span><span class="p">,</span> <span class="s2">&quot;blue&quot;</span><span class="p">],</span> <span class="n">signer</span><span class="o">=</span><span class="n">planetary_computer</span><span class="o">.</span><span class="n">sign_inplace</span><span class="p">)</span>
-
-<span class="ne">NameError</span>: name &#39;cat&#39; is not defined
+<span class="n">catbands</span> <span class="o">=</span> <span class="n">cat</span><span class="p">[</span><span class="n">item_key</span><span class="p">]</span><span class="o">.</span><span class="n">to_reader</span><span class="p">(</span><span class="n">reader</span><span class="o">=</span><span class="s2">&quot;StackBands&quot;</span><span class="p">,</span> <span class="n">bands</span><span class="o">=</span><span class="p">[</span><span class="s2">&quot;red&quot;</span><span class="p">,</span> <span class="s2">&quot;green&quot;</span><span class="p">,</span> <span class="s2">&quot;blue&quot;</span><span class="p">],</span> <span class="n">signer</span><span class="o">=</span><span class="n">planetary_computer</span><span class="o">.</span><span class="n">sign_inplace</span><span class="p">)</span>
 </pre></div>
 </div>
 </div>
@@ -840,15 +1955,199 @@ const thebe_selector_output = ".output, .cell_output"
 </div>
 </div>
 <div class="cell_output docutils container">
+<div class="output stderr highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>_tiffSeekProc: Success.
+_tiffSeekProc: Success.
+ERROR 1: /vsipythonfilelike/49fca32c-b2a3-4c2a-b978-701a47fea1b4/49fca32c-b2a3-4c2a-b978-701a47fea1b4, band 1: IReadBlock failed at X offset 0, Y offset 0
+</pre></div>
+</div>
 <div class="output traceback highlight-ipythontb notranslate"><div class="highlight"><pre><span></span><span class="gt">---------------------------------------------------------------------------</span>
-<span class="ne">NameError</span><span class="g g-Whitespace">                                 </span>Traceback (most recent call last)
+<span class="ne">AttributeError</span><span class="g g-Whitespace">                            </span>Traceback (most recent call last)
+<span class="nn">File rasterio/_filepath.pyx:164,</span> in <span class="ni">rasterio._filepath.filepath_seek</span><span class="nt">()</span>
+
+<span class="nn">File rasterio/_filepath.pyx:164,</span> in <span class="ni">rasterio._filepath.filepath_seek</span><span class="nt">()</span>
+
+<span class="ne">AttributeError</span>: &#39;RasterArray&#39; object has no attribute &#39;seek&#39;
+
+<span class="n">The</span> <span class="n">above</span> <span class="n">exception</span> <span class="n">was</span> <span class="n">the</span> <span class="n">direct</span> <span class="n">cause</span> <span class="n">of</span> <span class="n">the</span> <span class="n">following</span> <span class="n">exception</span><span class="p">:</span>
+
+<span class="ne">SystemError</span><span class="g g-Whitespace">                               </span>Traceback (most recent call last)
 <span class="n">Cell</span> <span class="n">In</span><span class="p">[</span><span class="mi">19</span><span class="p">],</span> <span class="n">line</span> <span class="mi">3</span>
 <span class="g g-Whitespace">      </span><span class="mi">1</span> <span class="c1"># multiband image. Unfortunately, the value of the &quot;band&quot; variable in each input is 1, not the real</span>
 <span class="g g-Whitespace">      </span><span class="mi">2</span> <span class="c1"># value; they could be relabelled here</span>
 <span class="ne">----&gt; </span><span class="mi">3</span> <span class="n">data</span> <span class="o">=</span> <span class="n">catbands</span><span class="o">.</span><span class="n">read</span><span class="p">(</span><span class="n">dim</span><span class="o">=</span><span class="s2">&quot;band&quot;</span><span class="p">)</span>
 <span class="g g-Whitespace">      </span><span class="mi">4</span> <span class="n">data</span>
 
-<span class="ne">NameError</span>: name &#39;catbands&#39; is not defined
+<span class="nn">File ~/miniconda3/envs/cookbook-dev/lib/python3.10/site-packages/intake/readers/readers.py:96,</span> in <span class="ni">BaseReader.read</span><span class="nt">(self, *args, **kwargs)</span>
+<span class="g g-Whitespace">     </span><span class="mi">94</span> <span class="n">kw</span><span class="o">.</span><span class="n">update</span><span class="p">(</span><span class="n">kwargs</span><span class="p">)</span>
+<span class="g g-Whitespace">     </span><span class="mi">95</span> <span class="n">args</span> <span class="o">=</span> <span class="n">kw</span><span class="o">.</span><span class="n">pop</span><span class="p">(</span><span class="s2">&quot;args&quot;</span><span class="p">,</span> <span class="p">())</span> <span class="ow">or</span> <span class="n">args</span>
+<span class="ne">---&gt; </span><span class="mi">96</span> <span class="k">return</span> <span class="bp">self</span><span class="o">.</span><span class="n">_read</span><span class="p">(</span><span class="o">*</span><span class="n">args</span><span class="p">,</span> <span class="o">**</span><span class="n">kw</span><span class="p">)</span>
+
+<span class="nn">File ~/miniconda3/envs/cookbook-dev/lib/python3.10/site-packages/intake/readers/catalogs.py:308,</span> in <span class="ni">StackBands._read</span><span class="nt">(self, data, bands, concat_dim, signer, **kw)</span>
+<span class="g g-Whitespace">    </span><span class="mi">306</span> <span class="n">reader</span><span class="o">.</span><span class="n">kwargs</span><span class="p">[</span><span class="s2">&quot;data&quot;</span><span class="p">]</span><span class="o">.</span><span class="n">url</span> <span class="o">=</span> <span class="n">hrefs</span>
+<span class="g g-Whitespace">    </span><span class="mi">307</span> <span class="n">reader</span><span class="o">.</span><span class="n">kwargs</span><span class="o">.</span><span class="n">update</span><span class="p">(</span><span class="n">kw</span><span class="p">)</span>
+<span class="ne">--&gt; </span><span class="mi">308</span> <span class="k">return</span> <span class="n">reader</span><span class="o">.</span><span class="n">read</span><span class="p">()</span>
+
+<span class="nn">File ~/miniconda3/envs/cookbook-dev/lib/python3.10/site-packages/intake/readers/readers.py:96,</span> in <span class="ni">BaseReader.read</span><span class="nt">(self, *args, **kwargs)</span>
+<span class="g g-Whitespace">     </span><span class="mi">94</span> <span class="n">kw</span><span class="o">.</span><span class="n">update</span><span class="p">(</span><span class="n">kwargs</span><span class="p">)</span>
+<span class="g g-Whitespace">     </span><span class="mi">95</span> <span class="n">args</span> <span class="o">=</span> <span class="n">kw</span><span class="o">.</span><span class="n">pop</span><span class="p">(</span><span class="s2">&quot;args&quot;</span><span class="p">,</span> <span class="p">())</span> <span class="ow">or</span> <span class="n">args</span>
+<span class="ne">---&gt; </span><span class="mi">96</span> <span class="k">return</span> <span class="bp">self</span><span class="o">.</span><span class="n">_read</span><span class="p">(</span><span class="o">*</span><span class="n">args</span><span class="p">,</span> <span class="o">**</span><span class="n">kw</span><span class="p">)</span>
+
+<span class="nn">File ~/miniconda3/envs/cookbook-dev/lib/python3.10/site-packages/intake/readers/readers.py:1023,</span> in <span class="ni">RasterIOXarrayReader._read</span><span class="nt">(self, data, concat_kwargs, **kwargs)</span>
+<span class="g g-Whitespace">   </span><span class="mi">1020</span>     <span class="k">return</span> <span class="n">bits</span>
+<span class="g g-Whitespace">   </span><span class="mi">1021</span> <span class="k">else</span><span class="p">:</span>
+<span class="g g-Whitespace">   </span><span class="mi">1022</span>     <span class="c1"># requires dim= in kwargs</span>
+<span class="ne">-&gt; </span><span class="mi">1023</span>     <span class="k">return</span> <span class="n">xr</span><span class="o">.</span><span class="n">concat</span><span class="p">(</span><span class="n">bits</span><span class="p">,</span> <span class="o">**</span><span class="n">concat_kwargs</span><span class="p">)</span>
+
+<span class="nn">File ~/miniconda3/envs/cookbook-dev/lib/python3.10/site-packages/xarray/core/concat.py:237,</span> in <span class="ni">concat</span><span class="nt">(objs, dim, data_vars, coords, compat, positions, fill_value, join, combine_attrs)</span>
+<span class="g g-Whitespace">    </span><span class="mi">232</span>     <span class="k">raise</span> <span class="ne">ValueError</span><span class="p">(</span>
+<span class="g g-Whitespace">    </span><span class="mi">233</span>         <span class="sa">f</span><span class="s2">&quot;compat=</span><span class="si">{</span><span class="n">compat</span><span class="si">!r}</span><span class="s2"> invalid: must be &#39;broadcast_equals&#39;, &#39;equals&#39;, &#39;identical&#39;, &#39;no_conflicts&#39; or &#39;override&#39;&quot;</span>
+<span class="g g-Whitespace">    </span><span class="mi">234</span>     <span class="p">)</span>
+<span class="g g-Whitespace">    </span><span class="mi">236</span> <span class="k">if</span> <span class="nb">isinstance</span><span class="p">(</span><span class="n">first_obj</span><span class="p">,</span> <span class="n">DataArray</span><span class="p">):</span>
+<span class="ne">--&gt; </span><span class="mi">237</span>     <span class="k">return</span> <span class="n">_dataarray_concat</span><span class="p">(</span>
+<span class="g g-Whitespace">    </span><span class="mi">238</span>         <span class="n">objs</span><span class="p">,</span>
+<span class="g g-Whitespace">    </span><span class="mi">239</span>         <span class="n">dim</span><span class="o">=</span><span class="n">dim</span><span class="p">,</span>
+<span class="g g-Whitespace">    </span><span class="mi">240</span>         <span class="n">data_vars</span><span class="o">=</span><span class="n">data_vars</span><span class="p">,</span>
+<span class="g g-Whitespace">    </span><span class="mi">241</span>         <span class="n">coords</span><span class="o">=</span><span class="n">coords</span><span class="p">,</span>
+<span class="g g-Whitespace">    </span><span class="mi">242</span>         <span class="n">compat</span><span class="o">=</span><span class="n">compat</span><span class="p">,</span>
+<span class="g g-Whitespace">    </span><span class="mi">243</span>         <span class="n">positions</span><span class="o">=</span><span class="n">positions</span><span class="p">,</span>
+<span class="g g-Whitespace">    </span><span class="mi">244</span>         <span class="n">fill_value</span><span class="o">=</span><span class="n">fill_value</span><span class="p">,</span>
+<span class="g g-Whitespace">    </span><span class="mi">245</span>         <span class="n">join</span><span class="o">=</span><span class="n">join</span><span class="p">,</span>
+<span class="g g-Whitespace">    </span><span class="mi">246</span>         <span class="n">combine_attrs</span><span class="o">=</span><span class="n">combine_attrs</span><span class="p">,</span>
+<span class="g g-Whitespace">    </span><span class="mi">247</span>     <span class="p">)</span>
+<span class="g g-Whitespace">    </span><span class="mi">248</span> <span class="k">elif</span> <span class="nb">isinstance</span><span class="p">(</span><span class="n">first_obj</span><span class="p">,</span> <span class="n">Dataset</span><span class="p">):</span>
+<span class="g g-Whitespace">    </span><span class="mi">249</span>     <span class="k">return</span> <span class="n">_dataset_concat</span><span class="p">(</span>
+<span class="g g-Whitespace">    </span><span class="mi">250</span>         <span class="n">objs</span><span class="p">,</span>
+<span class="g g-Whitespace">    </span><span class="mi">251</span>         <span class="n">dim</span><span class="o">=</span><span class="n">dim</span><span class="p">,</span>
+   <span class="p">(</span><span class="o">...</span><span class="p">)</span>
+<span class="g g-Whitespace">    </span><span class="mi">258</span>         <span class="n">combine_attrs</span><span class="o">=</span><span class="n">combine_attrs</span><span class="p">,</span>
+<span class="g g-Whitespace">    </span><span class="mi">259</span>     <span class="p">)</span>
+
+<span class="nn">File ~/miniconda3/envs/cookbook-dev/lib/python3.10/site-packages/xarray/core/concat.py:702,</span> in <span class="ni">_dataarray_concat</span><span class="nt">(arrays, dim, data_vars, coords, compat, positions, fill_value, join, combine_attrs)</span>
+<span class="g g-Whitespace">    </span><span class="mi">699</span>             <span class="n">arr</span> <span class="o">=</span> <span class="n">cast</span><span class="p">(</span><span class="n">T_DataArray</span><span class="p">,</span> <span class="n">arr</span><span class="o">.</span><span class="n">rename</span><span class="p">(</span><span class="n">name</span><span class="p">))</span>
+<span class="g g-Whitespace">    </span><span class="mi">700</span>     <span class="n">datasets</span><span class="o">.</span><span class="n">append</span><span class="p">(</span><span class="n">arr</span><span class="o">.</span><span class="n">_to_temp_dataset</span><span class="p">())</span>
+<span class="ne">--&gt; </span><span class="mi">702</span> <span class="n">ds</span> <span class="o">=</span> <span class="n">_dataset_concat</span><span class="p">(</span>
+<span class="g g-Whitespace">    </span><span class="mi">703</span>     <span class="n">datasets</span><span class="p">,</span>
+<span class="g g-Whitespace">    </span><span class="mi">704</span>     <span class="n">dim</span><span class="p">,</span>
+<span class="g g-Whitespace">    </span><span class="mi">705</span>     <span class="n">data_vars</span><span class="p">,</span>
+<span class="g g-Whitespace">    </span><span class="mi">706</span>     <span class="n">coords</span><span class="p">,</span>
+<span class="g g-Whitespace">    </span><span class="mi">707</span>     <span class="n">compat</span><span class="p">,</span>
+<span class="g g-Whitespace">    </span><span class="mi">708</span>     <span class="n">positions</span><span class="p">,</span>
+<span class="g g-Whitespace">    </span><span class="mi">709</span>     <span class="n">fill_value</span><span class="o">=</span><span class="n">fill_value</span><span class="p">,</span>
+<span class="g g-Whitespace">    </span><span class="mi">710</span>     <span class="n">join</span><span class="o">=</span><span class="n">join</span><span class="p">,</span>
+<span class="g g-Whitespace">    </span><span class="mi">711</span>     <span class="n">combine_attrs</span><span class="o">=</span><span class="n">combine_attrs</span><span class="p">,</span>
+<span class="g g-Whitespace">    </span><span class="mi">712</span> <span class="p">)</span>
+<span class="g g-Whitespace">    </span><span class="mi">714</span> <span class="n">merged_attrs</span> <span class="o">=</span> <span class="n">merge_attrs</span><span class="p">([</span><span class="n">da</span><span class="o">.</span><span class="n">attrs</span> <span class="k">for</span> <span class="n">da</span> <span class="ow">in</span> <span class="n">arrays</span><span class="p">],</span> <span class="n">combine_attrs</span><span class="p">)</span>
+<span class="g g-Whitespace">    </span><span class="mi">716</span> <span class="n">result</span> <span class="o">=</span> <span class="n">arrays</span><span class="p">[</span><span class="mi">0</span><span class="p">]</span><span class="o">.</span><span class="n">_from_temp_dataset</span><span class="p">(</span><span class="n">ds</span><span class="p">,</span> <span class="n">name</span><span class="p">)</span>
+
+<span class="nn">File ~/miniconda3/envs/cookbook-dev/lib/python3.10/site-packages/xarray/core/concat.py:620,</span> in <span class="ni">_dataset_concat</span><span class="nt">(datasets, dim, data_vars, coords, compat, positions, fill_value, join, combine_attrs)</span>
+<span class="g g-Whitespace">    </span><span class="mi">618</span>         <span class="n">result_vars</span><span class="p">[</span><span class="n">k</span><span class="p">]</span> <span class="o">=</span> <span class="n">v</span>
+<span class="g g-Whitespace">    </span><span class="mi">619</span> <span class="k">else</span><span class="p">:</span>
+<span class="ne">--&gt; </span><span class="mi">620</span>     <span class="n">combined_var</span> <span class="o">=</span> <span class="n">concat_vars</span><span class="p">(</span>
+<span class="g g-Whitespace">    </span><span class="mi">621</span>         <span class="nb">vars</span><span class="p">,</span> <span class="n">dim</span><span class="p">,</span> <span class="n">positions</span><span class="p">,</span> <span class="n">combine_attrs</span><span class="o">=</span><span class="n">combine_attrs</span>
+<span class="g g-Whitespace">    </span><span class="mi">622</span>     <span class="p">)</span>
+<span class="g g-Whitespace">    </span><span class="mi">623</span>     <span class="c1"># reindex if variable is not present in all datasets</span>
+<span class="g g-Whitespace">    </span><span class="mi">624</span>     <span class="k">if</span> <span class="nb">len</span><span class="p">(</span><span class="n">variable_index</span><span class="p">)</span> <span class="o">&lt;</span> <span class="nb">len</span><span class="p">(</span><span class="n">concat_index</span><span class="p">):</span>
+
+<span class="nn">File ~/miniconda3/envs/cookbook-dev/lib/python3.10/site-packages/xarray/core/variable.py:3201,</span> in <span class="ni">concat</span><span class="nt">(variables, dim, positions, shortcut, combine_attrs)</span>
+<span class="g g-Whitespace">   </span><span class="mi">3199</span>     <span class="k">return</span> <span class="n">IndexVariable</span><span class="o">.</span><span class="n">concat</span><span class="p">(</span><span class="n">variables</span><span class="p">,</span> <span class="n">dim</span><span class="p">,</span> <span class="n">positions</span><span class="p">,</span> <span class="n">shortcut</span><span class="p">,</span> <span class="n">combine_attrs</span><span class="p">)</span>
+<span class="g g-Whitespace">   </span><span class="mi">3200</span> <span class="k">else</span><span class="p">:</span>
+<span class="ne">-&gt; </span><span class="mi">3201</span>     <span class="k">return</span> <span class="n">Variable</span><span class="o">.</span><span class="n">concat</span><span class="p">(</span><span class="n">variables</span><span class="p">,</span> <span class="n">dim</span><span class="p">,</span> <span class="n">positions</span><span class="p">,</span> <span class="n">shortcut</span><span class="p">,</span> <span class="n">combine_attrs</span><span class="p">)</span>
+
+<span class="nn">File ~/miniconda3/envs/cookbook-dev/lib/python3.10/site-packages/xarray/core/variable.py:2057,</span> in <span class="ni">Variable.concat</span><span class="nt">(cls, variables, dim, positions, shortcut, combine_attrs)</span>
+<span class="g g-Whitespace">   </span><span class="mi">2054</span> <span class="n">variables</span> <span class="o">=</span> <span class="nb">list</span><span class="p">(</span><span class="n">variables</span><span class="p">)</span>
+<span class="g g-Whitespace">   </span><span class="mi">2055</span> <span class="n">first_var</span> <span class="o">=</span> <span class="n">variables</span><span class="p">[</span><span class="mi">0</span><span class="p">]</span>
+<span class="ne">-&gt; </span><span class="mi">2057</span> <span class="n">arrays</span> <span class="o">=</span> <span class="p">[</span><span class="n">v</span><span class="o">.</span><span class="n">data</span> <span class="k">for</span> <span class="n">v</span> <span class="ow">in</span> <span class="n">variables</span><span class="p">]</span>
+<span class="g g-Whitespace">   </span><span class="mi">2059</span> <span class="k">if</span> <span class="n">dim</span> <span class="ow">in</span> <span class="n">first_var</span><span class="o">.</span><span class="n">dims</span><span class="p">:</span>
+<span class="g g-Whitespace">   </span><span class="mi">2060</span>     <span class="n">axis</span> <span class="o">=</span> <span class="n">first_var</span><span class="o">.</span><span class="n">get_axis_num</span><span class="p">(</span><span class="n">dim</span><span class="p">)</span>
+
+<span class="nn">File ~/miniconda3/envs/cookbook-dev/lib/python3.10/site-packages/xarray/core/variable.py:2057,</span> in <span class="ni">&lt;listcomp&gt;</span><span class="nt">(.0)</span>
+<span class="g g-Whitespace">   </span><span class="mi">2054</span> <span class="n">variables</span> <span class="o">=</span> <span class="nb">list</span><span class="p">(</span><span class="n">variables</span><span class="p">)</span>
+<span class="g g-Whitespace">   </span><span class="mi">2055</span> <span class="n">first_var</span> <span class="o">=</span> <span class="n">variables</span><span class="p">[</span><span class="mi">0</span><span class="p">]</span>
+<span class="ne">-&gt; </span><span class="mi">2057</span> <span class="n">arrays</span> <span class="o">=</span> <span class="p">[</span><span class="n">v</span><span class="o">.</span><span class="n">data</span> <span class="k">for</span> <span class="n">v</span> <span class="ow">in</span> <span class="n">variables</span><span class="p">]</span>
+<span class="g g-Whitespace">   </span><span class="mi">2059</span> <span class="k">if</span> <span class="n">dim</span> <span class="ow">in</span> <span class="n">first_var</span><span class="o">.</span><span class="n">dims</span><span class="p">:</span>
+<span class="g g-Whitespace">   </span><span class="mi">2060</span>     <span class="n">axis</span> <span class="o">=</span> <span class="n">first_var</span><span class="o">.</span><span class="n">get_axis_num</span><span class="p">(</span><span class="n">dim</span><span class="p">)</span>
+
+<span class="nn">File ~/miniconda3/envs/cookbook-dev/lib/python3.10/site-packages/xarray/core/variable.py:430,</span> in <span class="ni">Variable.data</span><span class="nt">(self)</span>
+<span class="g g-Whitespace">    </span><span class="mi">428</span>     <span class="k">return</span> <span class="bp">self</span><span class="o">.</span><span class="n">_data</span>
+<span class="g g-Whitespace">    </span><span class="mi">429</span> <span class="k">else</span><span class="p">:</span>
+<span class="ne">--&gt; </span><span class="mi">430</span>     <span class="k">return</span> <span class="bp">self</span><span class="o">.</span><span class="n">values</span>
+
+<span class="nn">File ~/miniconda3/envs/cookbook-dev/lib/python3.10/site-packages/xarray/core/variable.py:603,</span> in <span class="ni">Variable.values</span><span class="nt">(self)</span>
+<span class="g g-Whitespace">    </span><span class="mi">600</span> <span class="nd">@property</span>
+<span class="g g-Whitespace">    </span><span class="mi">601</span> <span class="k">def</span> <span class="nf">values</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
+<span class="g g-Whitespace">    </span><span class="mi">602</span><span class="w">     </span><span class="sd">&quot;&quot;&quot;The variable&#39;s data as a numpy.ndarray&quot;&quot;&quot;</span>
+<span class="ne">--&gt; </span><span class="mi">603</span>     <span class="k">return</span> <span class="n">_as_array_or_item</span><span class="p">(</span><span class="bp">self</span><span class="o">.</span><span class="n">_data</span><span class="p">)</span>
+
+<span class="nn">File ~/miniconda3/envs/cookbook-dev/lib/python3.10/site-packages/xarray/core/variable.py:309,</span> in <span class="ni">_as_array_or_item</span><span class="nt">(data)</span>
+<span class="g g-Whitespace">    </span><span class="mi">295</span> <span class="k">def</span> <span class="nf">_as_array_or_item</span><span class="p">(</span><span class="n">data</span><span class="p">):</span>
+<span class="g g-Whitespace">    </span><span class="mi">296</span><span class="w">     </span><span class="sd">&quot;&quot;&quot;Return the given values as a numpy array, or as an individual item if</span>
+<span class="g g-Whitespace">    </span><span class="mi">297</span><span class="sd">     it&#39;s a 0d datetime64 or timedelta64 array.</span>
+<span class="g g-Whitespace">    </span><span class="mi">298</span><span class="sd"> </span>
+<span class="sd">   (...)</span>
+<span class="g g-Whitespace">    </span><span class="mi">307</span><span class="sd">     TODO: remove this (replace with np.asarray) once these issues are fixed</span>
+<span class="g g-Whitespace">    </span><span class="mi">308</span><span class="sd">     &quot;&quot;&quot;</span>
+<span class="ne">--&gt; </span><span class="mi">309</span>     <span class="n">data</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">asarray</span><span class="p">(</span><span class="n">data</span><span class="p">)</span>
+<span class="g g-Whitespace">    </span><span class="mi">310</span>     <span class="k">if</span> <span class="n">data</span><span class="o">.</span><span class="n">ndim</span> <span class="o">==</span> <span class="mi">0</span><span class="p">:</span>
+<span class="g g-Whitespace">    </span><span class="mi">311</span>         <span class="k">if</span> <span class="n">data</span><span class="o">.</span><span class="n">dtype</span><span class="o">.</span><span class="n">kind</span> <span class="o">==</span> <span class="s2">&quot;M&quot;</span><span class="p">:</span>
+
+<span class="nn">File ~/miniconda3/envs/cookbook-dev/lib/python3.10/site-packages/xarray/core/indexing.py:664,</span> in <span class="ni">MemoryCachedArray.__array__</span><span class="nt">(self, dtype)</span>
+<span class="g g-Whitespace">    </span><span class="mi">663</span> <span class="k">def</span> <span class="nf">__array__</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">dtype</span><span class="o">=</span><span class="kc">None</span><span class="p">):</span>
+<span class="ne">--&gt; </span><span class="mi">664</span>     <span class="bp">self</span><span class="o">.</span><span class="n">_ensure_cached</span><span class="p">()</span>
+<span class="g g-Whitespace">    </span><span class="mi">665</span>     <span class="k">return</span> <span class="n">np</span><span class="o">.</span><span class="n">asarray</span><span class="p">(</span><span class="bp">self</span><span class="o">.</span><span class="n">array</span><span class="p">,</span> <span class="n">dtype</span><span class="o">=</span><span class="n">dtype</span><span class="p">)</span>
+
+<span class="nn">File ~/miniconda3/envs/cookbook-dev/lib/python3.10/site-packages/xarray/core/indexing.py:661,</span> in <span class="ni">MemoryCachedArray._ensure_cached</span><span class="nt">(self)</span>
+<span class="g g-Whitespace">    </span><span class="mi">659</span> <span class="k">def</span> <span class="nf">_ensure_cached</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
+<span class="g g-Whitespace">    </span><span class="mi">660</span>     <span class="k">if</span> <span class="ow">not</span> <span class="nb">isinstance</span><span class="p">(</span><span class="bp">self</span><span class="o">.</span><span class="n">array</span><span class="p">,</span> <span class="n">NumpyIndexingAdapter</span><span class="p">):</span>
+<span class="ne">--&gt; </span><span class="mi">661</span>         <span class="bp">self</span><span class="o">.</span><span class="n">array</span> <span class="o">=</span> <span class="n">NumpyIndexingAdapter</span><span class="p">(</span><span class="n">np</span><span class="o">.</span><span class="n">asarray</span><span class="p">(</span><span class="bp">self</span><span class="o">.</span><span class="n">array</span><span class="p">))</span>
+
+<span class="nn">File ~/miniconda3/envs/cookbook-dev/lib/python3.10/site-packages/xarray/core/indexing.py:634,</span> in <span class="ni">CopyOnWriteArray.__array__</span><span class="nt">(self, dtype)</span>
+<span class="g g-Whitespace">    </span><span class="mi">633</span> <span class="k">def</span> <span class="nf">__array__</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">dtype</span><span class="o">=</span><span class="kc">None</span><span class="p">):</span>
+<span class="ne">--&gt; </span><span class="mi">634</span>     <span class="k">return</span> <span class="n">np</span><span class="o">.</span><span class="n">asarray</span><span class="p">(</span><span class="bp">self</span><span class="o">.</span><span class="n">array</span><span class="p">,</span> <span class="n">dtype</span><span class="o">=</span><span class="n">dtype</span><span class="p">)</span>
+
+<span class="nn">File ~/miniconda3/envs/cookbook-dev/lib/python3.10/site-packages/xarray/core/indexing.py:535,</span> in <span class="ni">LazilyIndexedArray.__array__</span><span class="nt">(self, dtype)</span>
+<span class="g g-Whitespace">    </span><span class="mi">533</span> <span class="k">def</span> <span class="nf">__array__</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">dtype</span><span class="o">=</span><span class="kc">None</span><span class="p">):</span>
+<span class="g g-Whitespace">    </span><span class="mi">534</span>     <span class="n">array</span> <span class="o">=</span> <span class="n">as_indexable</span><span class="p">(</span><span class="bp">self</span><span class="o">.</span><span class="n">array</span><span class="p">)</span>
+<span class="ne">--&gt; </span><span class="mi">535</span>     <span class="k">return</span> <span class="n">np</span><span class="o">.</span><span class="n">asarray</span><span class="p">(</span><span class="n">array</span><span class="p">[</span><span class="bp">self</span><span class="o">.</span><span class="n">key</span><span class="p">],</span> <span class="n">dtype</span><span class="o">=</span><span class="kc">None</span><span class="p">)</span>
+
+<span class="nn">File ~/miniconda3/envs/cookbook-dev/lib/python3.10/site-packages/rioxarray/_io.py:453,</span> in <span class="ni">RasterioArrayWrapper.__getitem__</span><span class="nt">(self, key)</span>
+<span class="g g-Whitespace">    </span><span class="mi">452</span> <span class="k">def</span> <span class="fm">__getitem__</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">key</span><span class="p">):</span>
+<span class="ne">--&gt; </span><span class="mi">453</span>     <span class="k">return</span> <span class="n">indexing</span><span class="o">.</span><span class="n">explicit_indexing_adapter</span><span class="p">(</span>
+<span class="g g-Whitespace">    </span><span class="mi">454</span>         <span class="n">key</span><span class="p">,</span> <span class="bp">self</span><span class="o">.</span><span class="n">shape</span><span class="p">,</span> <span class="n">indexing</span><span class="o">.</span><span class="n">IndexingSupport</span><span class="o">.</span><span class="n">OUTER</span><span class="p">,</span> <span class="bp">self</span><span class="o">.</span><span class="n">_getitem</span>
+<span class="g g-Whitespace">    </span><span class="mi">455</span>     <span class="p">)</span>
+
+<span class="nn">File ~/miniconda3/envs/cookbook-dev/lib/python3.10/site-packages/xarray/core/indexing.py:826,</span> in <span class="ni">explicit_indexing_adapter</span><span class="nt">(key, shape, indexing_support, raw_indexing_method)</span>
+<span class="g g-Whitespace">    </span><span class="mi">804</span><span class="w"> </span><span class="sd">&quot;&quot;&quot;Support explicit indexing by delegating to a raw indexing method.</span>
+<span class="g g-Whitespace">    </span><span class="mi">805</span><span class="sd"> </span>
+<span class="g g-Whitespace">    </span><span class="mi">806</span><span class="sd"> Outer and/or vectorized indexers are supported by indexing a second time</span>
+<span class="sd">   (...)</span>
+<span class="g g-Whitespace">    </span><span class="mi">823</span><span class="sd"> Indexing result, in the form of a duck numpy-array.</span>
+<span class="g g-Whitespace">    </span><span class="mi">824</span><span class="sd"> &quot;&quot;&quot;</span>
+<span class="g g-Whitespace">    </span><span class="mi">825</span> <span class="n">raw_key</span><span class="p">,</span> <span class="n">numpy_indices</span> <span class="o">=</span> <span class="n">decompose_indexer</span><span class="p">(</span><span class="n">key</span><span class="p">,</span> <span class="n">shape</span><span class="p">,</span> <span class="n">indexing_support</span><span class="p">)</span>
+<span class="ne">--&gt; </span><span class="mi">826</span> <span class="n">result</span> <span class="o">=</span> <span class="n">raw_indexing_method</span><span class="p">(</span><span class="n">raw_key</span><span class="o">.</span><span class="n">tuple</span><span class="p">)</span>
+<span class="g g-Whitespace">    </span><span class="mi">827</span> <span class="k">if</span> <span class="n">numpy_indices</span><span class="o">.</span><span class="n">tuple</span><span class="p">:</span>
+<span class="g g-Whitespace">    </span><span class="mi">828</span>     <span class="c1"># index the loaded np.ndarray</span>
+<span class="g g-Whitespace">    </span><span class="mi">829</span>     <span class="n">result</span> <span class="o">=</span> <span class="n">NumpyIndexingAdapter</span><span class="p">(</span><span class="n">np</span><span class="o">.</span><span class="n">asarray</span><span class="p">(</span><span class="n">result</span><span class="p">))[</span><span class="n">numpy_indices</span><span class="p">]</span>
+
+<span class="nn">File ~/miniconda3/envs/cookbook-dev/lib/python3.10/site-packages/rioxarray/_io.py:430,</span> in <span class="ni">RasterioArrayWrapper._getitem</span><span class="nt">(self, key)</span>
+<span class="g g-Whitespace">    </span><span class="mi">426</span> <span class="k">with</span> <span class="bp">self</span><span class="o">.</span><span class="n">lock</span><span class="p">:</span>
+<span class="g g-Whitespace">    </span><span class="mi">427</span>     <span class="n">riods</span> <span class="o">=</span> <span class="n">_ensure_warped_vrt</span><span class="p">(</span>
+<span class="g g-Whitespace">    </span><span class="mi">428</span>         <span class="bp">self</span><span class="o">.</span><span class="n">manager</span><span class="o">.</span><span class="n">acquire</span><span class="p">(</span><span class="n">needs_lock</span><span class="o">=</span><span class="kc">False</span><span class="p">),</span> <span class="bp">self</span><span class="o">.</span><span class="n">vrt_params</span>
+<span class="g g-Whitespace">    </span><span class="mi">429</span>     <span class="p">)</span>
+<span class="ne">--&gt; </span><span class="mi">430</span>     <span class="n">out</span> <span class="o">=</span> <span class="n">riods</span><span class="o">.</span><span class="n">read</span><span class="p">(</span><span class="n">band_key</span><span class="p">,</span> <span class="n">window</span><span class="o">=</span><span class="n">window</span><span class="p">,</span> <span class="n">masked</span><span class="o">=</span><span class="bp">self</span><span class="o">.</span><span class="n">masked</span><span class="p">)</span>
+<span class="g g-Whitespace">    </span><span class="mi">431</span>     <span class="k">if</span> <span class="bp">self</span><span class="o">.</span><span class="n">_unsigned_dtype</span> <span class="ow">is</span> <span class="ow">not</span> <span class="kc">None</span><span class="p">:</span>
+<span class="g g-Whitespace">    </span><span class="mi">432</span>         <span class="n">out</span> <span class="o">=</span> <span class="n">out</span><span class="o">.</span><span class="n">astype</span><span class="p">(</span><span class="bp">self</span><span class="o">.</span><span class="n">_unsigned_dtype</span><span class="p">)</span>
+
+<span class="nn">File rasterio/_io.pyx:651,</span> in <span class="ni">rasterio._io.DatasetReaderBase.read</span><span class="nt">()</span>
+
+<span class="nn">File rasterio/_io.pyx:975,</span> in <span class="ni">rasterio._io.DatasetReaderBase._read</span><span class="nt">()</span>
+
+<span class="nn">File rasterio/_io.pyx:213,</span> in <span class="ni">rasterio._io.io_multi_band</span><span class="nt">()</span>
+
+<span class="nn">File rasterio/_err.pyx:193,</span> in <span class="ni">rasterio._err.exc_wrap_int</span><span class="nt">()</span>
+
+<span class="nn">File rasterio/_err.pyx:166,</span> in <span class="ni">rasterio._err.exc_check</span><span class="nt">()</span>
+
+<span class="ne">SystemError</span>: &lt;class &#39;rasterio._err.CPLE_AppDefinedError&#39;&gt; returned a result with an exception set
 </pre></div>
 </div>
 </div>
@@ -862,11 +2161,11 @@ const thebe_selector_output = ".output, .cell_output"
 </div>
 <div class="cell_output docutils container">
 <div class="output traceback highlight-ipythontb notranslate"><div class="highlight"><pre><span></span><span class="gt">---------------------------------------------------------------------------</span>
-<span class="ne">NameError</span><span class="g g-Whitespace">                                 </span>Traceback (most recent call last)
+<span class="ne">AttributeError</span><span class="g g-Whitespace">                            </span>Traceback (most recent call last)
 <span class="n">Cell</span> <span class="n">In</span><span class="p">[</span><span class="mi">20</span><span class="p">],</span> <span class="n">line</span> <span class="mi">1</span>
 <span class="ne">----&gt; </span><span class="mi">1</span> <span class="n">data</span><span class="o">.</span><span class="n">plot</span><span class="o">.</span><span class="n">imshow</span><span class="p">(</span><span class="n">robust</span><span class="o">=</span><span class="kc">True</span><span class="p">,</span> <span class="n">figsize</span><span class="o">=</span><span class="p">(</span><span class="mi">10</span><span class="p">,</span> <span class="mi">10</span><span class="p">))</span>
 
-<span class="ne">NameError</span>: name &#39;data&#39; is not defined
+<span class="ne">AttributeError</span>: &#39;dict&#39; object has no attribute &#39;plot&#39;
 </pre></div>
 </div>
 </div>
@@ -956,7 +2255,7 @@ const thebe_selector_output = ".output, .cell_output"
         
           By Demetris Roumis.
         
-          Last updated on 14 March 2024.
+          Last updated on 20 March 2024.
         </p>
       </div>
     </div>
