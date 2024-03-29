@@ -9,8 +9,7 @@ parts:
       - file: notebooks/0.0_Intro_Landsat
       - file: notebooks/1.0_Data_Ingestion-Planetary_Computer
       - file: notebooks/1.1_Data_Ingestion-Intake
-      - file: notebooks/2.0_Preprocessing
   - caption: Example Workflows
     chapters:
-      - file: notebooks/3.0_Spectral_Clustering_PC
+      - file: notebooks/2.0_Spectral_Clustering_PC
 
