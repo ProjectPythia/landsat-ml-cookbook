@@ -17,7 +17,6 @@ dependencies:
   - geoviews
   - datashader
   - colorcet
-  - intake>2.0.4
   - intake-xarray
   - xarray<2023.04
   - bokeh<3.4.0
@@ -52,3 +51,4 @@ dependencies:
       - dask_geopandas
       - jupyter_bokeh
       - pygeos
+      - intake>=2.0.4
