@@ -32,6 +32,4 @@ dependencies:
   - jupyterlab
   - jupyter_server<2
   - pyopenssl>22
-  - pip
-  - pip:
-      - sphinx-pythia-theme
+  - sphinx-pythia-theme
