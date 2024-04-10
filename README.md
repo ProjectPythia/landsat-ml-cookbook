@@ -15,6 +15,7 @@ Once you complete this cookbook, you will have the skills to access, resample, r
 ## Authors
 
 [Demetris Roumis](https://github.com/droumis)
+[Andrew Huang](https://github.com/ahuang11)
 
 ### Contributors
 
