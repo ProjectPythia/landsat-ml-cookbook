@@ -34,10 +34,9 @@ This cookbook is broken up into two main sections - "Foundations" and "Example W
 
 ### Foundations
 The foundational content includes:
-- Start Here - Introduction to Landsat data
-- Data Ingestion - Planetary Computer - Demonstrating a method for loading and accessing Landsat data from Microsoft's platform
-- Data Ingestion - Intake - Demonstrating approaches for data access using Intake
-- Preprocessing - Regrid - Demonstrating common preprocessing approaches such as regridding
+- Start Here - Introduction to Landsat data.
+- Data Ingestion - Geospatial-Specific Tooling - Demonstrating a method for loading and accessing Landsat data from Microsoft's Planetary Computer platform with tooling from pystac and odc.
+- Data Ingestion - General Purpose Tooling - Demonstrating approaches for domain-independent data access using Intake.
 
 ### Example Workflows
 Example workflows include:
