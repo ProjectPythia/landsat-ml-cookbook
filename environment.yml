@@ -13,23 +13,31 @@ dependencies:
   - odc-stac
   - ipykernel
   - hvplot
-  - panel
-  - geoviews<1.10
+  - panel<1.4.0
+  - geoviews
   - datashader
   - colorcet
-  - intake
-  - intake-xarray<0.7
-  - xarray=2023.04
-  - bokeh<3.0
+  - intake-xarray
+  - xarray<2023.04
+  - bokeh<3.4.0
   - dask
   - dask-ml
   - pandas
   - numpy
   - cartopy
+  - rioxarray
   - rasterio
   - s3fs
   - jupyter-book
   - jupyterlab
   - jupyter_server<2
   - pyopenssl>22
-  - sphinx-pythia-theme
+  - adlfs
+  - pip
+  - pip:
+      - sphinx-pythia-theme
+      - stac_geoparquet
+      - dask_geopandas
+      - jupyter_bokeh
+      - pygeos
+      - intake>=2.0.4
