@@ -7,10 +7,10 @@ logo: notebooks/images/logos/pythia_logo-white-rtext.svg
 copyright: '2024'
 
 execute:
-  # To execute notebooks via a binder instead, replace 'cache' with 'binder'
-  execute_notebooks: force
+  # To execute notebooks via a Binder instead, replace 'cache' with 'binder'
+  execute_notebooks: cache
   timeout: 600
-  allow_errors: True
+  allow_errors: False # cells with expected failures must set the `raises-exception` cell tag
 
 # Add a few extensions to help with parsing content
 parse:
@@ -27,6 +27,8 @@ parse:
 
 sphinx:
   config:
+    linkcheck_ignore: ["https://doi.org/*"] # don't run link checker on DOI links since they are immutable
+    nb_execution_raise_on_error: true # raise exception in build if there are notebook errors (this flag is ignored if building on binder)
     html_favicon: notebooks/images/icons/favicon.ico
     html_last_updated_fmt: '%-d %B %Y'
     html_theme: sphinx_pythia_theme

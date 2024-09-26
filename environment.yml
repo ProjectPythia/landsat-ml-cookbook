@@ -27,6 +27,7 @@ dependencies:
   - cartopy
   - rioxarray
   - rasterio
+  - rioxarray
   - s3fs
   - jupyter-book
   - jupyterlab
