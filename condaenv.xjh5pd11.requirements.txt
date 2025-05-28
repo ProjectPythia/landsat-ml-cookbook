@@ -1,0 +1,6 @@
+sphinx-pythia-theme
+stac_geoparquet
+dask_geopandas
+jupyter_bokeh
+pygeos
+intake>=2.0.4
