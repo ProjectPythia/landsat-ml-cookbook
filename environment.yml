@@ -41,3 +41,4 @@ dependencies:
       - jupyter_bokeh
       - pygeos
       - intake>=2.0.4
+  - mystmd

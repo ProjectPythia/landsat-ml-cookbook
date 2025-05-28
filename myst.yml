@@ -1,0 +1,29 @@
+version: 1
+extends:
+  - https://raw.githubusercontent.com/projectpythia-mystmd/pythia-config/main/pythia.yml
+project:
+  title: Landsat ML Cookbook
+  authors:
+    - name: Demetris Roumis
+  copyright: '2024'
+  toc:
+    - file: README.md
+    - title: Preamble
+      children:
+        - file: notebooks/how-to-cite
+    - title: Foundations
+      children:
+        - file: notebooks/0.0_Intro_Landsat.ipynb
+        - file: notebooks/1.0_Data_Ingestion-Geospatial.ipynb
+        - file: notebooks/1.1_Data_Ingestion-General.ipynb
+    - title: Example Workflows
+      children:
+        - file: notebooks/2.0_Spectral_Clustering_PC.ipynb
+  jupyter:
+      binder:
+        repo: projectpythia-mystmd/radar-cookbook
+site:
+  options:
+    logo: notebooks/images/logos/pythia_logo-white-rtext.svg
+    folders: true
+  template: book-theme
