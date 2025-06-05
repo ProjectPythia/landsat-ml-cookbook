@@ -5,6 +5,8 @@ project:
   title: Landsat ML Cookbook
   authors:
     - name: Demetris Roumis
+      url: https://github.com/droumis
+  github: https://github.com/projectpythia-mystmd/landsat-ml-cookbook
   copyright: '2024'
   toc:
     - file: README.md
@@ -21,7 +23,7 @@ project:
         - file: notebooks/2.0_Spectral_Clustering_PC.ipynb
   jupyter:
       binder:
-        repo: projectpythia-mystmd/radar-cookbook
+        repo: projectpythia-mystmd/landsat-ml-cookbook
 site:
   options:
     logo: notebooks/images/logos/pythia_logo-white-rtext.svg
