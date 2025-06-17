@@ -1,6 +1,6 @@
-![Landsat 8](./notebooks/images/nasa_landsat8.jpg "Landsat 8")
-
 # Landsat ML Cookbook
+
+![Landsat 8](./notebooks/images/nasa_landsat8.jpg "Landsat 8")
 
 [![nightly-build](https://github.com/ProjectPythia/landsat-ml-cookbook/actions/workflows/nightly-build.yaml/badge.svg)](https://github.com/ProjectPythia/landsat-ml-cookbook/actions/workflows/nightly-build.yaml)
 [![Binder](http://binder.projectpythia.org/badge_logo.svg)](http://binder.projectpythia.org/v2/gh/ProjectPythia/landsat-ml-cookbook/main?labpath=notebooks)
