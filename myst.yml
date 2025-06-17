@@ -1,12 +1,12 @@
 version: 1
 extends:
-  - https://raw.githubusercontent.com/projectpythia-mystmd/pythia-config/main/pythia.yml
+  - https://raw.githubusercontent.com/projectpythia/pythia-config/main/pythia.yml
 project:
   title: Landsat ML Cookbook
   authors:
     - name: Demetris Roumis
       url: https://github.com/droumis
-  github: https://github.com/projectpythia-mystmd/landsat-ml-cookbook
+  github: https://github.com/projectpythia/landsat-ml-cookbook
   copyright: '2024'
   toc:
     - file: README.md
@@ -23,7 +23,7 @@ project:
         - file: notebooks/2.0_Spectral_Clustering_PC.ipynb
   jupyter:
       binder:
-        repo: projectpythia-mystmd/landsat-ml-cookbook
+        repo: projectpythia/landsat-ml-cookbook
 site:
   options:
     logo: notebooks/images/logos/pythia_logo-white-rtext.svg
