@@ -24,8 +24,3 @@ project:
   jupyter:
       binder:
         repo: projectpythia/landsat-ml-cookbook
-site:
-  options:
-    logo: notebooks/images/logos/pythia_logo-white-rtext.svg
-    folders: true
-  template: book-theme
